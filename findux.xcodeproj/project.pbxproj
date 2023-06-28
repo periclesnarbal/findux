@@ -1,0 +1,613 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B71B91C12A4CAD5B00843ACA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71B91C02A4CAD5B00843ACA /* AppDelegate.swift */; };
+		B71B91C32A4CAD5B00843ACA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71B91C22A4CAD5B00843ACA /* SceneDelegate.swift */; };
+		B71B91C52A4CAD5B00843ACA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71B91C42A4CAD5B00843ACA /* ViewController.swift */; };
+		B71B91C82A4CAD5B00843ACA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B71B91C62A4CAD5B00843ACA /* Main.storyboard */; };
+		B71B91CA2A4CAD5C00843ACA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B71B91C92A4CAD5C00843ACA /* Assets.xcassets */; };
+		B71B91CD2A4CAD5C00843ACA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B71B91CB2A4CAD5C00843ACA /* LaunchScreen.storyboard */; };
+		B71B91D82A4CAD5D00843ACA /* finduxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71B91D72A4CAD5D00843ACA /* finduxTests.swift */; };
+		B71B91E22A4CAD5D00843ACA /* finduxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71B91E12A4CAD5D00843ACA /* finduxUITests.swift */; };
+		B71B91E42A4CAD5D00843ACA /* finduxUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71B91E32A4CAD5D00843ACA /* finduxUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B71B91D42A4CAD5D00843ACA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B71B91B52A4CAD5A00843ACA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B71B91BC2A4CAD5A00843ACA;
+			remoteInfo = findux;
+		};
+		B71B91DE2A4CAD5D00843ACA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B71B91B52A4CAD5A00843ACA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B71B91BC2A4CAD5A00843ACA;
+			remoteInfo = findux;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B71B91BD2A4CAD5B00843ACA /* findux.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = findux.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B71B91C02A4CAD5B00843ACA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B71B91C22A4CAD5B00843ACA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B71B91C42A4CAD5B00843ACA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B71B91C72A4CAD5B00843ACA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B71B91C92A4CAD5C00843ACA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B71B91CC2A4CAD5C00843ACA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B71B91CE2A4CAD5C00843ACA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B71B91D32A4CAD5D00843ACA /* finduxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = finduxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B71B91D72A4CAD5D00843ACA /* finduxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = finduxTests.swift; sourceTree = "<group>"; };
+		B71B91DD2A4CAD5D00843ACA /* finduxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = finduxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B71B91E12A4CAD5D00843ACA /* finduxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = finduxUITests.swift; sourceTree = "<group>"; };
+		B71B91E32A4CAD5D00843ACA /* finduxUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = finduxUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B71B91BA2A4CAD5A00843ACA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B71B91D02A4CAD5D00843ACA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B71B91DA2A4CAD5D00843ACA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B71B91B42A4CAD5A00843ACA = {
+			isa = PBXGroup;
+			children = (
+				B71B91BF2A4CAD5B00843ACA /* findux */,
+				B71B91D62A4CAD5D00843ACA /* finduxTests */,
+				B71B91E02A4CAD5D00843ACA /* finduxUITests */,
+				B71B91BE2A4CAD5B00843ACA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B71B91BE2A4CAD5B00843ACA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B71B91BD2A4CAD5B00843ACA /* findux.app */,
+				B71B91D32A4CAD5D00843ACA /* finduxTests.xctest */,
+				B71B91DD2A4CAD5D00843ACA /* finduxUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B71B91BF2A4CAD5B00843ACA /* findux */ = {
+			isa = PBXGroup;
+			children = (
+				B71B91C02A4CAD5B00843ACA /* AppDelegate.swift */,
+				B71B91C22A4CAD5B00843ACA /* SceneDelegate.swift */,
+				B71B91C42A4CAD5B00843ACA /* ViewController.swift */,
+				B71B91C62A4CAD5B00843ACA /* Main.storyboard */,
+				B71B91C92A4CAD5C00843ACA /* Assets.xcassets */,
+				B71B91CB2A4CAD5C00843ACA /* LaunchScreen.storyboard */,
+				B71B91CE2A4CAD5C00843ACA /* Info.plist */,
+			);
+			path = findux;
+			sourceTree = "<group>";
+		};
+		B71B91D62A4CAD5D00843ACA /* finduxTests */ = {
+			isa = PBXGroup;
+			children = (
+				B71B91D72A4CAD5D00843ACA /* finduxTests.swift */,
+			);
+			path = finduxTests;
+			sourceTree = "<group>";
+		};
+		B71B91E02A4CAD5D00843ACA /* finduxUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B71B91E12A4CAD5D00843ACA /* finduxUITests.swift */,
+				B71B91E32A4CAD5D00843ACA /* finduxUITestsLaunchTests.swift */,
+			);
+			path = finduxUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B71B91BC2A4CAD5A00843ACA /* findux */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B71B91E72A4CAD5D00843ACA /* Build configuration list for PBXNativeTarget "findux" */;
+			buildPhases = (
+				B71B91B92A4CAD5A00843ACA /* Sources */,
+				B71B91BA2A4CAD5A00843ACA /* Frameworks */,
+				B71B91BB2A4CAD5A00843ACA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = findux;
+			productName = findux;
+			productReference = B71B91BD2A4CAD5B00843ACA /* findux.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B71B91D22A4CAD5D00843ACA /* finduxTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B71B91EA2A4CAD5D00843ACA /* Build configuration list for PBXNativeTarget "finduxTests" */;
+			buildPhases = (
+				B71B91CF2A4CAD5D00843ACA /* Sources */,
+				B71B91D02A4CAD5D00843ACA /* Frameworks */,
+				B71B91D12A4CAD5D00843ACA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B71B91D52A4CAD5D00843ACA /* PBXTargetDependency */,
+			);
+			name = finduxTests;
+			productName = finduxTests;
+			productReference = B71B91D32A4CAD5D00843ACA /* finduxTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B71B91DC2A4CAD5D00843ACA /* finduxUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B71B91ED2A4CAD5D00843ACA /* Build configuration list for PBXNativeTarget "finduxUITests" */;
+			buildPhases = (
+				B71B91D92A4CAD5D00843ACA /* Sources */,
+				B71B91DA2A4CAD5D00843ACA /* Frameworks */,
+				B71B91DB2A4CAD5D00843ACA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B71B91DF2A4CAD5D00843ACA /* PBXTargetDependency */,
+			);
+			name = finduxUITests;
+			productName = finduxUITests;
+			productReference = B71B91DD2A4CAD5D00843ACA /* finduxUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B71B91B52A4CAD5A00843ACA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					B71B91BC2A4CAD5A00843ACA = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					B71B91D22A4CAD5D00843ACA = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = B71B91BC2A4CAD5A00843ACA;
+					};
+					B71B91DC2A4CAD5D00843ACA = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = B71B91BC2A4CAD5A00843ACA;
+					};
+				};
+			};
+			buildConfigurationList = B71B91B82A4CAD5A00843ACA /* Build configuration list for PBXProject "findux" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B71B91B42A4CAD5A00843ACA;
+			productRefGroup = B71B91BE2A4CAD5B00843ACA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B71B91BC2A4CAD5A00843ACA /* findux */,
+				B71B91D22A4CAD5D00843ACA /* finduxTests */,
+				B71B91DC2A4CAD5D00843ACA /* finduxUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B71B91BB2A4CAD5A00843ACA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B71B91CD2A4CAD5C00843ACA /* LaunchScreen.storyboard in Resources */,
+				B71B91CA2A4CAD5C00843ACA /* Assets.xcassets in Resources */,
+				B71B91C82A4CAD5B00843ACA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B71B91D12A4CAD5D00843ACA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B71B91DB2A4CAD5D00843ACA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B71B91B92A4CAD5A00843ACA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B71B91C52A4CAD5B00843ACA /* ViewController.swift in Sources */,
+				B71B91C12A4CAD5B00843ACA /* AppDelegate.swift in Sources */,
+				B71B91C32A4CAD5B00843ACA /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B71B91CF2A4CAD5D00843ACA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B71B91D82A4CAD5D00843ACA /* finduxTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B71B91D92A4CAD5D00843ACA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B71B91E42A4CAD5D00843ACA /* finduxUITestsLaunchTests.swift in Sources */,
+				B71B91E22A4CAD5D00843ACA /* finduxUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B71B91D52A4CAD5D00843ACA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B71B91BC2A4CAD5A00843ACA /* findux */;
+			targetProxy = B71B91D42A4CAD5D00843ACA /* PBXContainerItemProxy */;
+		};
+		B71B91DF2A4CAD5D00843ACA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B71B91BC2A4CAD5A00843ACA /* findux */;
+			targetProxy = B71B91DE2A4CAD5D00843ACA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B71B91C62A4CAD5B00843ACA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B71B91C72A4CAD5B00843ACA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B71B91CB2A4CAD5C00843ACA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B71B91CC2A4CAD5C00843ACA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B71B91E52A4CAD5D00843ACA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B71B91E62A4CAD5D00843ACA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B71B91E82A4CAD5D00843ACA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9QCEA3X339;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = findux/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Findux;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ifce.findux;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B71B91E92A4CAD5D00843ACA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9QCEA3X339;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = findux/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Findux;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ifce.findux;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B71B91EB2A4CAD5D00843ACA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9QCEA3X339;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ifce.finduxTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/findux.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/findux";
+			};
+			name = Debug;
+		};
+		B71B91EC2A4CAD5D00843ACA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9QCEA3X339;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ifce.finduxTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/findux.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/findux";
+			};
+			name = Release;
+		};
+		B71B91EE2A4CAD5D00843ACA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9QCEA3X339;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ifce.finduxUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = findux;
+			};
+			name = Debug;
+		};
+		B71B91EF2A4CAD5D00843ACA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9QCEA3X339;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ifce.finduxUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = findux;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B71B91B82A4CAD5A00843ACA /* Build configuration list for PBXProject "findux" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B71B91E52A4CAD5D00843ACA /* Debug */,
+				B71B91E62A4CAD5D00843ACA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B71B91E72A4CAD5D00843ACA /* Build configuration list for PBXNativeTarget "findux" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B71B91E82A4CAD5D00843ACA /* Debug */,
+				B71B91E92A4CAD5D00843ACA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B71B91EA2A4CAD5D00843ACA /* Build configuration list for PBXNativeTarget "finduxTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B71B91EB2A4CAD5D00843ACA /* Debug */,
+				B71B91EC2A4CAD5D00843ACA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B71B91ED2A4CAD5D00843ACA /* Build configuration list for PBXNativeTarget "finduxUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B71B91EE2A4CAD5D00843ACA /* Debug */,
+				B71B91EF2A4CAD5D00843ACA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B71B91B52A4CAD5A00843ACA /* Project object */;
+}
