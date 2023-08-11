@@ -7,13 +7,7 @@
 
 import UIKit
 
-class MaterialCoordinator: BaseCoordinator, ChildCoordinator {
-    unowned let parentCoordinator: MainCoordinator
-    
-    required init(parentCoordinator: MainCoordinator, navigationController: UINavigationController) {
-        self.parentCoordinator = parentCoordinator
-        super.init(navigationController: navigationController)
-    }
+final class MaterialCoordinator: BaseChildCoordinator<MainCoordinator> {
     
     override func start() {
         goToMaterialViewController()
@@ -28,6 +22,5 @@ class MaterialCoordinator: BaseCoordinator, ChildCoordinator {
     func goToHome() {
         parentCoordinator.goToHomeCoordinator()
     }
-    
 }
 

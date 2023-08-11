@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, ViewControllerDelegate {
+final class HomeViewController: UIViewController, ViewControllerDelegate {
     
     weak var coordinator: HomeCoordinator?
     weak var viewModel: AnyObject?
@@ -22,6 +22,12 @@ class HomeViewController: UIViewController, ViewControllerDelegate {
     @objc
     func goToProfileViewController() {
         coordinator?.goToProfile()
+    }
+    
+    
+    deinit {
+        print("\(self)")
+        print("DEINITITIALIZED \n")
     }
 }
 

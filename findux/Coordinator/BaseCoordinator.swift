@@ -14,7 +14,7 @@ enum NavigationDirection {
 
 class BaseCoordinator: NSObject, Coordinator {
     
-    static var childCoordinators = [any ChildCoordinator]()
+    var childCoordinators = [any ChildCoordinator]()
     var navigationController: UINavigationController
     
     init(navigationController: UINavigationController) {
@@ -24,6 +24,11 @@ class BaseCoordinator: NSObject, Coordinator {
     }
     
     func start() {}
+    
+    deinit {
+        print("\(self)")
+        print("DEINITITIALIZED \n")
+    }
 }
 
 extension BaseCoordinator {
@@ -37,7 +42,7 @@ extension BaseCoordinator {
     }
     
     func searchChildBy<T: ChildCoordinator>(type: T.Type) throws -> T {
-        guard let foundChildCoordinator = BaseCoordinator.childCoordinators.first(where: { $0.isKind(of: type) }) as? T else {
+        guard let foundChildCoordinator = childCoordinators.first(where: { $0.isKind(of: type) }) as? T else {
             throw NSError(domain: "Child coordinator is not found", code: 0)
         }
         return foundChildCoordinator
@@ -61,13 +66,13 @@ extension BaseCoordinator {
     }
     
     private func updateChildCoordinators() {
-        BaseCoordinator.childCoordinators = childCoordinatorsInUse()
+        childCoordinators = childCoordinatorsInUse()
     }
     
     private func childCoordinatorsInUse() -> [any ChildCoordinator] {
         return navigationController.viewControllers
             .compactMap { ($0 as? (any ViewControllerDelegate))?.coordinator }
-            .filter { coordinator in BaseCoordinator.childCoordinators.contains { coordinator === $0 } }
+            .filter { coordinator in childCoordinators.contains { coordinator === $0 } }
     }
 }
 
@@ -86,7 +91,7 @@ extension BaseCoordinator: UINavigationControllerDelegate {
        
         print("--- \(self)")
         print("viewControllers \(navigationController.viewControllers)")
-        print("childCoordinators \(BaseCoordinator.childCoordinators)")
+        print("childCoordinators \(childCoordinators)")
         
     }
 }

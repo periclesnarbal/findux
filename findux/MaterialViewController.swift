@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MaterialViewController: UIViewController, ViewControllerDelegate {
+final class MaterialViewController: UIViewController, ViewControllerDelegate {
     
     weak var coordinator: MaterialCoordinator?
     weak var viewModel: AnyObject?
@@ -22,6 +22,12 @@ class MaterialViewController: UIViewController, ViewControllerDelegate {
     @objc
     func goToHomeViewController() {
         coordinator?.goToHome()
+    }
+    
+    
+    deinit {
+        print("\(self)")
+        print("DEINITITIALIZED \n")
     }
 }
 

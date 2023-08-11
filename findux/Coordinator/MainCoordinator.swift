@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainCoordinator: BaseCoordinator {
+final class MainCoordinator: BaseCoordinator {
     
     override func start() {
         goToHomeCoordinator()
@@ -18,9 +18,8 @@ class MainCoordinator: BaseCoordinator {
         
         if let currentChild = try? searchChildBy(type: HomeCoordinator.self) {
             child = currentChild
-            child.navigationController.delegate = child
         } else {
-            BaseCoordinator.childCoordinators.append(child)
+            childCoordinators.append(child)
         }
         
         child.start()
@@ -31,9 +30,8 @@ class MainCoordinator: BaseCoordinator {
         
         if let currentChild = try? searchChildBy(type: ProfileCoordinator.self) {
             child = currentChild
-            child.navigationController.delegate = child
         } else {
-            BaseCoordinator.childCoordinators.append(child)
+            childCoordinators.append(child)
         }
         
         child.start()
@@ -44,9 +42,8 @@ class MainCoordinator: BaseCoordinator {
         
         if let currentChild = try? searchChildBy(type: MaterialCoordinator.self) {
             child = currentChild
-            child.navigationController.delegate = child
         } else {
-            BaseCoordinator.childCoordinators.append(child)
+            childCoordinators.append(child)
         }
         
         child.start()

@@ -7,13 +7,7 @@
 
 import UIKit
 
-class ProfileCoordinator: BaseCoordinator, ChildCoordinator {
-    unowned let parentCoordinator: MainCoordinator
-    
-    required init(parentCoordinator: MainCoordinator, navigationController: UINavigationController) {
-        self.parentCoordinator = parentCoordinator
-        super.init(navigationController: navigationController)
-    }
+final class ProfileCoordinator: BaseChildCoordinator<MainCoordinator> {
     
     override func start() {
         goToProfileViewController()

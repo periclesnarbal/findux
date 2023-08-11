@@ -8,7 +8,7 @@
 import UIKit
 
 protocol Coordinator: NSObject {
-    static var childCoordinators: [any ChildCoordinator] { get set }
+    var childCoordinators: [any ChildCoordinator] { get set }
     var navigationController: UINavigationController { get set }
 
     func start()
