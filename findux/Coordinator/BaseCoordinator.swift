@@ -48,6 +48,15 @@ extension BaseCoordinator {
         return foundChildCoordinator
     }
     
+    func goToChildCoordinator<T: ChildCoordinator>(_ child: T) {
+        if let existingCoordinator = try? searchChildBy(type: T.self) {
+            existingCoordinator.start()
+            return
+        }
+        childCoordinators.append(child)
+        child.start()
+    }
+    
     private func unstackViews(currentViewController: UIViewController, direction: NavigationDirection) {
         var controllerList: [UIViewController] = []
         for viewController in navigationController.viewControllers {
@@ -81,11 +90,8 @@ extension BaseCoordinator: UINavigationControllerDelegate {
 
     func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
         
-        if let _ = navigationController.transitionCoordinator?.viewController(forKey: .from) {
-            unstackViews(currentViewController: viewController, direction: .backward)
-        } else {
-            unstackViews(currentViewController: viewController, direction: .forward)
-        }
+        let direction: NavigationDirection = navigationController.transitionCoordinator?.viewController(forKey: .from) != nil ? .backward : .forward
+        unstackViews(currentViewController: viewController, direction: direction)
         
         updateChildCoordinators()
        

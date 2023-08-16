@@ -14,38 +14,17 @@ final class MainCoordinator: BaseCoordinator {
     }
 
     func goToHomeCoordinator() {
-        var child = HomeCoordinator(parentCoordinator: self, navigationController: navigationController)
-        
-        if let currentChild = try? searchChildBy(type: HomeCoordinator.self) {
-            child = currentChild
-        } else {
-            childCoordinators.append(child)
-        }
-        
-        child.start()
+        var homeCoordinator = HomeCoordinator(parentCoordinator: self, navigationController: navigationController)
+        goToChildCoordinator(homeCoordinator)
     }
     
     func goToProfileCoordinator() {
-        var child = ProfileCoordinator(parentCoordinator: self, navigationController: navigationController)
-        
-        if let currentChild = try? searchChildBy(type: ProfileCoordinator.self) {
-            child = currentChild
-        } else {
-            childCoordinators.append(child)
-        }
-        
-        child.start()
+        let profileCoordinator = ProfileCoordinator(parentCoordinator: self, navigationController: navigationController)
+        goToChildCoordinator(profileCoordinator)
     }
     
     func goToMaterialCoordinator() {
-        var child = MaterialCoordinator(parentCoordinator: self, navigationController: navigationController)
-        
-        if let currentChild = try? searchChildBy(type: MaterialCoordinator.self) {
-            child = currentChild
-        } else {
-            childCoordinators.append(child)
-        }
-        
-        child.start()
+        let materialCoordinator = MaterialCoordinator(parentCoordinator: self, navigationController: navigationController)
+        goToChildCoordinator(materialCoordinator)
     }
 }

@@ -123,9 +123,6 @@
 			children = (
 				B71B91C02A4CAD5B00843ACA /* AppDelegate.swift */,
 				B71B91C22A4CAD5B00843ACA /* SceneDelegate.swift */,
-				B71B91C42A4CAD5B00843ACA /* HomeViewController.swift */,
-				B79F9FC22A4CE7C40000B973 /* ProfileViewController.swift */,
-				B79F9FC42A4CE8050000B973 /* MaterialViewController.swift */,
 				B71B91C92A4CAD5C00843ACA /* Assets.xcassets */,
 				B71B91CB2A4CAD5C00843ACA /* LaunchScreen.storyboard */,
 				B71B91CE2A4CAD5C00843ACA /* Info.plist */,
@@ -179,6 +176,9 @@
 		B79F9FC62A4D23210000B973 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				B71B91C42A4CAD5B00843ACA /* HomeViewController.swift */,
+				B79F9FC22A4CE7C40000B973 /* ProfileViewController.swift */,
+				B79F9FC42A4CE8050000B973 /* MaterialViewController.swift */,
 				B79F9FC72A4D23390000B973 /* ViewControllerDelegate.swift */,
 			);
 			path = ViewController;
