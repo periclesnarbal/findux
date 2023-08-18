@@ -14,14 +14,14 @@ final class MaterialViewController: UIViewController, ViewControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(goToHomeViewController))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(goToMaterialTwoViewController))
         // Do any additional setup after loading the view.
         view.backgroundColor = .blue
     }
     
     @objc
-    func goToHomeViewController() {
-        coordinator?.backToHome()
+    func goToMaterialTwoViewController() {
+        coordinator?.goToMaterialTwoViewController()
     }
 }
 

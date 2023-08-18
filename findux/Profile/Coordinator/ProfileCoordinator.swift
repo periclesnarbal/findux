@@ -19,6 +19,12 @@ final class ProfileCoordinator: BaseChildCoordinator<MainCoordinator> {
         navigationController.pushViewController(vc, animated: true)
     }
     
+    func goToProfileTwoViewController() {
+        let vc = ProfileTwoViewController()
+        vc.coordinator = self
+        navigationController.pushViewController(vc, animated: true)
+    }
+    
     func goToMaterial() {
         parentCoordinator.goToMaterialCoordinator()
     }

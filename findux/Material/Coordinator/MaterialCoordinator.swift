@@ -19,8 +19,10 @@ final class MaterialCoordinator: BaseChildCoordinator<MainCoordinator> {
         navigationController.pushViewController(vc, animated: true)
     }
     
-    func goToHome() {
-        parentCoordinator.goToHomeCoordinator()
+    func goToMaterialTwoViewController() {
+        let vc = MaterialTwoViewController()
+        vc.coordinator = self
+        navigationController.pushViewController(vc, animated: true)
     }
     
     func backToHome() {

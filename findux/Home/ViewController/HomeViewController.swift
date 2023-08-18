@@ -14,14 +14,14 @@ final class HomeViewController: UIViewController, ViewControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(goToProfileViewController))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(goToHomeTwoViewController))
         // Do any additional setup after loading the view.
         view.backgroundColor = .red
     }
     
     @objc
-    func goToProfileViewController() {
-        coordinator?.goToProfile()
+    func goToHomeTwoViewController() {
+        coordinator?.goToHomeTwoViewController()
     }
 }
 

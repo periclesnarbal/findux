@@ -13,13 +13,13 @@ enum NavigationDirection: String {
     case idle = "IDLE"
 }
 
-protocol CoordinatorNavigationControllerDelegate: NSObject, UINavigationControllerDelegate {
-    var delegate: BaseCoordinatorStackControlDelegate? { get set }
+protocol NavigationControlCoordinatorDelegate: NSObject, UINavigationControllerDelegate {
+    var delegate: BaseCoordinatorNavigationControlDelegate? { get set }
 }
 
-final class CoordinatorNavigationController: NSObject, CoordinatorNavigationControllerDelegate {
+final class NavigationControlCoordinator: NSObject, NavigationControlCoordinatorDelegate {
     
-    weak var delegate: BaseCoordinatorStackControlDelegate?
+    weak var delegate: BaseCoordinatorNavigationControlDelegate?
     private var viewControllerCountBefore = 0
     var lastDirection: NavigationDirection = .idle
     

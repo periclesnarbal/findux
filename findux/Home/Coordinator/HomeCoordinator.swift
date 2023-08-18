@@ -19,6 +19,12 @@ final class HomeCoordinator: BaseChildCoordinator<MainCoordinator> {
         navigationController.pushViewController(vc, animated: true)
     }
     
+    func goToHomeTwoViewController() {
+        let vc = HomeTwoViewController()
+        vc.coordinator = self
+        navigationController.pushViewController(vc, animated: true)
+    }
+    
     func goToProfile() {
         parentCoordinator.goToProfileCoordinator()
     }

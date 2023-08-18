@@ -10,7 +10,7 @@ import UIKit
 protocol Coordinator: NSObject {
     var childCoordinators: [any ChildCoordinator] { get set }
     var navigationController: UINavigationController { get set }
-    var navigationDelegate: CoordinatorNavigationControllerDelegate? { get set }
+    var navigationDelegate: NavigationControlCoordinatorDelegate? { get set }
     
     func start()
 }

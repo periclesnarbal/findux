@@ -14,14 +14,14 @@ final class ProfileViewController: UIViewController, ViewControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(goToMaterialViewController))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(goToProfileTwoViewController))
         // Do any additional setup after loading the view.
         view.backgroundColor = .green
     }
     
     @objc
-    func goToMaterialViewController() {
-        coordinator?.goToMaterial()
+    func goToProfileTwoViewController() {
+        coordinator?.goToProfileTwoViewController()
     }
 }
 

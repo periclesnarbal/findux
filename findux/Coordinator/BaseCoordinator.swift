@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol BaseCoordinatorStackControlDelegate: NSObject {
+protocol BaseCoordinatorNavigationControlDelegate: NSObject {
     func unstackViews(currentViewController: UIViewController)
     func updateChildCoordinators()
 }
@@ -16,9 +16,9 @@ class BaseCoordinator: NSObject, Coordinator {
     
     var childCoordinators = [any ChildCoordinator]()
     var navigationController: UINavigationController
-    var navigationDelegate: CoordinatorNavigationControllerDelegate?
+    var navigationDelegate: NavigationControlCoordinatorDelegate?
     
-    init(navigationController: UINavigationController, navigationDelegate: CoordinatorNavigationControllerDelegate?) {
+    init(navigationController: UINavigationController, navigationDelegate: NavigationControlCoordinatorDelegate?) {
         self.navigationController = navigationController
         self.navigationDelegate = navigationDelegate
         super.init()
@@ -56,7 +56,7 @@ extension BaseCoordinator {
     }
 }
 
-extension BaseCoordinator: BaseCoordinatorStackControlDelegate {
+extension BaseCoordinator: BaseCoordinatorNavigationControlDelegate {
     func unstackViews(currentViewController: UIViewController) {
         var controllerList: [UIViewController] = []
         for viewController in navigationController.viewControllers {
