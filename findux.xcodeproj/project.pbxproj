@@ -131,7 +131,9 @@
 				B79F9FBD2A4CB1B20000B973 /* Coordinator */,
 				B79F9FC62A4D23210000B973 /* ViewController */,
 				B73691302A7AE61B00A67F4B /* Extension */,
-				B79E3AA62A8EA7AA00C8BD2E /* CoordinatorNavigationController.swift */,
+				B78D92012A8FFDD900AE57E4 /* Home */,
+				B78D92022A8FFDE000AE57E4 /* Profile */,
+				B78D92032A8FFDE800AE57E4 /* Material */,
 			);
 			path = findux;
 			sourceTree = "<group>";
@@ -162,6 +164,81 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		B78D92012A8FFDD900AE57E4 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B78D92042A90001500AE57E4 /* Coordinator */,
+				B78D92072A90004900AE57E4 /* ViewController */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		B78D92022A8FFDE000AE57E4 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				B78D92062A90002600AE57E4 /* Coordinator */,
+				B78D92082A90005200AE57E4 /* ViewController */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		B78D92032A8FFDE800AE57E4 /* Material */ = {
+			isa = PBXGroup;
+			children = (
+				B78D92052A90001E00AE57E4 /* Coordinator */,
+				B78D92092A90005B00AE57E4 /* ViewController */,
+			);
+			path = Material;
+			sourceTree = "<group>";
+		};
+		B78D92042A90001500AE57E4 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				B79F9FC02A4CB4B00000B973 /* HomeCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		B78D92052A90001E00AE57E4 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				B7D262DA2A4E2A43001757B6 /* MaterialCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		B78D92062A90002600AE57E4 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				B7D262D82A4E29A6001757B6 /* ProfileCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		B78D92072A90004900AE57E4 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B71B91C42A4CAD5B00843ACA /* HomeViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		B78D92082A90005200AE57E4 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B79F9FC22A4CE7C40000B973 /* ProfileViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		B78D92092A90005B00AE57E4 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B79F9FC42A4CE8050000B973 /* MaterialViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		B79F9FBD2A4CB1B20000B973 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,9 +246,7 @@
 				B79F9FBE2A4CB1E40000B973 /* BaseCoordinator.swift */,
 				B784D4C02A86AD6D00CD0E39 /* BaseChildCoordinator.swift */,
 				B79F9FCA2A4DDE730000B973 /* MainCoordinator.swift */,
-				B79F9FC02A4CB4B00000B973 /* HomeCoordinator.swift */,
-				B7D262D82A4E29A6001757B6 /* ProfileCoordinator.swift */,
-				B7D262DA2A4E2A43001757B6 /* MaterialCoordinator.swift */,
+				B79E3AA62A8EA7AA00C8BD2E /* CoordinatorNavigationController.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -179,9 +254,6 @@
 		B79F9FC62A4D23210000B973 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				B71B91C42A4CAD5B00843ACA /* HomeViewController.swift */,
-				B79F9FC22A4CE7C40000B973 /* ProfileViewController.swift */,
-				B79F9FC42A4CE8050000B973 /* MaterialViewController.swift */,
 				B79F9FC72A4D23390000B973 /* ViewControllerDelegate.swift */,
 			);
 			path = ViewController;

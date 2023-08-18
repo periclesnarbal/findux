@@ -66,10 +66,12 @@ extension BaseCoordinator: BaseCoordinatorStackControlDelegate {
             }
         }
         navigationController.viewControllers = controllerList
+        print("CHILD COORDINATORS: \(childCoordinators)")
     }
     
     func updateChildCoordinators() {
         childCoordinators = childCoordinatorsInUse()
+        print("UPDATE CHILD COORDINATORS: \(childCoordinators)")
     }
     
     private func childCoordinatorsInUse() -> [any ChildCoordinator] {
