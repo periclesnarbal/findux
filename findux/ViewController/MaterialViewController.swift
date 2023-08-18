@@ -21,13 +21,7 @@ final class MaterialViewController: UIViewController, ViewControllerDelegate {
     
     @objc
     func goToHomeViewController() {
-        coordinator?.goToHome()
-    }
-    
-    
-    deinit {
-        print("\(self)")
-        print("DEINITITIALIZED \n")
+        coordinator?.backToHome()
     }
 }
 

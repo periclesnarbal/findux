@@ -14,17 +14,17 @@ final class MainCoordinator: BaseCoordinator {
     }
 
     func goToHomeCoordinator() {
-        var homeCoordinator = HomeCoordinator(parentCoordinator: self, navigationController: navigationController)
-        goToChildCoordinator(homeCoordinator)
+        let homeCoordinator = buildChildCoordinator(childType: HomeCoordinator.self, parentCoordinator: self)
+        homeCoordinator.start()
     }
     
     func goToProfileCoordinator() {
-        let profileCoordinator = ProfileCoordinator(parentCoordinator: self, navigationController: navigationController)
-        goToChildCoordinator(profileCoordinator)
+        let profileCoordinator =  buildChildCoordinator(childType: ProfileCoordinator.self, parentCoordinator: self)
+        profileCoordinator.start()
     }
     
     func goToMaterialCoordinator() {
-        let materialCoordinator = MaterialCoordinator(parentCoordinator: self, navigationController: navigationController)
-        goToChildCoordinator(materialCoordinator)
+        let materialCoordinator =  buildChildCoordinator(childType: MaterialCoordinator.self, parentCoordinator: self)
+        materialCoordinator.start()
     }
 }

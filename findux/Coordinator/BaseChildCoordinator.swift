@@ -10,9 +10,10 @@ import UIKit
 class BaseChildCoordinator<T: BaseCoordinator>: BaseCoordinator, ChildCoordinator {
     unowned let parentCoordinator: T
     
-    required init(parentCoordinator: T, navigationController: UINavigationController) {
+    required init(parentCoordinator: T) {
         self.parentCoordinator = parentCoordinator
-        super.init(navigationController: navigationController)
-        navigationController.delegate = parentCoordinator
+        super.init(navigationController: parentCoordinator.navigationController, navigationDelegate: parentCoordinator.navigationDelegate)
+        navigationDelegate?.delegate = parentCoordinator
+        navigationController.delegate = navigationDelegate
     }
 }

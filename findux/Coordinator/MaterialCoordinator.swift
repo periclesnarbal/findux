@@ -23,8 +23,8 @@ final class MaterialCoordinator: BaseChildCoordinator<MainCoordinator> {
         parentCoordinator.goToHomeCoordinator()
     }
     
-//    func backToHome() {
-//        parentCoordinator.backToViewController(HomeViewController.self)
-//    }
+    func backToHome() {
+        parentCoordinator.backToViewController(HomeViewController.self)
+    }
 }
 

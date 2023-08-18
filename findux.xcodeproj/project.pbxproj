@@ -18,6 +18,7 @@
 		B736912F2A7AE57E00A67F4B /* UINavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B736912E2A7AE57E00A67F4B /* UINavigationControllerExtension.swift */; };
 		B784D4C12A86AD6D00CD0E39 /* BaseChildCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B784D4C02A86AD6D00CD0E39 /* BaseChildCoordinator.swift */; };
 		B784D4C32A86C75B00CD0E39 /* BaseCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B784D4C22A86C75B00CD0E39 /* BaseCoordinatorTests.swift */; };
+		B79E3AA72A8EA7AA00C8BD2E /* CoordinatorNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79E3AA62A8EA7AA00C8BD2E /* CoordinatorNavigationController.swift */; };
 		B79F9FBC2A4CB0BD0000B973 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79F9FBB2A4CB0BD0000B973 /* Coordinator.swift */; };
 		B79F9FBF2A4CB1E40000B973 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79F9FBE2A4CB1E40000B973 /* BaseCoordinator.swift */; };
 		B79F9FC12A4CB4B00000B973 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79F9FC02A4CB4B00000B973 /* HomeCoordinator.swift */; };
@@ -62,6 +63,7 @@
 		B736912E2A7AE57E00A67F4B /* UINavigationControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerExtension.swift; sourceTree = "<group>"; };
 		B784D4C02A86AD6D00CD0E39 /* BaseChildCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseChildCoordinator.swift; sourceTree = "<group>"; };
 		B784D4C22A86C75B00CD0E39 /* BaseCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinatorTests.swift; sourceTree = "<group>"; };
+		B79E3AA62A8EA7AA00C8BD2E /* CoordinatorNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorNavigationController.swift; sourceTree = "<group>"; };
 		B79F9FBB2A4CB0BD0000B973 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		B79F9FBE2A4CB1E40000B973 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		B79F9FC02A4CB4B00000B973 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				B79F9FBD2A4CB1B20000B973 /* Coordinator */,
 				B79F9FC62A4D23210000B973 /* ViewController */,
 				B73691302A7AE61B00A67F4B /* Extension */,
+				B79E3AA62A8EA7AA00C8BD2E /* CoordinatorNavigationController.swift */,
 			);
 			path = findux;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 			files = (
 				B7D262D92A4E29A6001757B6 /* ProfileCoordinator.swift in Sources */,
 				B79F9FBC2A4CB0BD0000B973 /* Coordinator.swift in Sources */,
+				B79E3AA72A8EA7AA00C8BD2E /* CoordinatorNavigationController.swift in Sources */,
 				B736912F2A7AE57E00A67F4B /* UINavigationControllerExtension.swift in Sources */,
 				B71B91C52A4CAD5B00843ACA /* HomeViewController.swift in Sources */,
 				B784D4C12A86AD6D00CD0E39 /* BaseChildCoordinator.swift in Sources */,

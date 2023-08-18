@@ -7,28 +7,26 @@
 
 import UIKit
 
-enum NavigationDirection {
-    case forward
-    case backward
+protocol BaseCoordinatorStackControlDelegate: NSObject {
+    func unstackViews(currentViewController: UIViewController)
+    func updateChildCoordinators()
 }
 
 class BaseCoordinator: NSObject, Coordinator {
     
     var childCoordinators = [any ChildCoordinator]()
     var navigationController: UINavigationController
+    var navigationDelegate: CoordinatorNavigationControllerDelegate?
     
-    init(navigationController: UINavigationController) {
+    init(navigationController: UINavigationController, navigationDelegate: CoordinatorNavigationControllerDelegate?) {
         self.navigationController = navigationController
+        self.navigationDelegate = navigationDelegate
         super.init()
-        navigationController.delegate = self
+        navigationDelegate?.delegate = self
+        navigationController.delegate = navigationDelegate
     }
     
     func start() {}
-    
-    deinit {
-        print("\(self)")
-        print("DEINITITIALIZED \n")
-    }
 }
 
 extension BaseCoordinator {
@@ -48,57 +46,37 @@ extension BaseCoordinator {
         return foundChildCoordinator
     }
     
-    func goToChildCoordinator<T: ChildCoordinator>(_ child: T) {
-        if let existingCoordinator = try? searchChildBy(type: T.self) {
-            existingCoordinator.start()
-            return
+    func buildChildCoordinator<G: BaseCoordinator, T: BaseChildCoordinator<G>>(childType: T.Type, parentCoordinator: G) -> T {
+        if let existingCoordinator = try? searchChildBy(type: childType) {
+            return existingCoordinator
         }
+        let child = T(parentCoordinator: parentCoordinator)
         childCoordinators.append(child)
-        child.start()
+        return child
     }
-    
-    private func unstackViews(currentViewController: UIViewController, direction: NavigationDirection) {
+}
+
+extension BaseCoordinator: BaseCoordinatorStackControlDelegate {
+    func unstackViews(currentViewController: UIViewController) {
         var controllerList: [UIViewController] = []
         for viewController in navigationController.viewControllers {
-            let existsInNavigation = viewController.isKind(of: type(of: currentViewController))
-            var addView = UIViewController()
-            switch direction {
-            case .forward:
-                addView = existsInNavigation ? currentViewController : viewController
-            case .backward:
-                addView = viewController
+            controllerList.append(viewController)
+            if viewController.isKind(of: type(of: currentViewController)) {
+                break
             }
-            controllerList.append(addView)
-            if existsInNavigation { break }
         }
         navigationController.viewControllers = controllerList
     }
     
-    private func updateChildCoordinators() {
+    func updateChildCoordinators() {
         childCoordinators = childCoordinatorsInUse()
     }
     
     private func childCoordinatorsInUse() -> [any ChildCoordinator] {
+        // TODO: CONSERTAR ESTE METODO
         return navigationController.viewControllers
             .compactMap { ($0 as? (any ViewControllerDelegate))?.coordinator }
             .filter { coordinator in childCoordinators.contains { coordinator === $0 } }
-    }
-}
-
-
-extension BaseCoordinator: UINavigationControllerDelegate {
-
-    func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
-        
-        let direction: NavigationDirection = navigationController.transitionCoordinator?.viewController(forKey: .from) != nil ? .backward : .forward
-        unstackViews(currentViewController: viewController, direction: direction)
-        
-        updateChildCoordinators()
-       
-        print("--- \(self)")
-        print("viewControllers \(navigationController.viewControllers)")
-        print("childCoordinators \(childCoordinators)")
-        
     }
 }
 

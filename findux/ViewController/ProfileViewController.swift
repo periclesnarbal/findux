@@ -23,11 +23,5 @@ final class ProfileViewController: UIViewController, ViewControllerDelegate {
     func goToMaterialViewController() {
         coordinator?.goToMaterial()
     }
-    
-    
-    deinit {
-        print("\(self)")
-        print("DEINITITIALIZED \n")
-    }
 }
 

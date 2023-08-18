@@ -23,11 +23,5 @@ final class HomeViewController: UIViewController, ViewControllerDelegate {
     func goToProfileViewController() {
         coordinator?.goToProfile()
     }
-    
-    
-    deinit {
-        print("\(self)")
-        print("DEINITITIALIZED \n")
-    }
 }
 
