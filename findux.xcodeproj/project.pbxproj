@@ -27,7 +27,7 @@
 		B79F9FC12A4CB4B00000B973 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79F9FC02A4CB4B00000B973 /* HomeCoordinator.swift */; };
 		B79F9FC32A4CE7C40000B973 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79F9FC22A4CE7C40000B973 /* ProfileViewController.swift */; };
 		B79F9FC52A4CE8050000B973 /* MaterialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79F9FC42A4CE8050000B973 /* MaterialViewController.swift */; };
-		B79F9FC82A4D23390000B973 /* ViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79F9FC72A4D23390000B973 /* ViewControllerDelegate.swift */; };
+		B79F9FC82A4D23390000B973 /* ViewControllerCoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79F9FC72A4D23390000B973 /* ViewControllerCoordinatorDelegate.swift */; };
 		B79F9FCB2A4DDE730000B973 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79F9FCA2A4DDE730000B973 /* MainCoordinator.swift */; };
 		B7D262D92A4E29A6001757B6 /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D262D82A4E29A6001757B6 /* ProfileCoordinator.swift */; };
 		B7D262DB2A4E2A43001757B6 /* MaterialCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D262DA2A4E2A43001757B6 /* MaterialCoordinator.swift */; };
@@ -75,7 +75,7 @@
 		B79F9FC02A4CB4B00000B973 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		B79F9FC22A4CE7C40000B973 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		B79F9FC42A4CE8050000B973 /* MaterialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialViewController.swift; sourceTree = "<group>"; };
-		B79F9FC72A4D23390000B973 /* ViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerDelegate.swift; sourceTree = "<group>"; };
+		B79F9FC72A4D23390000B973 /* ViewControllerCoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerCoordinatorDelegate.swift; sourceTree = "<group>"; };
 		B79F9FCA2A4DDE730000B973 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		B7D262D82A4E29A6001757B6 /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
 		B7D262DA2A4E2A43001757B6 /* MaterialCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialCoordinator.swift; sourceTree = "<group>"; };
@@ -263,7 +263,7 @@
 		B79F9FC62A4D23210000B973 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				B79F9FC72A4D23390000B973 /* ViewControllerDelegate.swift */,
+				B79F9FC72A4D23390000B973 /* ViewControllerCoordinatorDelegate.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -415,7 +415,7 @@
 				B78D920F2A900FCB00AE57E4 /* MaterialTwoViewController.swift in Sources */,
 				B79F9FC12A4CB4B00000B973 /* HomeCoordinator.swift in Sources */,
 				B78D920D2A900F3D00AE57E4 /* ProfileTwoViewController.swift in Sources */,
-				B79F9FC82A4D23390000B973 /* ViewControllerDelegate.swift in Sources */,
+				B79F9FC82A4D23390000B973 /* ViewControllerCoordinatorDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

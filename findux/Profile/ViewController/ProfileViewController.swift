@@ -7,10 +7,9 @@
 
 import UIKit
 
-final class ProfileViewController: UIViewController, ViewControllerDelegate {
+final class ProfileViewController: UIViewController, ViewControllerCoordinatorDelegate {
     
-    weak var coordinator: ProfileCoordinator?
-    weak var viewModel: AnyObject?
+    weak var coordinatorDelegate: ProfileCoordinator?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +20,7 @@ final class ProfileViewController: UIViewController, ViewControllerDelegate {
     
     @objc
     func goToProfileTwoViewController() {
-        coordinator?.goToProfileTwoViewController()
+        coordinatorDelegate?.goToProfileTwoViewController()
     }
 }
 

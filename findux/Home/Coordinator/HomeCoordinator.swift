@@ -15,13 +15,13 @@ final class HomeCoordinator: BaseChildCoordinator<MainCoordinator> {
     
     func goToHomeViewController() {
         let vc = HomeViewController()
-        vc.coordinator = self
+        vc.coordinatorDelegate = self
         navigationController.pushViewController(vc, animated: true)
     }
     
     func goToHomeTwoViewController() {
         let vc = HomeTwoViewController()
-        vc.coordinator = self
+        vc.coordinatorDelegate = self
         navigationController.pushViewController(vc, animated: true)
     }
     

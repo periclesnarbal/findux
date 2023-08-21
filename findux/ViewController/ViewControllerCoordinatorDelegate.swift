@@ -7,11 +7,9 @@
 
 import Foundation
 
-protocol ViewControllerDelegate {
+protocol ViewControllerCoordinatorDelegate {
     associatedtype CoordinatorType: ChildCoordinator
-    associatedtype ViewModelType
     
-    var coordinator: CoordinatorType? { get set }
-    var viewModel: ViewModelType? { get set }
+    var coordinatorDelegate: CoordinatorType? { get set }
 }
 

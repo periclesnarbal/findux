@@ -13,7 +13,7 @@ class BaseChildCoordinator<T: BaseCoordinator>: BaseCoordinator, ChildCoordinato
     required init(parentCoordinator: T) {
         self.parentCoordinator = parentCoordinator
         super.init(navigationController: parentCoordinator.navigationController, navigationDelegate: parentCoordinator.navigationDelegate)
-        navigationDelegate?.delegate = parentCoordinator
+        navigationDelegate?.coordinatorDelegate = parentCoordinator
         navigationController.delegate = navigationDelegate
     }
 }

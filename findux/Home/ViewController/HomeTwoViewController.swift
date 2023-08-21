@@ -7,10 +7,9 @@
 
 import UIKit
 
-final class HomeTwoViewController: UIViewController, ViewControllerDelegate {
+final class HomeTwoViewController: UIViewController, ViewControllerCoordinatorDelegate {
     
-    weak var coordinator: HomeCoordinator?
-    weak var viewModel: AnyObject?
+    weak var coordinatorDelegate: HomeCoordinator?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +20,6 @@ final class HomeTwoViewController: UIViewController, ViewControllerDelegate {
     
     @objc
     func goToProfileViewController() {
-        coordinator?.goToProfile()
+        coordinatorDelegate?.goToProfile()
     }
 }

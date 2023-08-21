@@ -7,10 +7,9 @@
 
 import UIKit
 
-final class MaterialViewController: UIViewController, ViewControllerDelegate {
+final class MaterialViewController: UIViewController, ViewControllerCoordinatorDelegate {
     
-    weak var coordinator: MaterialCoordinator?
-    weak var viewModel: AnyObject?
+    weak var coordinatorDelegate: MaterialCoordinator?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +20,7 @@ final class MaterialViewController: UIViewController, ViewControllerDelegate {
     
     @objc
     func goToMaterialTwoViewController() {
-        coordinator?.goToMaterialTwoViewController()
+        coordinatorDelegate?.goToMaterialTwoViewController()
     }
 }
 

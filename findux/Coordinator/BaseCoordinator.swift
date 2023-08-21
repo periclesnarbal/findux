@@ -22,7 +22,7 @@ class BaseCoordinator: NSObject, Coordinator {
         self.navigationController = navigationController
         self.navigationDelegate = navigationDelegate
         super.init()
-        navigationDelegate?.delegate = self
+        navigationDelegate?.coordinatorDelegate = self
         navigationController.delegate = navigationDelegate
     }
     
@@ -75,10 +75,8 @@ extension BaseCoordinator: BaseCoordinatorNavigationControlDelegate {
     }
     
     private func childCoordinatorsInUse() -> [any ChildCoordinator] {
-        // TODO: CONSERTAR ESTE METODO
-        return navigationController.viewControllers
-            .compactMap { ($0 as? (any ViewControllerDelegate))?.coordinator }
-            .filter { coordinator in childCoordinators.contains { coordinator === $0 } }
+        let viewCoordinators = navigationController.viewControllers.compactMap { ($0 as? (any ViewControllerCoordinatorDelegate))?.coordinatorDelegate }
+        return childCoordinators.filter { coordinator in viewCoordinators.contains { coordinator === $0 } }
     }
 }
 

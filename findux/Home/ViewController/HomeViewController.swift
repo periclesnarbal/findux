@@ -7,10 +7,9 @@
 
 import UIKit
 
-final class HomeViewController: UIViewController, ViewControllerDelegate {
+final class HomeViewController: UIViewController, ViewControllerCoordinatorDelegate {
     
-    weak var coordinator: HomeCoordinator?
-    weak var viewModel: AnyObject?
+    weak var coordinatorDelegate: HomeCoordinator?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +20,7 @@ final class HomeViewController: UIViewController, ViewControllerDelegate {
     
     @objc
     func goToHomeTwoViewController() {
-        coordinator?.goToHomeTwoViewController()
+        coordinatorDelegate?.goToHomeTwoViewController()
     }
 }
 

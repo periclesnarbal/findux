@@ -14,12 +14,12 @@ enum NavigationDirection: String {
 }
 
 protocol NavigationControlCoordinatorDelegate: NSObject, UINavigationControllerDelegate {
-    var delegate: BaseCoordinatorNavigationControlDelegate? { get set }
+    var coordinatorDelegate: BaseCoordinatorNavigationControlDelegate? { get set }
 }
 
 final class NavigationControlCoordinator: NSObject, NavigationControlCoordinatorDelegate {
     
-    weak var delegate: BaseCoordinatorNavigationControlDelegate?
+    weak var coordinatorDelegate: BaseCoordinatorNavigationControlDelegate?
     private var viewControllerCountBefore = 0
     var lastDirection: NavigationDirection = .idle
     
@@ -29,7 +29,7 @@ final class NavigationControlCoordinator: NSObject, NavigationControlCoordinator
         print("DIRECTION: \(lastDirection.rawValue)")
 
         if lastDirection == .push {
-            delegate?.unstackViews(currentViewController: viewController)
+            coordinatorDelegate?.unstackViews(currentViewController: viewController)
         }
     }
     
@@ -38,7 +38,7 @@ final class NavigationControlCoordinator: NSObject, NavigationControlCoordinator
         viewControllerCountBefore = navigationController.viewControllers.count
         print("VIEW CONTROLLERS: \(navigationController.viewControllers)")
         if lastDirection == .pop {
-            self.delegate?.updateChildCoordinators()
+            self.coordinatorDelegate?.updateChildCoordinators()
         }
     }
     
