@@ -28,4 +28,8 @@ final class HomeCoordinator: BaseChildCoordinator<MainCoordinator> {
     func goToProfile() {
         parentCoordinator.goToProfileCoordinator()
     }
+    
+    func goToPassword() {
+        parentCoordinator.goToPasswordCoordinator()
+    }
 }

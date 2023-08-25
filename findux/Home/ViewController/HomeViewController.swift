@@ -13,7 +13,7 @@ final class HomeViewController: UIViewController, ViewControllerCoordinatorDeleg
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(goToHomeTwoViewController))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(goToPasswordViewController))
         // Do any additional setup after loading the view.
         view.backgroundColor = .red
     }
@@ -21,6 +21,11 @@ final class HomeViewController: UIViewController, ViewControllerCoordinatorDeleg
     @objc
     func goToHomeTwoViewController() {
         coordinatorDelegate?.goToHomeTwoViewController()
+    }
+
+    @objc
+    func goToPasswordViewController() {
+        coordinatorDelegate?.goToPassword()
     }
 }
 

@@ -27,4 +27,9 @@ final class MainCoordinator: BaseCoordinator {
         let materialCoordinator =  buildChildCoordinator(childType: MaterialCoordinator.self, parentCoordinator: self)
         materialCoordinator.start()
     }
+    
+    func goToPasswordCoordinator() {
+        let passwordCoordinator = buildChildCoordinator(childType: PasswordCoordinator.self, parentCoordinator: self)
+        passwordCoordinator.start()
+    }
 }

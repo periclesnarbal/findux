@@ -29,6 +29,10 @@
 		B79F9FC52A4CE8050000B973 /* MaterialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79F9FC42A4CE8050000B973 /* MaterialViewController.swift */; };
 		B79F9FC82A4D23390000B973 /* ViewControllerCoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79F9FC72A4D23390000B973 /* ViewControllerCoordinatorDelegate.swift */; };
 		B79F9FCB2A4DDE730000B973 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79F9FCA2A4DDE730000B973 /* MainCoordinator.swift */; };
+		B7C068272A98E92900A5F9B2 /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C068262A98E92900A5F9B2 /* PasswordViewController.swift */; };
+		B7C068292A98EBBE00A5F9B2 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C068282A98EBBE00A5F9B2 /* UIViewExtension.swift */; };
+		B7C0682B2A98F26A00A5F9B2 /* PasswordCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C0682A2A98F26A00A5F9B2 /* PasswordCoordinator.swift */; };
+		B7C0682E2A98F61100A5F9B2 /* BaseViewEmbedScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C0682D2A98F61100A5F9B2 /* BaseViewEmbedScrollViewController.swift */; };
 		B7D262D92A4E29A6001757B6 /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D262D82A4E29A6001757B6 /* ProfileCoordinator.swift */; };
 		B7D262DB2A4E2A43001757B6 /* MaterialCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D262DA2A4E2A43001757B6 /* MaterialCoordinator.swift */; };
 /* End PBXBuildFile section */
@@ -77,6 +81,10 @@
 		B79F9FC42A4CE8050000B973 /* MaterialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialViewController.swift; sourceTree = "<group>"; };
 		B79F9FC72A4D23390000B973 /* ViewControllerCoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerCoordinatorDelegate.swift; sourceTree = "<group>"; };
 		B79F9FCA2A4DDE730000B973 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		B7C068262A98E92900A5F9B2 /* PasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
+		B7C068282A98EBBE00A5F9B2 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		B7C0682A2A98F26A00A5F9B2 /* PasswordCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordCoordinator.swift; sourceTree = "<group>"; };
+		B7C0682D2A98F61100A5F9B2 /* BaseViewEmbedScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewEmbedScrollViewController.swift; sourceTree = "<group>"; };
 		B7D262D82A4E29A6001757B6 /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
 		B7D262DA2A4E2A43001757B6 /* MaterialCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -137,6 +145,7 @@
 				B79F9FBD2A4CB1B20000B973 /* Coordinator */,
 				B79F9FC62A4D23210000B973 /* ViewController */,
 				B73691302A7AE61B00A67F4B /* Extension */,
+				B7C068242A98E8B100A5F9B2 /* Password */,
 				B78D92012A8FFDD900AE57E4 /* Home */,
 				B78D92022A8FFDE000AE57E4 /* Profile */,
 				B78D92032A8FFDE800AE57E4 /* Material */,
@@ -166,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				B736912E2A7AE57E00A67F4B /* UINavigationControllerExtension.swift */,
+				B7C068282A98EBBE00A5F9B2 /* UIViewExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -264,8 +274,34 @@
 			isa = PBXGroup;
 			children = (
 				B79F9FC72A4D23390000B973 /* ViewControllerCoordinatorDelegate.swift */,
+				B7C0682D2A98F61100A5F9B2 /* BaseViewEmbedScrollViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		B7C068242A98E8B100A5F9B2 /* Password */ = {
+			isa = PBXGroup;
+			children = (
+				B7C0682C2A98F38900A5F9B2 /* Coordinator */,
+				B7C068252A98E8E700A5F9B2 /* ViewController */,
+			);
+			path = Password;
+			sourceTree = "<group>";
+		};
+		B7C068252A98E8E700A5F9B2 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B7C068262A98E92900A5F9B2 /* PasswordViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		B7C0682C2A98F38900A5F9B2 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				B7C0682A2A98F26A00A5F9B2 /* PasswordCoordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -404,10 +440,13 @@
 				B736912F2A7AE57E00A67F4B /* UINavigationControllerExtension.swift in Sources */,
 				B71B91C52A4CAD5B00843ACA /* HomeViewController.swift in Sources */,
 				B784D4C12A86AD6D00CD0E39 /* BaseChildCoordinator.swift in Sources */,
+				B7C068272A98E92900A5F9B2 /* PasswordViewController.swift in Sources */,
 				B7D262DB2A4E2A43001757B6 /* MaterialCoordinator.swift in Sources */,
 				B71B91C12A4CAD5B00843ACA /* AppDelegate.swift in Sources */,
 				B78D920B2A900E0200AE57E4 /* HomeTwoViewController.swift in Sources */,
+				B7C068292A98EBBE00A5F9B2 /* UIViewExtension.swift in Sources */,
 				B79F9FCB2A4DDE730000B973 /* MainCoordinator.swift in Sources */,
+				B7C0682B2A98F26A00A5F9B2 /* PasswordCoordinator.swift in Sources */,
 				B79F9FBF2A4CB1E40000B973 /* BaseCoordinator.swift in Sources */,
 				B79F9FC32A4CE7C40000B973 /* ProfileViewController.swift in Sources */,
 				B71B91C32A4CAD5B00843ACA /* SceneDelegate.swift in Sources */,
@@ -416,6 +455,7 @@
 				B79F9FC12A4CB4B00000B973 /* HomeCoordinator.swift in Sources */,
 				B78D920D2A900F3D00AE57E4 /* ProfileTwoViewController.swift in Sources */,
 				B79F9FC82A4D23390000B973 /* ViewControllerCoordinatorDelegate.swift in Sources */,
+				B7C0682E2A98F61100A5F9B2 /* BaseViewEmbedScrollViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
