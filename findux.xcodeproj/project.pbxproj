@@ -16,23 +16,35 @@
 		B71B91E22A4CAD5D00843ACA /* finduxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71B91E12A4CAD5D00843ACA /* finduxUITests.swift */; };
 		B71B91E42A4CAD5D00843ACA /* finduxUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71B91E32A4CAD5D00843ACA /* finduxUITestsLaunchTests.swift */; };
 		B736912F2A7AE57E00A67F4B /* UINavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B736912E2A7AE57E00A67F4B /* UINavigationControllerExtension.swift */; };
+		B73774B72A9D192600B56B74 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73774B62A9D192600B56B74 /* BaseView.swift */; };
+		B76BEC502A99410F00A24FEE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76BEC4F2A99410F00A24FEE /* HomeView.swift */; };
+		B76BEC522A99412800A24FEE /* HomeTwoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76BEC512A99412800A24FEE /* HomeTwoView.swift */; };
+		B76BEC542A99414E00A24FEE /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76BEC532A99414E00A24FEE /* ProfileView.swift */; };
+		B76BEC572A99417000A24FEE /* ProfileTwoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76BEC562A99417000A24FEE /* ProfileTwoView.swift */; };
+		B76BEC592A99418E00A24FEE /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76BEC582A99418E00A24FEE /* MaterialView.swift */; };
+		B76BEC5B2A9941A000A24FEE /* MaterialTwoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76BEC5A2A9941A000A24FEE /* MaterialTwoView.swift */; };
+		B76BEC5D2A9941C000A24FEE /* PasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76BEC5C2A9941C000A24FEE /* PasswordView.swift */; };
+		B76BEC5F2A99420200A24FEE /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76BEC5E2A99420200A24FEE /* BaseViewController.swift */; };
+		B76BEC612A99424200A24FEE /* LifeCycleViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76BEC602A99424200A24FEE /* LifeCycleViewControllerDelegate.swift */; };
+		B76BEC632A995AB900A24FEE /* FullAccessViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76BEC622A995AB900A24FEE /* FullAccessViewControllerDelegate.swift */; };
 		B784D4C12A86AD6D00CD0E39 /* BaseChildCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B784D4C02A86AD6D00CD0E39 /* BaseChildCoordinator.swift */; };
 		B784D4C32A86C75B00CD0E39 /* BaseCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B784D4C22A86C75B00CD0E39 /* BaseCoordinatorTests.swift */; };
 		B78D920B2A900E0200AE57E4 /* HomeTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78D920A2A900E0200AE57E4 /* HomeTwoViewController.swift */; };
 		B78D920D2A900F3D00AE57E4 /* ProfileTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78D920C2A900F3D00AE57E4 /* ProfileTwoViewController.swift */; };
 		B78D920F2A900FCB00AE57E4 /* MaterialTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78D920E2A900FCB00AE57E4 /* MaterialTwoViewController.swift */; };
-		B79E3AA72A8EA7AA00C8BD2E /* NavigationControlCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79E3AA62A8EA7AA00C8BD2E /* NavigationControlCoordinator.swift */; };
+		B79E3AA72A8EA7AA00C8BD2E /* CoordinatorNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79E3AA62A8EA7AA00C8BD2E /* CoordinatorNavigationController.swift */; };
 		B79F9FBC2A4CB0BD0000B973 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79F9FBB2A4CB0BD0000B973 /* Coordinator.swift */; };
 		B79F9FBF2A4CB1E40000B973 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79F9FBE2A4CB1E40000B973 /* BaseCoordinator.swift */; };
 		B79F9FC12A4CB4B00000B973 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79F9FC02A4CB4B00000B973 /* HomeCoordinator.swift */; };
 		B79F9FC32A4CE7C40000B973 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79F9FC22A4CE7C40000B973 /* ProfileViewController.swift */; };
 		B79F9FC52A4CE8050000B973 /* MaterialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79F9FC42A4CE8050000B973 /* MaterialViewController.swift */; };
-		B79F9FC82A4D23390000B973 /* ViewControllerCoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79F9FC72A4D23390000B973 /* ViewControllerCoordinatorDelegate.swift */; };
+		B79F9FC82A4D23390000B973 /* ViewCoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79F9FC72A4D23390000B973 /* ViewCoordinatorDelegate.swift */; };
 		B79F9FCB2A4DDE730000B973 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79F9FCA2A4DDE730000B973 /* MainCoordinator.swift */; };
 		B7C068272A98E92900A5F9B2 /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C068262A98E92900A5F9B2 /* PasswordViewController.swift */; };
 		B7C068292A98EBBE00A5F9B2 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C068282A98EBBE00A5F9B2 /* UIViewExtension.swift */; };
 		B7C0682B2A98F26A00A5F9B2 /* PasswordCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C0682A2A98F26A00A5F9B2 /* PasswordCoordinator.swift */; };
 		B7C0682E2A98F61100A5F9B2 /* BaseViewEmbedScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C0682D2A98F61100A5F9B2 /* BaseViewEmbedScrollViewController.swift */; };
+		B7C068302A993C9E00A5F9B2 /* ChildCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C0682F2A993C9E00A5F9B2 /* ChildCoordinator.swift */; };
 		B7D262D92A4E29A6001757B6 /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D262D82A4E29A6001757B6 /* ProfileCoordinator.swift */; };
 		B7D262DB2A4E2A43001757B6 /* MaterialCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D262DA2A4E2A43001757B6 /* MaterialCoordinator.swift */; };
 /* End PBXBuildFile section */
@@ -68,23 +80,35 @@
 		B71B91E12A4CAD5D00843ACA /* finduxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = finduxUITests.swift; sourceTree = "<group>"; };
 		B71B91E32A4CAD5D00843ACA /* finduxUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = finduxUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B736912E2A7AE57E00A67F4B /* UINavigationControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerExtension.swift; sourceTree = "<group>"; };
+		B73774B62A9D192600B56B74 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		B76BEC4F2A99410F00A24FEE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		B76BEC512A99412800A24FEE /* HomeTwoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTwoView.swift; sourceTree = "<group>"; };
+		B76BEC532A99414E00A24FEE /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		B76BEC562A99417000A24FEE /* ProfileTwoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTwoView.swift; sourceTree = "<group>"; };
+		B76BEC582A99418E00A24FEE /* MaterialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
+		B76BEC5A2A9941A000A24FEE /* MaterialTwoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialTwoView.swift; sourceTree = "<group>"; };
+		B76BEC5C2A9941C000A24FEE /* PasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordView.swift; sourceTree = "<group>"; };
+		B76BEC5E2A99420200A24FEE /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		B76BEC602A99424200A24FEE /* LifeCycleViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCycleViewControllerDelegate.swift; sourceTree = "<group>"; };
+		B76BEC622A995AB900A24FEE /* FullAccessViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullAccessViewControllerDelegate.swift; sourceTree = "<group>"; };
 		B784D4C02A86AD6D00CD0E39 /* BaseChildCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseChildCoordinator.swift; sourceTree = "<group>"; };
 		B784D4C22A86C75B00CD0E39 /* BaseCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinatorTests.swift; sourceTree = "<group>"; };
 		B78D920A2A900E0200AE57E4 /* HomeTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTwoViewController.swift; sourceTree = "<group>"; };
 		B78D920C2A900F3D00AE57E4 /* ProfileTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTwoViewController.swift; sourceTree = "<group>"; };
 		B78D920E2A900FCB00AE57E4 /* MaterialTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialTwoViewController.swift; sourceTree = "<group>"; };
-		B79E3AA62A8EA7AA00C8BD2E /* NavigationControlCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControlCoordinator.swift; sourceTree = "<group>"; };
+		B79E3AA62A8EA7AA00C8BD2E /* CoordinatorNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorNavigationController.swift; sourceTree = "<group>"; };
 		B79F9FBB2A4CB0BD0000B973 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		B79F9FBE2A4CB1E40000B973 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		B79F9FC02A4CB4B00000B973 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		B79F9FC22A4CE7C40000B973 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		B79F9FC42A4CE8050000B973 /* MaterialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialViewController.swift; sourceTree = "<group>"; };
-		B79F9FC72A4D23390000B973 /* ViewControllerCoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerCoordinatorDelegate.swift; sourceTree = "<group>"; };
+		B79F9FC72A4D23390000B973 /* ViewCoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCoordinatorDelegate.swift; sourceTree = "<group>"; };
 		B79F9FCA2A4DDE730000B973 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		B7C068262A98E92900A5F9B2 /* PasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
 		B7C068282A98EBBE00A5F9B2 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		B7C0682A2A98F26A00A5F9B2 /* PasswordCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordCoordinator.swift; sourceTree = "<group>"; };
 		B7C0682D2A98F61100A5F9B2 /* BaseViewEmbedScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewEmbedScrollViewController.swift; sourceTree = "<group>"; };
+		B7C0682F2A993C9E00A5F9B2 /* ChildCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildCoordinator.swift; sourceTree = "<group>"; };
 		B7D262D82A4E29A6001757B6 /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
 		B7D262DA2A4E2A43001757B6 /* MaterialCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -142,13 +166,8 @@
 				B71B91C92A4CAD5C00843ACA /* Assets.xcassets */,
 				B71B91CB2A4CAD5C00843ACA /* LaunchScreen.storyboard */,
 				B71B91CE2A4CAD5C00843ACA /* Info.plist */,
-				B79F9FBD2A4CB1B20000B973 /* Coordinator */,
-				B79F9FC62A4D23210000B973 /* ViewController */,
-				B73691302A7AE61B00A67F4B /* Extension */,
-				B7C068242A98E8B100A5F9B2 /* Password */,
-				B78D92012A8FFDD900AE57E4 /* Home */,
-				B78D92022A8FFDE000AE57E4 /* Profile */,
-				B78D92032A8FFDE800AE57E4 /* Material */,
+				B7C068322A993D1700A5F9B2 /* General */,
+				B7C068332A993D3900A5F9B2 /* Feature */,
 			);
 			path = findux;
 			sourceTree = "<group>";
@@ -185,6 +204,7 @@
 			children = (
 				B78D92042A90001500AE57E4 /* Coordinator */,
 				B78D92072A90004900AE57E4 /* ViewController */,
+				B7C068352A993D5D00A5F9B2 /* View */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -194,6 +214,7 @@
 			children = (
 				B78D92062A90002600AE57E4 /* Coordinator */,
 				B78D92082A90005200AE57E4 /* ViewController */,
+				B7C068362A993D7000A5F9B2 /* View */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -203,6 +224,7 @@
 			children = (
 				B78D92052A90001E00AE57E4 /* Coordinator */,
 				B78D92092A90005B00AE57E4 /* ViewController */,
+				B7C068372A993D8000A5F9B2 /* View */,
 			);
 			path = Material;
 			sourceTree = "<group>";
@@ -262,10 +284,11 @@
 			isa = PBXGroup;
 			children = (
 				B79F9FBB2A4CB0BD0000B973 /* Coordinator.swift */,
+				B7C0682F2A993C9E00A5F9B2 /* ChildCoordinator.swift */,
 				B79F9FBE2A4CB1E40000B973 /* BaseCoordinator.swift */,
 				B784D4C02A86AD6D00CD0E39 /* BaseChildCoordinator.swift */,
 				B79F9FCA2A4DDE730000B973 /* MainCoordinator.swift */,
-				B79E3AA62A8EA7AA00C8BD2E /* NavigationControlCoordinator.swift */,
+				B79E3AA62A8EA7AA00C8BD2E /* CoordinatorNavigationController.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -273,8 +296,10 @@
 		B79F9FC62A4D23210000B973 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				B79F9FC72A4D23390000B973 /* ViewControllerCoordinatorDelegate.swift */,
+				B76BEC5E2A99420200A24FEE /* BaseViewController.swift */,
 				B7C0682D2A98F61100A5F9B2 /* BaseViewEmbedScrollViewController.swift */,
+				B76BEC602A99424200A24FEE /* LifeCycleViewControllerDelegate.swift */,
+				B76BEC622A995AB900A24FEE /* FullAccessViewControllerDelegate.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -284,6 +309,7 @@
 			children = (
 				B7C0682C2A98F38900A5F9B2 /* Coordinator */,
 				B7C068252A98E8E700A5F9B2 /* ViewController */,
+				B7C068342A993D5400A5F9B2 /* View */,
 			);
 			path = Password;
 			sourceTree = "<group>";
@@ -302,6 +328,72 @@
 				B7C0682A2A98F26A00A5F9B2 /* PasswordCoordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		B7C068312A993CD700A5F9B2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B79F9FC72A4D23390000B973 /* ViewCoordinatorDelegate.swift */,
+				B73774B62A9D192600B56B74 /* BaseView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B7C068322A993D1700A5F9B2 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				B79F9FBD2A4CB1B20000B973 /* Coordinator */,
+				B79F9FC62A4D23210000B973 /* ViewController */,
+				B7C068312A993CD700A5F9B2 /* View */,
+				B73691302A7AE61B00A67F4B /* Extension */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		B7C068332A993D3900A5F9B2 /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				B7C068242A98E8B100A5F9B2 /* Password */,
+				B78D92012A8FFDD900AE57E4 /* Home */,
+				B78D92022A8FFDE000AE57E4 /* Profile */,
+				B78D92032A8FFDE800AE57E4 /* Material */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		B7C068342A993D5400A5F9B2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B76BEC5C2A9941C000A24FEE /* PasswordView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B7C068352A993D5D00A5F9B2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B76BEC4F2A99410F00A24FEE /* HomeView.swift */,
+				B76BEC512A99412800A24FEE /* HomeTwoView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B7C068362A993D7000A5F9B2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B76BEC532A99414E00A24FEE /* ProfileView.swift */,
+				B76BEC562A99417000A24FEE /* ProfileTwoView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B7C068372A993D8000A5F9B2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B76BEC582A99418E00A24FEE /* MaterialView.swift */,
+				B76BEC5A2A9941A000A24FEE /* MaterialTwoView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -436,17 +528,24 @@
 			files = (
 				B7D262D92A4E29A6001757B6 /* ProfileCoordinator.swift in Sources */,
 				B79F9FBC2A4CB0BD0000B973 /* Coordinator.swift in Sources */,
-				B79E3AA72A8EA7AA00C8BD2E /* NavigationControlCoordinator.swift in Sources */,
+				B76BEC5B2A9941A000A24FEE /* MaterialTwoView.swift in Sources */,
+				B73774B72A9D192600B56B74 /* BaseView.swift in Sources */,
+				B76BEC522A99412800A24FEE /* HomeTwoView.swift in Sources */,
+				B76BEC5F2A99420200A24FEE /* BaseViewController.swift in Sources */,
+				B76BEC592A99418E00A24FEE /* MaterialView.swift in Sources */,
+				B79E3AA72A8EA7AA00C8BD2E /* CoordinatorNavigationController.swift in Sources */,
 				B736912F2A7AE57E00A67F4B /* UINavigationControllerExtension.swift in Sources */,
 				B71B91C52A4CAD5B00843ACA /* HomeViewController.swift in Sources */,
 				B784D4C12A86AD6D00CD0E39 /* BaseChildCoordinator.swift in Sources */,
 				B7C068272A98E92900A5F9B2 /* PasswordViewController.swift in Sources */,
+				B76BEC572A99417000A24FEE /* ProfileTwoView.swift in Sources */,
 				B7D262DB2A4E2A43001757B6 /* MaterialCoordinator.swift in Sources */,
 				B71B91C12A4CAD5B00843ACA /* AppDelegate.swift in Sources */,
 				B78D920B2A900E0200AE57E4 /* HomeTwoViewController.swift in Sources */,
 				B7C068292A98EBBE00A5F9B2 /* UIViewExtension.swift in Sources */,
 				B79F9FCB2A4DDE730000B973 /* MainCoordinator.swift in Sources */,
 				B7C0682B2A98F26A00A5F9B2 /* PasswordCoordinator.swift in Sources */,
+				B76BEC542A99414E00A24FEE /* ProfileView.swift in Sources */,
 				B79F9FBF2A4CB1E40000B973 /* BaseCoordinator.swift in Sources */,
 				B79F9FC32A4CE7C40000B973 /* ProfileViewController.swift in Sources */,
 				B71B91C32A4CAD5B00843ACA /* SceneDelegate.swift in Sources */,
@@ -454,8 +553,13 @@
 				B78D920F2A900FCB00AE57E4 /* MaterialTwoViewController.swift in Sources */,
 				B79F9FC12A4CB4B00000B973 /* HomeCoordinator.swift in Sources */,
 				B78D920D2A900F3D00AE57E4 /* ProfileTwoViewController.swift in Sources */,
-				B79F9FC82A4D23390000B973 /* ViewControllerCoordinatorDelegate.swift in Sources */,
+				B76BEC632A995AB900A24FEE /* FullAccessViewControllerDelegate.swift in Sources */,
+				B76BEC612A99424200A24FEE /* LifeCycleViewControllerDelegate.swift in Sources */,
+				B76BEC5D2A9941C000A24FEE /* PasswordView.swift in Sources */,
+				B79F9FC82A4D23390000B973 /* ViewCoordinatorDelegate.swift in Sources */,
+				B76BEC502A99410F00A24FEE /* HomeView.swift in Sources */,
 				B7C0682E2A98F61100A5F9B2 /* BaseViewEmbedScrollViewController.swift in Sources */,
+				B7C068302A993C9E00A5F9B2 /* ChildCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
