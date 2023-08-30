@@ -11,9 +11,10 @@ class BaseViewController: UIViewController {
     
     weak var lifeCycleDelegate: LifeCycleViewControllerDelegate?
     weak var fullAccessDelegate: FullAccessViewControllerDelegate?
+    var coordinatorDelegate: (() -> (any ChildCoordinator)?)?
     
-    var contentView: any ViewCoordinatorDelegate = {
-        let view = BaseView<BaseChildCoordinator<BaseCoordinator>>()
+    var contentView: UIView = {
+        let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -26,9 +27,10 @@ class BaseViewController: UIViewController {
         view.embedConstraints(contentView)
     }
     
-    func loadContentView(_ anyView: any ViewCoordinatorDelegate) {
+    func loadContentView<T: ChildCoordinator>(_ anyView: BaseView<T>) {
         anyView.translatesAutoresizingMaskIntoConstraints = false
         contentView = anyView
+        coordinatorDelegate = { return anyView.coordinatorDelegate }
     }
     
     override func loadView() {

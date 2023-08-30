@@ -79,9 +79,8 @@ extension BaseCoordinator: BaseCoordinatorNavigationControlDelegate {
     }
     
     private func childCoordinatorsInUse() -> [any ChildCoordinator] {
-        let viewCoordinators = navigationController.viewControllers.compactMap { ($0 as? BaseViewController)?.contentView }
-//        return childCoordinators.filter { coordinator in viewCoordinators.contains { coordinator === $0 } }
-        return []
+        let viewCoordinators = navigationController.viewControllers.compactMap { ($0 as? BaseViewController)?.coordinatorDelegate?() }
+        return childCoordinators.filter { coordinator in viewCoordinators.contains { coordinator === $0 } }
     }
 }
 
