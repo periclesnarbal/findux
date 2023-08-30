@@ -32,6 +32,7 @@
 		B78D920B2A900E0200AE57E4 /* HomeTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78D920A2A900E0200AE57E4 /* HomeTwoViewController.swift */; };
 		B78D920D2A900F3D00AE57E4 /* ProfileTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78D920C2A900F3D00AE57E4 /* ProfileTwoViewController.swift */; };
 		B78D920F2A900FCB00AE57E4 /* MaterialTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78D920E2A900FCB00AE57E4 /* MaterialTwoViewController.swift */; };
+		B7923BB92A9FB2880095B443 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7923BB82A9FB2880095B443 /* Network.swift */; };
 		B79E3AA72A8EA7AA00C8BD2E /* CoordinatorNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79E3AA62A8EA7AA00C8BD2E /* CoordinatorNavigationController.swift */; };
 		B79F9FBC2A4CB0BD0000B973 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79F9FBB2A4CB0BD0000B973 /* Coordinator.swift */; };
 		B79F9FBF2A4CB1E40000B973 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79F9FBE2A4CB1E40000B973 /* BaseCoordinator.swift */; };
@@ -96,6 +97,7 @@
 		B78D920A2A900E0200AE57E4 /* HomeTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTwoViewController.swift; sourceTree = "<group>"; };
 		B78D920C2A900F3D00AE57E4 /* ProfileTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTwoViewController.swift; sourceTree = "<group>"; };
 		B78D920E2A900FCB00AE57E4 /* MaterialTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialTwoViewController.swift; sourceTree = "<group>"; };
+		B7923BB82A9FB2880095B443 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		B79E3AA62A8EA7AA00C8BD2E /* CoordinatorNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorNavigationController.swift; sourceTree = "<group>"; };
 		B79F9FBB2A4CB0BD0000B973 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		B79F9FBE2A4CB1E40000B973 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
@@ -280,6 +282,14 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		B7923BB72A9FB2750095B443 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B7923BB82A9FB2880095B443 /* Network.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		B79F9FBD2A4CB1B20000B973 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
@@ -342,6 +352,7 @@
 		B7C068322A993D1700A5F9B2 /* General */ = {
 			isa = PBXGroup;
 			children = (
+				B7923BB72A9FB2750095B443 /* Network */,
 				B79F9FBD2A4CB1B20000B973 /* Coordinator */,
 				B79F9FC62A4D23210000B973 /* ViewController */,
 				B7C068312A993CD700A5F9B2 /* View */,
@@ -531,6 +542,7 @@
 				B76BEC5B2A9941A000A24FEE /* MaterialTwoView.swift in Sources */,
 				B73774B72A9D192600B56B74 /* BaseView.swift in Sources */,
 				B76BEC522A99412800A24FEE /* HomeTwoView.swift in Sources */,
+				B7923BB92A9FB2880095B443 /* Network.swift in Sources */,
 				B76BEC5F2A99420200A24FEE /* BaseViewController.swift in Sources */,
 				B76BEC592A99418E00A24FEE /* MaterialView.swift in Sources */,
 				B79E3AA72A8EA7AA00C8BD2E /* CoordinatorNavigationController.swift in Sources */,
