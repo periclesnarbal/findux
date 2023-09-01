@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B702AD562AA2251B00880AD8 /* TriangleShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = B702AD552AA2251B00880AD8 /* TriangleShape.swift */; };
 		B71B91C12A4CAD5B00843ACA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71B91C02A4CAD5B00843ACA /* AppDelegate.swift */; };
 		B71B91C32A4CAD5B00843ACA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71B91C22A4CAD5B00843ACA /* SceneDelegate.swift */; };
 		B71B91C52A4CAD5B00843ACA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71B91C42A4CAD5B00843ACA /* HomeViewController.swift */; };
@@ -47,6 +48,7 @@
 		B7C068302A993C9E00A5F9B2 /* ChildCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C0682F2A993C9E00A5F9B2 /* ChildCoordinator.swift */; };
 		B7D262D92A4E29A6001757B6 /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D262D82A4E29A6001757B6 /* ProfileCoordinator.swift */; };
 		B7D262DB2A4E2A43001757B6 /* MaterialCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D262DA2A4E2A43001757B6 /* MaterialCoordinator.swift */; };
+		B7FB6BA42AA0D70600F944E7 /* PasswordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7FB6BA32AA0D70600F944E7 /* PasswordView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B702AD552AA2251B00880AD8 /* TriangleShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriangleShape.swift; sourceTree = "<group>"; };
 		B71B91BD2A4CAD5B00843ACA /* findux.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = findux.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B71B91C02A4CAD5B00843ACA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B71B91C22A4CAD5B00843ACA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +114,7 @@
 		B7C0682F2A993C9E00A5F9B2 /* ChildCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildCoordinator.swift; sourceTree = "<group>"; };
 		B7D262D82A4E29A6001757B6 /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
 		B7D262DA2A4E2A43001757B6 /* MaterialCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialCoordinator.swift; sourceTree = "<group>"; };
+		B7FB6BA32AA0D70600F944E7 /* PasswordView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PasswordView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -346,6 +350,7 @@
 				B79F9FC62A4D23210000B973 /* ViewController */,
 				B7C068312A993CD700A5F9B2 /* View */,
 				B73691302A7AE61B00A67F4B /* Extension */,
+				B702AD552AA2251B00880AD8 /* TriangleShape.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -365,6 +370,7 @@
 			isa = PBXGroup;
 			children = (
 				B76BEC5C2A9941C000A24FEE /* PasswordView.swift */,
+				B7FB6BA32AA0D70600F944E7 /* PasswordView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -502,6 +508,7 @@
 			files = (
 				B71B91CD2A4CAD5C00843ACA /* LaunchScreen.storyboard in Resources */,
 				B71B91CA2A4CAD5C00843ACA /* Assets.xcassets in Resources */,
+				B7FB6BA42AA0D70600F944E7 /* PasswordView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -531,6 +538,8 @@
 				B76BEC5B2A9941A000A24FEE /* MaterialTwoView.swift in Sources */,
 				B73774B72A9D192600B56B74 /* BaseView.swift in Sources */,
 				B76BEC522A99412800A24FEE /* HomeTwoView.swift in Sources */,
+				B702AD562AA2251B00880AD8 /* TriangleShape.swift in Sources */,
+				B7923BB92A9FB2880095B443 /* Network.swift in Sources */,
 				B76BEC5F2A99420200A24FEE /* BaseViewController.swift in Sources */,
 				B76BEC592A99418E00A24FEE /* MaterialView.swift in Sources */,
 				B79E3AA72A8EA7AA00C8BD2E /* CoordinatorNavigationController.swift in Sources */,
