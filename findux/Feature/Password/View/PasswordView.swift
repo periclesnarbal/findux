@@ -8,22 +8,25 @@
 import UIKit
 
 class PasswordView: BaseView<PasswordCoordinator> {
-  
+    var triangle: TriangleRectangleShape?
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        if triangle == nil {
+            let triangle = TriangleRectangleShape(b: frame.height, c: frame.width)
+            triangle.fillColor = UIColor.white.cgColor
+            self.triangle = triangle
+            layer.addSublayer(triangle)
+        }
+    }
 }
 
 extension PasswordView: LifeCycleViewControllerDelegate {
     func viewDidLoad() {
-        backgroundColor = .blue
+//        backgroundColor = .blue
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        let b = frame.height
-        let c = frame.width
-        let a = sqrt((pow(b, 2) + pow(c, 2)))
-        let triangle = TriangleShape(a: a, b: b, c: c)
-        layer.addSublayer(triangle)
-        print(frame)
-    }
+    
 }
 

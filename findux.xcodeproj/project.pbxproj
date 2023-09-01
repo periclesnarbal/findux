@@ -41,6 +41,7 @@
 		B79F9FC52A4CE8050000B973 /* MaterialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79F9FC42A4CE8050000B973 /* MaterialViewController.swift */; };
 		B79F9FC82A4D23390000B973 /* ViewCoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79F9FC72A4D23390000B973 /* ViewCoordinatorDelegate.swift */; };
 		B79F9FCB2A4DDE730000B973 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79F9FCA2A4DDE730000B973 /* MainCoordinator.swift */; };
+		B7BE2DF42AA27F2A00B86F2B /* BaseTriangleShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BE2DF32AA27F2A00B86F2B /* BaseTriangleShape.swift */; };
 		B7C068272A98E92900A5F9B2 /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C068262A98E92900A5F9B2 /* PasswordViewController.swift */; };
 		B7C068292A98EBBE00A5F9B2 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C068282A98EBBE00A5F9B2 /* UIViewExtension.swift */; };
 		B7C0682B2A98F26A00A5F9B2 /* PasswordCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C0682A2A98F26A00A5F9B2 /* PasswordCoordinator.swift */; };
@@ -107,6 +108,7 @@
 		B79F9FC42A4CE8050000B973 /* MaterialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialViewController.swift; sourceTree = "<group>"; };
 		B79F9FC72A4D23390000B973 /* ViewCoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCoordinatorDelegate.swift; sourceTree = "<group>"; };
 		B79F9FCA2A4DDE730000B973 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		B7BE2DF32AA27F2A00B86F2B /* BaseTriangleShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTriangleShape.swift; sourceTree = "<group>"; };
 		B7C068262A98E92900A5F9B2 /* PasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
 		B7C068282A98EBBE00A5F9B2 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		B7C0682A2A98F26A00A5F9B2 /* PasswordCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordCoordinator.swift; sourceTree = "<group>"; };
@@ -308,6 +310,15 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		B7BE2DF52AA2829500B86F2B /* Shapes */ = {
+			isa = PBXGroup;
+			children = (
+				B7BE2DF32AA27F2A00B86F2B /* BaseTriangleShape.swift */,
+				B702AD552AA2251B00880AD8 /* TriangleShape.swift */,
+			);
+			path = Shapes;
+			sourceTree = "<group>";
+		};
 		B7C068242A98E8B100A5F9B2 /* Password */ = {
 			isa = PBXGroup;
 			children = (
@@ -337,6 +348,7 @@
 		B7C068312A993CD700A5F9B2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B7BE2DF52AA2829500B86F2B /* Shapes */,
 				B79F9FC72A4D23390000B973 /* ViewCoordinatorDelegate.swift */,
 				B73774B62A9D192600B56B74 /* BaseView.swift */,
 			);
@@ -350,7 +362,6 @@
 				B79F9FC62A4D23210000B973 /* ViewController */,
 				B7C068312A993CD700A5F9B2 /* View */,
 				B73691302A7AE61B00A67F4B /* Extension */,
-				B702AD552AA2251B00880AD8 /* TriangleShape.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -539,11 +550,11 @@
 				B73774B72A9D192600B56B74 /* BaseView.swift in Sources */,
 				B76BEC522A99412800A24FEE /* HomeTwoView.swift in Sources */,
 				B702AD562AA2251B00880AD8 /* TriangleShape.swift in Sources */,
-				B7923BB92A9FB2880095B443 /* Network.swift in Sources */,
 				B76BEC5F2A99420200A24FEE /* BaseViewController.swift in Sources */,
 				B76BEC592A99418E00A24FEE /* MaterialView.swift in Sources */,
 				B79E3AA72A8EA7AA00C8BD2E /* CoordinatorNavigationController.swift in Sources */,
 				B736912F2A7AE57E00A67F4B /* UINavigationControllerExtension.swift in Sources */,
+				B7BE2DF42AA27F2A00B86F2B /* BaseTriangleShape.swift in Sources */,
 				B71B91C52A4CAD5B00843ACA /* HomeViewController.swift in Sources */,
 				B784D4C12A86AD6D00CD0E39 /* BaseChildCoordinator.swift in Sources */,
 				B7C068272A98E92900A5F9B2 /* PasswordViewController.swift in Sources */,
