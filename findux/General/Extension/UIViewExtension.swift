@@ -16,4 +16,13 @@ extension UIView {
             view.bottomAnchor.constraint(equalTo: bottomAnchor, constant: padding.bottom)
         ])
     }
+    
+    func loadViewFromNib(named: String? = nil) -> UIView? {
+        let bundle = Bundle(for: type(of: self))
+        let nibName = named == nil ? String(describing: type(of: self)) : named ?? ""
+        let nib = UINib(nibName: nibName, bundle: bundle)
+        let nibView = nib.instantiate(withOwner: self, options: nil).first as? UIView
+        
+        return nibView
+    }
 }
