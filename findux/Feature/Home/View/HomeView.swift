@@ -19,7 +19,7 @@ extension HomeView: LifeCycleViewControllerDelegate {
 
 extension HomeView: FullAccessViewControllerDelegate {
     func getNavigationItem(_ navigationItem: UINavigationItem) {
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(goToHomeTwoViewController))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(goToPasswordViewController))
     }
     
     @objc
