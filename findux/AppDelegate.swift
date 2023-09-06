@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import GoogleSignIn
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,8 +15,53 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        googleSignInSetup()
+        googleSignInRestoreSeccion()
+        
         return true
     }
+    
+    private func googleSignInSetup() {
+        if let credentials = try? googleSignInLoadCredentials() {
+            let configuration = GIDConfiguration(clientID: credentials.clientId)
+            GIDSignIn.sharedInstance.configuration = configuration
+        }
+    }
+    
+    private func googleSignInLoadCredentials() throws -> GoogleSignInCredentialsModel {
+        if let path = Bundle.main.path(forResource: "credentials", ofType: "plist") {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path))
+                let decoder = PropertyListDecoder()
+                let credentials = try decoder.decode(GoogleSignInCredentialsModel.self, from: data)
+                return credentials
+            } catch {
+               throw error
+            }
+        }
+        throw NSError(domain: "File named credentials.plist cant`t be load or doesn't exists.", code: 0)
+    }
+    
+    private func googleSignInRestoreSeccion() {
+        GIDSignIn.sharedInstance.restorePreviousSignIn { user, error in
+            if error != nil || user == nil {
+                // Show the app's signed-out state.
+                print("SIGNED-OUT STATE")
+            } else {
+                // Show the app's signed-in state.
+                print("SIGNED-IN STATE")
+            }
+        }
+    }
+    
+//    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+//        return GIDSignIn.sharedInstance.handle(url)
+//    }
+//
+//    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+//      return GIDSignIn.sharedInstance.handle(url)
+//    }
 
     // MARK: UISceneSession Lifecycle
 

@@ -9,6 +9,9 @@ import UIKit
 
 class PasswordView: BaseView<PasswordCoordinator> {
  
+    @IBAction func googleSignInButtonAction(_ sender: Any) {
+        coordinatorDelegate?.handleGoogleSignIn()
+    }
 }
 
 extension PasswordView: LifeCycleViewControllerDelegate {
