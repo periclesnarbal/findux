@@ -18,7 +18,7 @@ final class PasswordCoordinator: BaseChildCoordinator<MainCoordinator> {
         let vc = PasswordViewController()
         let view = PasswordView()
         vc.loadContentView(view)
-        vc.lifeCycleDelegate = view
+//        vc.lifeCycleDelegate = view
         view.coordinatorDelegate = self
         navigationController.present(vc, animated: true)
     }

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B70D49FC2AAB96F40069D4BF /* SeparatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70D49FB2AAB96F40069D4BF /* SeparatorView.swift */; };
+		B70D4A002AAB98A20069D4BF /* ViewControllerPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70D49FF2AAB98A20069D4BF /* ViewControllerPreview.swift */; };
+		B70D4A022AAB98D50069D4BF /* ViewPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70D4A012AAB98D50069D4BF /* ViewPreview.swift */; };
 		B71B91C12A4CAD5B00843ACA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71B91C02A4CAD5B00843ACA /* AppDelegate.swift */; };
 		B71B91C32A4CAD5B00843ACA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71B91C22A4CAD5B00843ACA /* SceneDelegate.swift */; };
 		B71B91C52A4CAD5B00843ACA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71B91C42A4CAD5B00843ACA /* HomeViewController.swift */; };
@@ -27,8 +30,11 @@
 		B76BEC5F2A99420200A24FEE /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76BEC5E2A99420200A24FEE /* BaseViewController.swift */; };
 		B76BEC612A99424200A24FEE /* LifeCycleViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76BEC602A99424200A24FEE /* LifeCycleViewControllerDelegate.swift */; };
 		B76BEC632A995AB900A24FEE /* FullAccessViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76BEC622A995AB900A24FEE /* FullAccessViewControllerDelegate.swift */; };
+		B7787AA72AB2501300E281FB /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7787AA62AB2501300E281FB /* PasswordTextField.swift */; };
+		B7787AA92AB2533B00E281FB /* EyeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7787AA82AB2533B00E281FB /* EyeButton.swift */; };
 		B784D4C12A86AD6D00CD0E39 /* BaseChildCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B784D4C02A86AD6D00CD0E39 /* BaseChildCoordinator.swift */; };
 		B784D4C32A86C75B00CD0E39 /* BaseCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B784D4C22A86C75B00CD0E39 /* BaseCoordinatorTests.swift */; };
+		B7850DEC2AB5EBD700106DFD /* LinkButtonLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7850DEB2AB5EBD700106DFD /* LinkButtonLabel.swift */; };
 		B78D920B2A900E0200AE57E4 /* HomeTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78D920A2A900E0200AE57E4 /* HomeTwoViewController.swift */; };
 		B78D920D2A900F3D00AE57E4 /* ProfileTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78D920C2A900F3D00AE57E4 /* ProfileTwoViewController.swift */; };
 		B78D920F2A900FCB00AE57E4 /* MaterialTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78D920E2A900FCB00AE57E4 /* MaterialTwoViewController.swift */; };
@@ -71,6 +77,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B70D49FB2AAB96F40069D4BF /* SeparatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeparatorView.swift; sourceTree = "<group>"; };
+		B70D49FF2AAB98A20069D4BF /* ViewControllerPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPreview.swift; sourceTree = "<group>"; };
+		B70D4A012AAB98D50069D4BF /* ViewPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPreview.swift; sourceTree = "<group>"; };
 		B71B91BD2A4CAD5B00843ACA /* findux.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = findux.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B71B91C02A4CAD5B00843ACA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B71B91C22A4CAD5B00843ACA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -95,8 +104,11 @@
 		B76BEC5E2A99420200A24FEE /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		B76BEC602A99424200A24FEE /* LifeCycleViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCycleViewControllerDelegate.swift; sourceTree = "<group>"; };
 		B76BEC622A995AB900A24FEE /* FullAccessViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullAccessViewControllerDelegate.swift; sourceTree = "<group>"; };
+		B7787AA62AB2501300E281FB /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
+		B7787AA82AB2533B00E281FB /* EyeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeButton.swift; sourceTree = "<group>"; };
 		B784D4C02A86AD6D00CD0E39 /* BaseChildCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseChildCoordinator.swift; sourceTree = "<group>"; };
 		B784D4C22A86C75B00CD0E39 /* BaseCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinatorTests.swift; sourceTree = "<group>"; };
+		B7850DEB2AB5EBD700106DFD /* LinkButtonLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkButtonLabel.swift; sourceTree = "<group>"; };
 		B78D920A2A900E0200AE57E4 /* HomeTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTwoViewController.swift; sourceTree = "<group>"; };
 		B78D920C2A900F3D00AE57E4 /* ProfileTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTwoViewController.swift; sourceTree = "<group>"; };
 		B78D920E2A900FCB00AE57E4 /* MaterialTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialTwoViewController.swift; sourceTree = "<group>"; };
@@ -146,6 +158,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B70D49FA2AAB96C50069D4BF /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				B70D49FB2AAB96F40069D4BF /* SeparatorView.swift */,
+				B7787AA62AB2501300E281FB /* PasswordTextField.swift */,
+				B7787AA82AB2533B00E281FB /* EyeButton.swift */,
+				B7850DEB2AB5EBD700106DFD /* LinkButtonLabel.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		B70D49FE2AAB98810069D4BF /* Preview */ = {
+			isa = PBXGroup;
+			children = (
+				B70D49FF2AAB98A20069D4BF /* ViewControllerPreview.swift */,
+				B70D4A012AAB98D50069D4BF /* ViewPreview.swift */,
+			);
+			path = Preview;
+			sourceTree = "<group>";
+		};
 		B71B91B42A4CAD5A00843ACA = {
 			isa = PBXGroup;
 			children = (
@@ -350,6 +382,7 @@
 		B7C068312A993CD700A5F9B2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B70D49FE2AAB98810069D4BF /* Preview */,
 				B79F9FC72A4D23390000B973 /* ViewCoordinatorDelegate.swift */,
 				B73774B62A9D192600B56B74 /* BaseView.swift */,
 			);
@@ -364,6 +397,7 @@
 				B79F9FC62A4D23210000B973 /* ViewController */,
 				B7C068312A993CD700A5F9B2 /* View */,
 				B73691302A7AE61B00A67F4B /* Extension */,
+				B70D49FA2AAB96C50069D4BF /* Components */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -554,6 +588,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7D262D92A4E29A6001757B6 /* ProfileCoordinator.swift in Sources */,
+				B7787AA92AB2533B00E281FB /* EyeButton.swift in Sources */,
 				B79839992AA8FDD900FD269D /* GoogleSignInCredentialsModel.swift in Sources */,
 				B79F9FBC2A4CB0BD0000B973 /* Coordinator.swift in Sources */,
 				B76BEC5B2A9941A000A24FEE /* MaterialTwoView.swift in Sources */,
@@ -570,12 +605,15 @@
 				B7D262DB2A4E2A43001757B6 /* MaterialCoordinator.swift in Sources */,
 				B71B91C12A4CAD5B00843ACA /* AppDelegate.swift in Sources */,
 				B78D920B2A900E0200AE57E4 /* HomeTwoViewController.swift in Sources */,
+				B70D4A002AAB98A20069D4BF /* ViewControllerPreview.swift in Sources */,
 				B7C068292A98EBBE00A5F9B2 /* UIViewExtension.swift in Sources */,
+				B70D49FC2AAB96F40069D4BF /* SeparatorView.swift in Sources */,
 				B79F9FCB2A4DDE730000B973 /* MainCoordinator.swift in Sources */,
 				B7C0682B2A98F26A00A5F9B2 /* PasswordCoordinator.swift in Sources */,
 				B76BEC542A99414E00A24FEE /* ProfileView.swift in Sources */,
 				B79F9FBF2A4CB1E40000B973 /* BaseCoordinator.swift in Sources */,
 				B79F9FC32A4CE7C40000B973 /* ProfileViewController.swift in Sources */,
+				B70D4A022AAB98D50069D4BF /* ViewPreview.swift in Sources */,
 				B71B91C32A4CAD5B00843ACA /* SceneDelegate.swift in Sources */,
 				B79F9FC52A4CE8050000B973 /* MaterialViewController.swift in Sources */,
 				B78D920F2A900FCB00AE57E4 /* MaterialTwoViewController.swift in Sources */,
@@ -585,6 +623,8 @@
 				B76BEC612A99424200A24FEE /* LifeCycleViewControllerDelegate.swift in Sources */,
 				B76BEC5D2A9941C000A24FEE /* PasswordView.swift in Sources */,
 				B79F9FC82A4D23390000B973 /* ViewCoordinatorDelegate.swift in Sources */,
+				B7787AA72AB2501300E281FB /* PasswordTextField.swift in Sources */,
+				B7850DEC2AB5EBD700106DFD /* LinkButtonLabel.swift in Sources */,
 				B76BEC502A99410F00A24FEE /* HomeView.swift in Sources */,
 				B7C0682E2A98F61100A5F9B2 /* BaseViewEmbedScrollViewController.swift in Sources */,
 				B7C068302A993C9E00A5F9B2 /* ChildCoordinator.swift in Sources */,
