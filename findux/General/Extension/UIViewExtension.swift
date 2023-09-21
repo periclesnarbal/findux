@@ -25,4 +25,13 @@ extension UIView {
         
         return nibView
     }
+    
+    func fadeInAnimation(duration: Double) {
+        { [weak self] in
+            self?.alpha = 0
+            UIView.animate(withDuration: duration) {
+                self?.alpha = 1
+            }
+        }()
+    }
 }
