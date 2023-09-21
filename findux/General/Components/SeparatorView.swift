@@ -20,14 +20,14 @@ class SeparatorView: UIView {
     
     private let separatorLeftView: UIView = {
         let view = UIView()
-        view.backgroundColor = .lightGray
+        view.backgroundColor = .systemGray4
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
     private let separatorRightView: UIView = {
         let view = UIView()
-        view.backgroundColor = .lightGray
+        view.backgroundColor = .systemGray4
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -35,6 +35,7 @@ class SeparatorView: UIView {
     let label: UILabel = {
         let label = UILabel()
         label.text = "Description"
+        label.textColor = .systemGray
         return label
     }()
     
@@ -66,7 +67,7 @@ class SeparatorView: UIView {
         }
     }
     
-    var color: UIColor = .lightGray {
+    var color: UIColor = .systemGray4 {
         didSet {
             changeColor(color)
         }

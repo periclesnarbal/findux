@@ -24,9 +24,7 @@ class PasswordTextField: UITextField {
     
     private func commomInit() {
         eyeButton.action = eyeButtonAction(status:)
-        borderStyle = .roundedRect
-        placeholder = "Senha"
-        
+        isSecureTextEntry = true
         rightView = eyeButton
         rightViewMode = .always
     }
