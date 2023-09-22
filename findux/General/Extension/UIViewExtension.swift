@@ -34,4 +34,17 @@ extension UIView {
             }
         }()
     }
+    
+    func customFadeInAnimation(changeDuration: Double, appearDuration: Double, completion: (() -> Void)?) {
+        { [weak self] in
+            self?.alpha = 0
+            UIView.animate(withDuration: changeDuration, animations: {
+                completion?()
+            }, completion: { finished in
+                if finished {
+                    self?.fadeInAnimation(duration: appearDuration)
+                }
+            })
+        }()
+    }
 }

@@ -9,12 +9,12 @@ import UIKit
 import SwiftUI
 
 class LinkButtonLabel: UILabel {
-    static let defaultSize: Double = 14
-    static let defaultColor: UIColor = .link
+    let defaultSize: Double = 14
+    let defaultColor: UIColor = .link
     
     var action: (() -> Void)?
     
-    init(frame: CGRect = .zero, title: String, size: Double = defaultSize, color: UIColor = defaultColor, action: (() -> Void)?) {
+    init(frame: CGRect = .zero, title: String, size: Double = 14, color: UIColor = .link, action: (() -> Void)?) {
         super.init(frame: frame)
         setupLabel(size: size, color: color)
         self.text = title
@@ -23,8 +23,8 @@ class LinkButtonLabel: UILabel {
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        setupLabel(size: LinkButtonLabel.defaultSize,
-                   color: LinkButtonLabel.defaultColor)
+        setupLabel(size: defaultSize,
+                   color: defaultColor)
     }
     
     func setupLabel(size: Double, color: UIColor) {
