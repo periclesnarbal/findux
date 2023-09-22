@@ -41,6 +41,9 @@
 		B79839952AA8DE1E00FD269D /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = B79839942AA8DE1E00FD269D /* GoogleSignIn */; };
 		B79839972AA8DF2200FD269D /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = B79839962AA8DF2200FD269D /* credentials.plist */; };
 		B79839992AA8FDD900FD269D /* GoogleSignInCredentialsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79839982AA8FDD900FD269D /* GoogleSignInCredentialsModel.swift */; };
+		B79C7B222ABCDC280051A4DC /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79C7B212ABCDC280051A4DC /* KeychainManager.swift */; };
+		B79C7B242ABCE2290051A4DC /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79C7B232ABCE2290051A4DC /* UserDefaultsManager.swift */; };
+		B79C7B272ABDDCC40051A4DC /* FieldValidatorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79C7B262ABDDCC40051A4DC /* FieldValidatorHelper.swift */; };
 		B79E3AA72A8EA7AA00C8BD2E /* CoordinatorNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79E3AA62A8EA7AA00C8BD2E /* CoordinatorNavigationController.swift */; };
 		B79F9FBC2A4CB0BD0000B973 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79F9FBB2A4CB0BD0000B973 /* Coordinator.swift */; };
 		B79F9FBF2A4CB1E40000B973 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79F9FBE2A4CB1E40000B973 /* BaseCoordinator.swift */; };
@@ -114,6 +117,9 @@
 		B78D920E2A900FCB00AE57E4 /* MaterialTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialTwoViewController.swift; sourceTree = "<group>"; };
 		B79839962AA8DF2200FD269D /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = credentials.plist; sourceTree = "<group>"; };
 		B79839982AA8FDD900FD269D /* GoogleSignInCredentialsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInCredentialsModel.swift; sourceTree = "<group>"; };
+		B79C7B212ABCDC280051A4DC /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
+		B79C7B232ABCE2290051A4DC /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		B79C7B262ABDDCC40051A4DC /* FieldValidatorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldValidatorHelper.swift; sourceTree = "<group>"; };
 		B79E3AA62A8EA7AA00C8BD2E /* CoordinatorNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorNavigationController.swift; sourceTree = "<group>"; };
 		B79F9FBB2A4CB0BD0000B973 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		B79F9FBE2A4CB1E40000B973 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
@@ -329,6 +335,23 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		B79C7B1F2ABCDC100051A4DC /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				B79C7B212ABCDC280051A4DC /* KeychainManager.swift */,
+				B79C7B232ABCE2290051A4DC /* UserDefaultsManager.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		B79C7B252ABDDC700051A4DC /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				B79C7B262ABDDCC40051A4DC /* FieldValidatorHelper.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		B79F9FBD2A4CB1B20000B973 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
@@ -392,12 +415,14 @@
 		B7C068322A993D1700A5F9B2 /* General */ = {
 			isa = PBXGroup;
 			children = (
+				B79C7B1F2ABCDC100051A4DC /* Persistence */,
 				B798399A2AA8FFA500FD269D /* Model */,
 				B79F9FBD2A4CB1B20000B973 /* Coordinator */,
 				B79F9FC62A4D23210000B973 /* ViewController */,
 				B7C068312A993CD700A5F9B2 /* View */,
 				B73691302A7AE61B00A67F4B /* Extension */,
 				B70D49FA2AAB96C50069D4BF /* Components */,
+				B79C7B252ABDDC700051A4DC /* Helper */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -612,6 +637,7 @@
 				B7C0682B2A98F26A00A5F9B2 /* PasswordCoordinator.swift in Sources */,
 				B76BEC542A99414E00A24FEE /* ProfileView.swift in Sources */,
 				B79F9FBF2A4CB1E40000B973 /* BaseCoordinator.swift in Sources */,
+				B79C7B242ABCE2290051A4DC /* UserDefaultsManager.swift in Sources */,
 				B79F9FC32A4CE7C40000B973 /* ProfileViewController.swift in Sources */,
 				B70D4A022AAB98D50069D4BF /* ViewPreview.swift in Sources */,
 				B71B91C32A4CAD5B00843ACA /* SceneDelegate.swift in Sources */,
@@ -624,6 +650,8 @@
 				B76BEC5D2A9941C000A24FEE /* PasswordView.swift in Sources */,
 				B79F9FC82A4D23390000B973 /* ViewCoordinatorDelegate.swift in Sources */,
 				B7787AA72AB2501300E281FB /* PasswordTextField.swift in Sources */,
+				B79C7B222ABCDC280051A4DC /* KeychainManager.swift in Sources */,
+				B79C7B272ABDDCC40051A4DC /* FieldValidatorHelper.swift in Sources */,
 				B7850DEC2AB5EBD700106DFD /* LinkButtonLabel.swift in Sources */,
 				B76BEC502A99410F00A24FEE /* HomeView.swift in Sources */,
 				B7C0682E2A98F61100A5F9B2 /* BaseViewEmbedScrollViewController.swift in Sources */,
