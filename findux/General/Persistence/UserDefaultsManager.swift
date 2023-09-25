@@ -17,8 +17,21 @@ class UserDefaultsManager {
         userDefaults.set(value, forKey: key)
     }
     
+    func createItem<T: Encodable>(_ key: String, value: T) {
+        let data = try? JSONEncoder().encode(value)
+        userDefaults.set(data, forKey: key)
+    }
+    
     func readItem<T>(_ key: String) -> T? {
         return userDefaults.value(forKey: key) as? T
+    }
+    
+    func readItem<T: Decodable>(_ key: String) -> T? {
+        if let data = userDefaults.value(forKey: key) as? Data {
+            let object = try? JSONDecoder().decode(T.self, from: data)
+            return object
+        }
+        return nil
     }
     
     func updateItem<T>(_ key: String, newValue: T) {

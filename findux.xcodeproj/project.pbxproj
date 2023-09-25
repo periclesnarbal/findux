@@ -18,6 +18,8 @@
 		B71B91D82A4CAD5D00843ACA /* finduxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71B91D72A4CAD5D00843ACA /* finduxTests.swift */; };
 		B71B91E22A4CAD5D00843ACA /* finduxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71B91E12A4CAD5D00843ACA /* finduxUITests.swift */; };
 		B71B91E42A4CAD5D00843ACA /* finduxUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71B91E32A4CAD5D00843ACA /* finduxUITestsLaunchTests.swift */; };
+		B71F5E0D2AC1B566009C992F /* SignInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71F5E0C2AC1B566009C992F /* SignInModel.swift */; };
+		B71F5E112AC1B789009C992F /* SignStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71F5E102AC1B789009C992F /* SignStatus.swift */; };
 		B736912F2A7AE57E00A67F4B /* UINavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B736912E2A7AE57E00A67F4B /* UINavigationControllerExtension.swift */; };
 		B73774B72A9D192600B56B74 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73774B62A9D192600B56B74 /* BaseView.swift */; };
 		B76BEC502A99410F00A24FEE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76BEC4F2A99410F00A24FEE /* HomeView.swift */; };
@@ -32,16 +34,17 @@
 		B76BEC632A995AB900A24FEE /* FullAccessViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76BEC622A995AB900A24FEE /* FullAccessViewControllerDelegate.swift */; };
 		B7787AA72AB2501300E281FB /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7787AA62AB2501300E281FB /* PasswordTextField.swift */; };
 		B7787AA92AB2533B00E281FB /* EyeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7787AA82AB2533B00E281FB /* EyeButton.swift */; };
+		B77CE8C42AC1D17D003C7E2A /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77CE8C32AC1D17D003C7E2A /* UserModel.swift */; };
 		B784D4C12A86AD6D00CD0E39 /* BaseChildCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B784D4C02A86AD6D00CD0E39 /* BaseChildCoordinator.swift */; };
 		B784D4C32A86C75B00CD0E39 /* BaseCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B784D4C22A86C75B00CD0E39 /* BaseCoordinatorTests.swift */; };
 		B7850DEC2AB5EBD700106DFD /* LinkButtonLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7850DEB2AB5EBD700106DFD /* LinkButtonLabel.swift */; };
 		B78D920B2A900E0200AE57E4 /* HomeTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78D920A2A900E0200AE57E4 /* HomeTwoViewController.swift */; };
 		B78D920D2A900F3D00AE57E4 /* ProfileTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78D920C2A900F3D00AE57E4 /* ProfileTwoViewController.swift */; };
 		B78D920F2A900FCB00AE57E4 /* MaterialTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78D920E2A900FCB00AE57E4 /* MaterialTwoViewController.swift */; };
+		B7923BB92A9FB2880095B443 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7923BB82A9FB2880095B443 /* Network.swift */; };
 		B79839952AA8DE1E00FD269D /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = B79839942AA8DE1E00FD269D /* GoogleSignIn */; };
 		B79839972AA8DF2200FD269D /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = B79839962AA8DF2200FD269D /* credentials.plist */; };
 		B79839992AA8FDD900FD269D /* GoogleSignInCredentialsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79839982AA8FDD900FD269D /* GoogleSignInCredentialsModel.swift */; };
-		B7923BB92A9FB2880095B443 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7923BB82A9FB2880095B443 /* Network.swift */; };
 		B79C7B222ABCDC280051A4DC /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79C7B212ABCDC280051A4DC /* KeychainManager.swift */; };
 		B79C7B242ABCE2290051A4DC /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79C7B232ABCE2290051A4DC /* UserDefaultsManager.swift */; };
 		B79C7B272ABDDCC40051A4DC /* FieldValidatorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79C7B262ABDDCC40051A4DC /* FieldValidatorHelper.swift */; };
@@ -96,6 +99,8 @@
 		B71B91DD2A4CAD5D00843ACA /* finduxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = finduxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B71B91E12A4CAD5D00843ACA /* finduxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = finduxUITests.swift; sourceTree = "<group>"; };
 		B71B91E32A4CAD5D00843ACA /* finduxUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = finduxUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B71F5E0C2AC1B566009C992F /* SignInModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInModel.swift; sourceTree = "<group>"; };
+		B71F5E102AC1B789009C992F /* SignStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignStatus.swift; sourceTree = "<group>"; };
 		B736912E2A7AE57E00A67F4B /* UINavigationControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerExtension.swift; sourceTree = "<group>"; };
 		B73774B62A9D192600B56B74 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		B76BEC4F2A99410F00A24FEE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -110,6 +115,7 @@
 		B76BEC622A995AB900A24FEE /* FullAccessViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullAccessViewControllerDelegate.swift; sourceTree = "<group>"; };
 		B7787AA62AB2501300E281FB /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
 		B7787AA82AB2533B00E281FB /* EyeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeButton.swift; sourceTree = "<group>"; };
+		B77CE8C32AC1D17D003C7E2A /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		B784D4C02A86AD6D00CD0E39 /* BaseChildCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseChildCoordinator.swift; sourceTree = "<group>"; };
 		B784D4C22A86C75B00CD0E39 /* BaseCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinatorTests.swift; sourceTree = "<group>"; };
 		B7850DEB2AB5EBD700106DFD /* LinkButtonLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkButtonLabel.swift; sourceTree = "<group>"; };
@@ -341,6 +347,9 @@
 			isa = PBXGroup;
 			children = (
 				B79839982AA8FDD900FD269D /* GoogleSignInCredentialsModel.swift */,
+				B71F5E0C2AC1B566009C992F /* SignInModel.swift */,
+				B71F5E102AC1B789009C992F /* SignStatus.swift */,
+				B77CE8C32AC1D17D003C7E2A /* UserModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -633,6 +642,7 @@
 				B7923BB92A9FB2880095B443 /* Network.swift in Sources */,
 				B76BEC5F2A99420200A24FEE /* BaseViewController.swift in Sources */,
 				B76BEC592A99418E00A24FEE /* MaterialView.swift in Sources */,
+				B77CE8C42AC1D17D003C7E2A /* UserModel.swift in Sources */,
 				B79E3AA72A8EA7AA00C8BD2E /* CoordinatorNavigationController.swift in Sources */,
 				B736912F2A7AE57E00A67F4B /* UINavigationControllerExtension.swift in Sources */,
 				B71B91C52A4CAD5B00843ACA /* HomeViewController.swift in Sources */,
@@ -643,6 +653,7 @@
 				B71B91C12A4CAD5B00843ACA /* AppDelegate.swift in Sources */,
 				B78D920B2A900E0200AE57E4 /* HomeTwoViewController.swift in Sources */,
 				B70D4A002AAB98A20069D4BF /* ViewControllerPreview.swift in Sources */,
+				B71F5E112AC1B789009C992F /* SignStatus.swift in Sources */,
 				B7C068292A98EBBE00A5F9B2 /* UIViewExtension.swift in Sources */,
 				B70D49FC2AAB96F40069D4BF /* SeparatorView.swift in Sources */,
 				B79F9FCB2A4DDE730000B973 /* MainCoordinator.swift in Sources */,
@@ -650,6 +661,7 @@
 				B76BEC542A99414E00A24FEE /* ProfileView.swift in Sources */,
 				B79F9FBF2A4CB1E40000B973 /* BaseCoordinator.swift in Sources */,
 				B79C7B242ABCE2290051A4DC /* UserDefaultsManager.swift in Sources */,
+				B71F5E0D2AC1B566009C992F /* SignInModel.swift in Sources */,
 				B79F9FC32A4CE7C40000B973 /* ProfileViewController.swift in Sources */,
 				B70D4A022AAB98D50069D4BF /* ViewPreview.swift in Sources */,
 				B71B91C32A4CAD5B00843ACA /* SceneDelegate.swift in Sources */,
