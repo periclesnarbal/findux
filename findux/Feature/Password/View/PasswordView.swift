@@ -10,6 +10,8 @@ import GoogleSignIn
 import SwiftUI
 
 class PasswordView: BaseView<PasswordCoordinator> {
+    
+    var viewModelDelegate: PasswordViewModel?
    
     @IBOutlet weak var googleSignInButton: GIDSignInButton!
     @IBOutlet weak var separatorView: SeparatorView!
@@ -30,61 +32,23 @@ class PasswordView: BaseView<PasswordCoordinator> {
         didSet { changeSignAction(status: signStatus) }
     }
     
-    let fieldValidator = FieldValidatorHelper()
-    
     @IBAction func googleSignInButtonAction(_ sender: Any) {
         coordinatorDelegate?.handleGoogleSignIn()
     }
     
     @IBAction func confirmButtonAction(_ sender: Any) {
         switch signStatus {
-        case .sign_in: return signInAction()
-        case .sign_up: return signUpAction()
+        case .sign_in: return signInAction(username: userTextField.text, password: passwordTextField.text)
+        case .sign_up: return signUpAction(email: emailTextField.text, username: userTextField.text, password: passwordTextField.text, checkPassword: checkPasswordTextField.text)
         }
     }
     
-    func signInAction() {
-        if validateSignInFields() {
-            let signInData = SignInModel(username: userTextField.text ?? "", password: passwordTextField.text ?? "")
-            
-            if let savedData: UserModel = UserDefaultsManager.shared.readItem(signInData.username) {
-                if signInData.password == savedData.password {
-                    print("PODE SEGUIR PARA PROXIMA PAGINA")
-                } else {
-                    print("Senha incorreta, por favor verifique seus dados e tente novamente")
-                }
-            } else {
-                print("Este usúario não esta cadastrado. Para criar uma conta escolha a opção 'cadastra-se'")
-            }
-        }
+    func signInAction(username: String?, password: String?) {
+        viewModelDelegate?.signInAction(username: username, password: password)
     }
     
-    func signUpAction() {
-        if validateSignUpFields() {
-            let signUpData = UserModel(username: userTextField.text ?? "", password: passwordTextField.text ?? "", email: emailTextField.text ?? "")
-            UserDefaultsManager.shared.createItem(signUpData.username, value: signUpData)
-            print("PODE SEGUIR PARA PROXIMA PAGINA")
-        }
-    }
-    
-    func validateSignInFields() -> Bool {
-        guard let username = userTextField.text, let password = passwordTextField.text else { return false }
-        
-        return (!username.isEmpty && !password.isEmpty)
-    }
-    
-    func validateSignUpFields() -> Bool {
-      
-        do {
-            try fieldValidator.validateEmail(emailTextField.text)
-            try fieldValidator.validateUsername(userTextField.text)
-            try fieldValidator.validatePassword(passwordTextField.text)
-            try fieldValidator.validatePasswordMatch(passwordTextField.text, checkPasswordTextField.text)
-        } catch {
-            print(error)
-            return false
-        }
-        return true
+    func signUpAction(email: String?, username: String?, password: String?, checkPassword: String?) {
+        viewModelDelegate?.signUpAction(email: email, username: username, password: password, checkPassword: checkPassword)
     }
     
     override init(frame: CGRect) {
