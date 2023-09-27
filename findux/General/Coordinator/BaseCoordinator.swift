@@ -58,6 +58,18 @@ extension BaseCoordinator {
         childCoordinators.append(child)
         return child
     }
+    
+    func showAlert(title: String, message: String, completion: (() -> Void)? = nil) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "OK", style: .default) { (action) in
+            completion?()
+        }
+        
+        alertController.addAction(okAction)
+        
+        navigationController.present(alertController, animated: true, completion: nil)
+    }
 }
 
 extension BaseCoordinator: BaseCoordinatorNavigationControlDelegate {

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B7027A102AC3634E00E9B249 /* LoginError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7027A0F2AC3634E00E9B249 /* LoginError.swift */; };
+		B7027A162AC4585300E9B249 /* FieldError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7027A152AC4585300E9B249 /* FieldError.swift */; };
+		B7027A192AC45AFB00E9B249 /* CustomErrorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7027A182AC45AFB00E9B249 /* CustomErrorProtocol.swift */; };
 		B70C358D2AC34C7600A55AC8 /* PasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70C358C2AC34C7600A55AC8 /* PasswordViewModel.swift */; };
 		B70D49FC2AAB96F40069D4BF /* SeparatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70D49FB2AAB96F40069D4BF /* SeparatorView.swift */; };
 		B70D4A002AAB98A20069D4BF /* ViewControllerPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70D49FF2AAB98A20069D4BF /* ViewControllerPreview.swift */; };
@@ -85,6 +88,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B7027A0F2AC3634E00E9B249 /* LoginError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginError.swift; sourceTree = "<group>"; };
+		B7027A152AC4585300E9B249 /* FieldError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldError.swift; sourceTree = "<group>"; };
+		B7027A182AC45AFB00E9B249 /* CustomErrorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomErrorProtocol.swift; sourceTree = "<group>"; };
 		B70C358C2AC34C7600A55AC8 /* PasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewModel.swift; sourceTree = "<group>"; };
 		B70D49FB2AAB96F40069D4BF /* SeparatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeparatorView.swift; sourceTree = "<group>"; };
 		B70D49FF2AAB98A20069D4BF /* ViewControllerPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPreview.swift; sourceTree = "<group>"; };
@@ -174,6 +180,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B7027A172AC45A9700E9B249 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				B71F5E102AC1B789009C992F /* SignStatus.swift */,
+				B7027A0F2AC3634E00E9B249 /* LoginError.swift */,
+				B7027A152AC4585300E9B249 /* FieldError.swift */,
+				B7027A182AC45AFB00E9B249 /* CustomErrorProtocol.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
 		B70C358B2AC34C5100A55AC8 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -357,7 +374,6 @@
 			isa = PBXGroup;
 			children = (
 				B79839982AA8FDD900FD269D /* GoogleSignInCredentialsModel.swift */,
-				B71F5E102AC1B789009C992F /* SignStatus.swift */,
 				B71F5E0C2AC1B566009C992F /* LoginModel.swift */,
 				B77CE8C32AC1D17D003C7E2A /* UserModel.swift */,
 			);
@@ -445,6 +461,7 @@
 		B7C068322A993D1700A5F9B2 /* General */ = {
 			isa = PBXGroup;
 			children = (
+				B7027A172AC45A9700E9B249 /* Enum */,
 				B7923BB72A9FB2750095B443 /* Network */,
 				B79C7B1F2ABCDC100051A4DC /* Persistence */,
 				B798399A2AA8FFA500FD269D /* Model */,
@@ -675,9 +692,11 @@
 				B71F5E0D2AC1B566009C992F /* LoginModel.swift in Sources */,
 				B79F9FC32A4CE7C40000B973 /* ProfileViewController.swift in Sources */,
 				B70D4A022AAB98D50069D4BF /* ViewPreview.swift in Sources */,
+				B7027A102AC3634E00E9B249 /* LoginError.swift in Sources */,
 				B71B91C32A4CAD5B00843ACA /* SceneDelegate.swift in Sources */,
 				B79F9FC52A4CE8050000B973 /* MaterialViewController.swift in Sources */,
 				B78D920F2A900FCB00AE57E4 /* MaterialTwoViewController.swift in Sources */,
+				B7027A162AC4585300E9B249 /* FieldError.swift in Sources */,
 				B79F9FC12A4CB4B00000B973 /* HomeCoordinator.swift in Sources */,
 				B78D920D2A900F3D00AE57E4 /* ProfileTwoViewController.swift in Sources */,
 				B76BEC632A995AB900A24FEE /* FullAccessViewControllerDelegate.swift in Sources */,
@@ -692,6 +711,7 @@
 				B76BEC502A99410F00A24FEE /* HomeView.swift in Sources */,
 				B7C0682E2A98F61100A5F9B2 /* BaseViewEmbedScrollViewController.swift in Sources */,
 				B7C068302A993C9E00A5F9B2 /* ChildCoordinator.swift in Sources */,
+				B7027A192AC45AFB00E9B249 /* CustomErrorProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

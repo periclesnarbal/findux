@@ -8,17 +8,7 @@
 import Foundation
 
 struct FieldValidatorHelper {
-    enum fieldError: Error {
-        case invalidEmail(title: String, message: String)
-        case invalidLenth(title: String, message: String)
-        case emptyField(title: String, message: String)
-        case containsWhitespace(title: String, message: String)
-        case mustContainCapitalLetter(title: String, message: String)
-        case mustContainNumber(title: String, message: String)
-        case mustBeEqual(title: String, message: String)
-        case nilValue(title: String, message: String)
-    }
-    
+   
     func validateEmail(_ email: String?) throws {
         let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
         let emailTest = NSPredicate(format: "SELF MATCHES %@", emailRegex)
@@ -31,7 +21,7 @@ struct FieldValidatorHelper {
         }
         
         if !emailTest.evaluate(with: email) {
-            throw fieldError.invalidEmail(title: "Erro", message: "O formato de email é invalido. Verifique se os dados foram inseridos corretamente")
+            throw FieldError.invalidEmail(title: "Erro", message: "O formato de email é invalido. Verifique se os dados foram inseridos corretamente")
         }
     }
     
@@ -45,7 +35,7 @@ struct FieldValidatorHelper {
         }
         
         if ((username?.count ?? 0) < 3) || ((username?.count ?? 0) > 20) {
-            throw fieldError.invalidLenth(title: "Erro", message: "O nome de usuário deve ter entre 3 e 20 caracteres")
+            throw FieldError.invalidLenth(title: "Erro", message: "O nome de usuário deve ter entre 3 e 20 caracteres")
         }
     }
     
@@ -59,18 +49,18 @@ struct FieldValidatorHelper {
         }
        
         if (password?.count ?? 0) < 8 {
-            throw fieldError.invalidLenth(title: "Erro", message: "A senha deve conter no mínimo 8 caracteres")
+            throw FieldError.invalidLenth(title: "Erro", message: "A senha deve conter no mínimo 8 caracteres")
         }
         
         let letraMaiusculaPredicate = NSPredicate(format: "SELF MATCHES %@", ".*[A-Z]+.*")
         let numeroPredicate = NSPredicate(format: "SELF MATCHES %@", ".*[0-9]+.*")
         
         if !letraMaiusculaPredicate.evaluate(with: password) {
-            throw fieldError.mustContainCapitalLetter(title: "Erro", message: "A senha deve conter pelo menos uma letra maiúscula")
+            throw FieldError.mustContainCapitalLetter(title: "Erro", message: "A senha deve conter pelo menos uma letra maiúscula")
         }
         
         if !numeroPredicate.evaluate(with: password) {
-            throw fieldError.mustContainNumber(title: "Erro", message: "A senha deve conter pelo menos um número")
+            throw FieldError.mustContainNumber(title: "Erro", message: "A senha deve conter pelo menos um número")
         }
     }
     
@@ -83,26 +73,26 @@ struct FieldValidatorHelper {
     }
     
     func checkFieldMatch(_ field1: String?, _ field2: String?, errorTitle: String, errorMessage: String) throws {
-        guard let field1 = field1, let field2 = field2 else { throw fieldError.nilValue(title: errorTitle, message: errorMessage) }
+        guard let field1 = field1, let field2 = field2 else { throw FieldError.nilValue(title: errorTitle, message: errorMessage) }
         
         if field1 != field2 {
-            throw fieldError.mustBeEqual(title: errorTitle, message: errorMessage)
+            throw FieldError.mustBeEqual(title: errorTitle, message: errorMessage)
         }
     }
     
     func handleBlankSpaces(_ string: String?, errorTitle: String, errorMessage: String) throws {
-        guard let string = string else { throw fieldError.nilValue(title: errorTitle, message: errorMessage) }
+        guard let string = string else { throw FieldError.nilValue(title: errorTitle, message: errorMessage) }
         
         if string.contains(" ") {
-            throw fieldError.containsWhitespace(title: errorTitle, message: errorMessage)
+            throw FieldError.containsWhitespace(title: errorTitle, message: errorMessage)
         }
     }
     
     func handleEmptyField(_ string: String?, errorTitle: String, errorMessage: String) throws {
-        guard let string = string else { throw fieldError.nilValue(title: errorTitle, message: errorMessage) }
+        guard let string = string else { throw FieldError.nilValue(title: errorTitle, message: errorMessage) }
         
         if string.isEmpty {
-            throw fieldError.emptyField(title: errorTitle, message: errorMessage)
+            throw FieldError.emptyField(title: errorTitle, message: errorMessage)
         }
     }
 }

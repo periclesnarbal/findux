@@ -24,12 +24,14 @@ final class PasswordCoordinator: BaseChildCoordinator<MainCoordinator> {
         navigationController.present(vc, animated: true)
     }
     
+    func goToHomeScreen() {
+        parentCoordinator.goToHomeCoordinator()
+    }
+    
     func handleGoogleSignIn() {
-        GIDSignIn.sharedInstance.signIn(withPresenting: navigationController) { signInResult, error in
+        GIDSignIn.sharedInstance.signIn(withPresenting: navigationController) { [weak self] signInResult, error in
             guard error == nil else { return }
-
-            // If sign in succeeded, display the app's main content View.
-            print("SIGN IN SUCCEDED")
-          }
+            self?.goToHomeScreen()
+        }
     }
 }

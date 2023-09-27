@@ -27,24 +27,30 @@ class PasswordViewModel {
     }
     
     func confirmButtonAction(user: UserModel, checkPassword: String) {
-        switch signStatus {
-        case .sign_in: return signInAction(username: user.username, password: user.password)
-        case .sign_up: return signUpAction(email: user.email, username: user.username, password: user.password, checkPassword: checkPassword)
+        do {
+            switch signStatus {
+            case .sign_in: return try signInAction(username: user.username, password: user.password)
+            case .sign_up: return signUpAction(email: user.email, username: user.username, password: user.password, checkPassword: checkPassword)
+            }
+        } catch {
+            if let error = error as? CustomErrorProtocol {
+                viewDelegate.loginFailure(error: error)
+            }
         }
     }
     
-    func signInAction(username: String, password: String) {
+    func signInAction(username: String, password: String) throws {
         if validateSignInFields(username: username, password: password) {
             let loginData = LoginModel(username: username, password: password)
             
             if let savedData: UserModel = UserDefaultsManager.shared.readItem(loginData.username) {
                 if loginData.password == savedData.password {
-                    print("PODE SEGUIR PARA PROXIMA PAGINA")
+                    viewDelegate.loginSuccess()
                 } else {
-                    print("Senha incorreta, por favor verifique seus dados e tente novamente")
+                    throw LoginError.invalidPassword(title: "Erro", message: "Senha incorreta, por favor verifique seus dados e tente novamente")
                 }
             } else {
-                print("Este usúario não esta cadastrado. Para criar uma conta escolha a opção 'cadastra-se'")
+                throw LoginError.dontHaveAccount(title: "Erro", messsage: "Este usúario não esta cadastrado. Para criar uma conta escolha a opção 'cadastra-se'")
             }
         }
     }
@@ -53,7 +59,7 @@ class PasswordViewModel {
         if validateSignUpFields(email: email, username: username, password: password, checkPassword: checkPassword) {
             let signUpData = UserModel(username: username, password: password, email: email)
             UserDefaultsManager.shared.createItem(signUpData.username, value: signUpData)
-            print("PODE SEGUIR PARA PROXIMA PAGINA")
+            viewDelegate.loginSuccess()
         }
     }
     
@@ -70,7 +76,9 @@ class PasswordViewModel {
             try fieldValidator.validatePassword(password)
             try fieldValidator.validatePasswordMatch(password, checkPassword)
         } catch {
-            print(error)
+            if let error = error as? CustomErrorProtocol {
+                viewDelegate.loginFailure(error: error)
+            }
             return false
         }
         return true

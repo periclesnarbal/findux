@@ -89,6 +89,15 @@ class PasswordView: BaseView<PasswordCoordinator> {
             }
         }
     }
+    
+    func loginSuccess() {
+        coordinatorDelegate?.goToHomeScreen()
+    }
+    
+    func loginFailure(error: CustomErrorProtocol) {
+        let error = error.getDescription()
+        coordinatorDelegate?.showAlert(title: error.title, message: error.message)
+    }
 
     private func fieldViewSetup(views: [UIView]) {
         views.forEach {
