@@ -19,6 +19,11 @@ class BaseViewEmbedScrollViewController: BaseViewController {
         scrollView.addSubview(contentView)
     }
     
+    override func loadContentView<T: ChildCoordinator>(_ anyView: BaseView<T>) {
+        super.loadContentView(anyView)
+        scrollView.backgroundColor = anyView.backgroundColor
+    }
+    
     override func setupConstraints() {
         view.embedConstraints(scrollView)
         

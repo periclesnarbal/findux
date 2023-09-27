@@ -19,9 +19,9 @@ final class PasswordCoordinator: BaseChildCoordinator<MainCoordinator> {
         let view = PasswordView()
         let _ = PasswordViewModel(viewDelegate: view, userDefaults: UserDefaultsManager.shared, fieldValidator: FieldValidatorHelper())
         vc.loadContentView(view)
-//        vc.lifeCycleDelegate = view
+        vc.fullAccessDelegate = view
         view.coordinatorDelegate = self
-        navigationController.present(vc, animated: true)
+        navigationController.pushViewController(vc, animated: true)
     }
     
     func goToHomeScreen() {

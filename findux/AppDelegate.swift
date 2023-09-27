@@ -44,11 +44,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func googleSignInRestoreSeccion() {
         GIDSignIn.sharedInstance.restorePreviousSignIn { user, error in
             if error != nil || user == nil {
-                // Show the app's signed-out state.
                 print("SIGNED-OUT STATE")
             } else {
-                // Show the app's signed-in state.
-                print("SIGNED-IN STATE")
+                if let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate {
+                    sceneDelegate.coordinator?.goToHomeCoordinator()
+                }
             }
         }
     }

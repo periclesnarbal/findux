@@ -53,6 +53,7 @@ class PasswordView: BaseView<PasswordCoordinator> {
             view.frame = bounds
             view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
             view.translatesAutoresizingMaskIntoConstraints = true
+            self.backgroundColor = view.backgroundColor
             addSubview(view)
         }
         
@@ -105,6 +106,12 @@ class PasswordView: BaseView<PasswordCoordinator> {
             $0.layer.borderWidth = 2
             $0.layer.borderColor = UIColor.systemGray5.cgColor
         }
+    }
+}
+
+extension PasswordView: FullAccessViewControllerDelegate {
+    func getNavigationController(_ navigationController: UINavigationController?) {
+        navigationController?.isNavigationBarHidden = true
     }
 }
 

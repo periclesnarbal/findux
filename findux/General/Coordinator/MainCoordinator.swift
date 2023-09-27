@@ -10,7 +10,7 @@ import UIKit
 final class MainCoordinator: BaseCoordinator {
     
     override func start() {
-        goToHomeCoordinator()
+        goToPasswordCoordinator()
     }
 
     func goToHomeCoordinator() {
