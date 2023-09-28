@@ -24,6 +24,8 @@
 		B71B91E42A4CAD5D00843ACA /* finduxUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71B91E32A4CAD5D00843ACA /* finduxUITestsLaunchTests.swift */; };
 		B71F5E0D2AC1B566009C992F /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71F5E0C2AC1B566009C992F /* LoginModel.swift */; };
 		B71F5E112AC1B789009C992F /* SignStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71F5E102AC1B789009C992F /* SignStatus.swift */; };
+		B727BCB72AC5E6F20077B515 /* HomeCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B727BCB62AC5E6F20077B515 /* HomeCellModel.swift */; };
+		B7368F892AC5C6F000533673 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7368F882AC5C6F000533673 /* HomeCollectionViewCell.swift */; };
 		B736912F2A7AE57E00A67F4B /* UINavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B736912E2A7AE57E00A67F4B /* UINavigationControllerExtension.swift */; };
 		B73774B72A9D192600B56B74 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73774B62A9D192600B56B74 /* BaseView.swift */; };
 		B76BEC502A99410F00A24FEE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76BEC4F2A99410F00A24FEE /* HomeView.swift */; };
@@ -109,6 +111,8 @@
 		B71B91E32A4CAD5D00843ACA /* finduxUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = finduxUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B71F5E0C2AC1B566009C992F /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		B71F5E102AC1B789009C992F /* SignStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignStatus.swift; sourceTree = "<group>"; };
+		B727BCB62AC5E6F20077B515 /* HomeCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCellModel.swift; sourceTree = "<group>"; };
+		B7368F882AC5C6F000533673 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		B736912E2A7AE57E00A67F4B /* UINavigationControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerExtension.swift; sourceTree = "<group>"; };
 		B73774B62A9D192600B56B74 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		B76BEC4F2A99410F00A24FEE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -272,6 +276,14 @@
 			path = finduxUITests;
 			sourceTree = "<group>";
 		};
+		B727BCB52AC5E6DB0077B515 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B727BCB62AC5E6F20077B515 /* HomeCellModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		B73691302A7AE61B00A67F4B /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -284,6 +296,7 @@
 		B78D92012A8FFDD900AE57E4 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				B727BCB52AC5E6DB0077B515 /* Model */,
 				B78D92042A90001500AE57E4 /* Coordinator */,
 				B78D92072A90004900AE57E4 /* ViewController */,
 				B7C068352A993D5D00A5F9B2 /* View */,
@@ -500,6 +513,7 @@
 			children = (
 				B76BEC4F2A99410F00A24FEE /* HomeView.swift */,
 				B76BEC512A99412800A24FEE /* HomeTwoView.swift */,
+				B7368F882AC5C6F000533673 /* HomeCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -664,6 +678,7 @@
 				B7787AA92AB2533B00E281FB /* EyeButton.swift in Sources */,
 				B79839992AA8FDD900FD269D /* GoogleSignInCredentialsModel.swift in Sources */,
 				B79F9FBC2A4CB0BD0000B973 /* Coordinator.swift in Sources */,
+				B7368F892AC5C6F000533673 /* HomeCollectionViewCell.swift in Sources */,
 				B76BEC5B2A9941A000A24FEE /* MaterialTwoView.swift in Sources */,
 				B73774B72A9D192600B56B74 /* BaseView.swift in Sources */,
 				B76BEC522A99412800A24FEE /* HomeTwoView.swift in Sources */,
@@ -673,6 +688,7 @@
 				B77CE8C42AC1D17D003C7E2A /* UserModel.swift in Sources */,
 				B79E3AA72A8EA7AA00C8BD2E /* CoordinatorNavigationController.swift in Sources */,
 				B736912F2A7AE57E00A67F4B /* UINavigationControllerExtension.swift in Sources */,
+				B727BCB72AC5E6F20077B515 /* HomeCellModel.swift in Sources */,
 				B71B91C52A4CAD5B00843ACA /* HomeViewController.swift in Sources */,
 				B784D4C12A86AD6D00CD0E39 /* BaseChildCoordinator.swift in Sources */,
 				B7C068272A98E92900A5F9B2 /* PasswordViewController.swift in Sources */,

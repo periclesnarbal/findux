@@ -77,6 +77,6 @@ struct EyeButtonPreview: PreviewProvider {
             EyeButton { status in
                 print(status)
             }
-        }.edgesIgnoringSafeArea(.all)
+        }.previewLayout(.fixed(width: 50, height: 50))
     }
 }
