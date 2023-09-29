@@ -129,7 +129,9 @@ extension PasswordView: FullAccessViewControllerDelegate {
 struct PasswordViewPreview: PreviewProvider {
     static var previews: some View {
         ViewPreview {
-            PasswordView()
+            let view = PasswordView()
+            _ = PasswordViewModel(viewDelegate: view, userDefaults: UserDefaultsManager.shared, fieldValidator: FieldValidatorHelper())
+            return view
         }.edgesIgnoringSafeArea(.all)
     }
 }

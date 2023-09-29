@@ -10,10 +10,15 @@ import SwiftUI
 
 class HomeView: BaseView<HomeCoordinator> {
     
-    let menus = ["Cursos", "Calculadora", "Glossário", "Simulador", "Metas", "Projetos"]
+    let menus = [HomeCellModel(imageName: "Book", title: "Cursos"),
+                 HomeCellModel(imageName: "OpenBook", title: "Glossário"),
+                 HomeCellModel(imageName: "Chart", title: "Simulador"),
+                 HomeCellModel(imageName: "Calendar", title: "Projetos"),
+                 HomeCellModel(imageName: "Percent", title: "Investimentos"),
+                 HomeCellModel(imageName: "Chart_alt", title: "Bolsa de valores")]
     
     let collectionView: UICollectionView = {
-        let layout = UICollectionViewFlowLayout()
+        let layout = HomeCollectionLayout()
         layout.scrollDirection = .vertical
         
         let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
@@ -49,8 +54,7 @@ extension HomeView: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCollectionViewCell.reuseIdentifier, for: indexPath) as? HomeCollectionViewCell else { return UICollectionViewCell() }
-        let cellData = HomeCellModel(imageName: "findux", title: "test")
-        cell.setupCell(data: cellData)
+        cell.setupCell(data: menus[indexPath.row])
         return cell
     }
 }

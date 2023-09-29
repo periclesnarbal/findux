@@ -43,22 +43,24 @@ class HomeCollectionViewCell: UICollectionViewCell {
     }
     
     private func setupView() {
-        contentView.backgroundColor = .red
+        backgroundColor = .clear
+        contentView.backgroundColor = .systemGray4
+        contentView.layer.cornerRadius = 12
         contentView.addSubview(imageView)
         contentView.addSubview(title)
     }
     
     private func setupConstraints() {
         NSLayoutConstraint.activate([
-            imageView.topAnchor.constraint(greaterThanOrEqualTo: contentView.topAnchor, constant: 8),
+            imageView.widthAnchor.constraint(equalToConstant: 70),
+            imageView.heightAnchor.constraint(equalToConstant: 70),
             imageView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
-            imageView.leadingAnchor.constraint(greaterThanOrEqualTo: contentView.leadingAnchor, constant: 4),
-            imageView.trailingAnchor.constraint(lessThanOrEqualTo: contentView.trailingAnchor, constant: -4),
+            imageView.centerYAnchor.constraint(lessThanOrEqualTo: contentView.centerYAnchor, constant: -12),
             
-            title.topAnchor.constraint(greaterThanOrEqualTo: imageView.bottomAnchor, constant: 16),
-            title.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8),
-            title.leadingAnchor.constraint(greaterThanOrEqualTo: contentView.leadingAnchor, constant: 4),
-            title.trailingAnchor.constraint(lessThanOrEqualTo: contentView.trailingAnchor, constant: -4),
+            title.topAnchor.constraint(greaterThanOrEqualTo: imageView.bottomAnchor, constant: 8),
+            title.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -16),
+            title.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 4),
+            title.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -4),
             
             title.centerXAnchor.constraint(equalTo: contentView.centerXAnchor)
         ])
@@ -74,7 +76,7 @@ class HomeCollectionViewCell: UICollectionViewCell {
 struct HomeCollectionViewCellPreview: PreviewProvider {
     static var previews: some View {
         ViewPreview {
-            let dataModel = HomeCellModel(imageName: "findux", title: "test")
+            let dataModel = HomeCellModel(imageName: "Book", title: "Cursos")
             let cell = HomeCollectionViewCell()
             cell.setupCell(data: dataModel)
             return cell
