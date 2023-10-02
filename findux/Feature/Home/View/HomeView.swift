@@ -17,6 +17,22 @@ class HomeView: BaseView<HomeCoordinator> {
                  HomeCellModel(imageName: "Percent", title: "Investimentos"),
                  HomeCellModel(imageName: "Chart_alt", title: "Bolsa de valores")]
     
+    let headerImageView: UIImageView = {
+        let img = UIImageView()
+        img.contentMode = .scaleAspectFit
+        img.translatesAutoresizingMaskIntoConstraints = false
+        return img
+    }()
+    
+    let profileButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.contentVerticalAlignment = .fill
+        button.contentHorizontalAlignment = .fill
+        button.tintColor = .darkGray
+        return button
+    }()
+    
     let collectionView: UICollectionView = {
         let layout = HomeCollectionLayout()
         layout.scrollDirection = .vertical
@@ -37,13 +53,45 @@ class HomeView: BaseView<HomeCoordinator> {
     }
     
     func commomInit() {
+        backgroundColor = .white
+        self.addSubview(headerImageView)
+        self.addSubview(profileButton)
         self.addSubview(collectionView)
-        self.embedConstraints(collectionView)
         
         collectionView.register(HomeCollectionViewCell.self, forCellWithReuseIdentifier: HomeCollectionViewCell.reuseIdentifier)
         
         collectionView.delegate = self
         collectionView.dataSource = self
+        
+        headerImageView.image = UIImage(named: "findux")
+        profileButton.setImage(UIImage(systemName: "person"), for: .normal)
+        
+        profileButton.addTarget(self, action: #selector(profileButtonAction), for: .touchUpInside)
+        
+        setupConstraints()
+    }
+    
+    func setupConstraints() {
+        NSLayoutConstraint.activate([
+            headerImageView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            headerImageView.topAnchor.constraint(equalTo: topAnchor, constant: 24),
+            headerImageView.widthAnchor.constraint(equalToConstant: 200),
+            headerImageView.heightAnchor.constraint(equalToConstant: 30),
+            
+            profileButton.topAnchor.constraint(equalTo: topAnchor, constant: 28),
+            profileButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
+            profileButton.widthAnchor.constraint(equalToConstant: 28),
+            profileButton.heightAnchor.constraint(equalToConstant: 24),
+            
+            collectionView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            collectionView.topAnchor.constraint(equalTo: headerImageView.bottomAnchor, constant: 32),
+            collectionView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            collectionView.bottomAnchor.constraint(equalTo: bottomAnchor)
+        ])
+    }
+    
+    @objc func profileButtonAction() {
+        print("MOSTRAR PROFILE")
     }
 }
 
