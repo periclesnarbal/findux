@@ -10,4 +10,5 @@ import Foundation
 struct HomeCellModel {
     let imageName: String
     let title: String
+    let action: () -> Void
 }

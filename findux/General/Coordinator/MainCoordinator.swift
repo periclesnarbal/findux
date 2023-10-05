@@ -32,4 +32,9 @@ final class MainCoordinator: BaseCoordinator {
         let passwordCoordinator = buildChildCoordinator(childType: PasswordCoordinator.self, parentCoordinator: self)
         passwordCoordinator.start()
     }
+    
+    func goToPresentationCoordinator() {
+        let presentationCoordinator = buildChildCoordinator(childType: PresentationCoordinator.self, parentCoordinator: self)
+        presentationCoordinator.start()
+    }
 }

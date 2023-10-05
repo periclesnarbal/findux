@@ -76,7 +76,7 @@ class HomeCollectionViewCell: UICollectionViewCell {
 struct HomeCollectionViewCellPreview: PreviewProvider {
     static var previews: some View {
         ViewPreview {
-            let dataModel = HomeCellModel(imageName: "Book", title: "Cursos")
+            let dataModel = HomeCellModel(imageName: "Book", title: "Cursos") {}
             let cell = HomeCollectionViewCell()
             cell.setupCell(data: dataModel)
             return cell

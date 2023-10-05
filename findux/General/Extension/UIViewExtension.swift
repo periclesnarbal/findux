@@ -26,6 +26,14 @@ extension UIView {
         return nibView
     }
     
+    func addViewToBounds(_ view: UIView) {
+        view.frame = bounds
+        view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        view.translatesAutoresizingMaskIntoConstraints = true
+        backgroundColor = view.backgroundColor
+        addSubview(view)
+    }
+
     func fadeInAnimation(duration: Double) {
         { [weak self] in
             self?.alpha = 0

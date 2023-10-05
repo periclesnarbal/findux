@@ -50,11 +50,7 @@ class PasswordView: BaseView<PasswordCoordinator> {
     
     func commomInit() {
         if let view: UIView = loadViewFromNib() {
-            view.frame = bounds
-            view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-            view.translatesAutoresizingMaskIntoConstraints = true
-            self.backgroundColor = view.backgroundColor
-            addSubview(view)
+           addViewToBounds(view)
         }
         
         fieldViewSetup(views: fieldStackView.arrangedSubviews)
@@ -118,10 +114,7 @@ extension PasswordView: FullAccessViewControllerDelegate {
 //extension PasswordView: LifeCycleViewControllerDelegate {
 //    func loadView() {
 //        if let view: UIView = loadViewFromNib() {
-//            view.frame = bounds
-//            view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-//            view.translatesAutoresizingMaskIntoConstraints = true
-//            addSubview(view)
+//            addViewToBounds(view)
 //        }
 //    }
 //}

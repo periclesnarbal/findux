@@ -10,12 +10,13 @@ import SwiftUI
 
 class HomeView: BaseView<HomeCoordinator> {
     
-    let menus = [HomeCellModel(imageName: "Book", title: "Cursos"),
-                 HomeCellModel(imageName: "OpenBook", title: "Glossário"),
-                 HomeCellModel(imageName: "Chart", title: "Simulador"),
-                 HomeCellModel(imageName: "Calendar", title: "Projetos"),
-                 HomeCellModel(imageName: "Percent", title: "Investimentos"),
-                 HomeCellModel(imageName: "Chart_alt", title: "Bolsa de valores")]
+    lazy var menus = [HomeCellModel(imageName: "Book", title: "Cursos") { [weak self] in
+                                        self?.coordinatorDelegate?.goToPresentation() },
+                 HomeCellModel(imageName: "OpenBook", title: "Glossário") {},
+                 HomeCellModel(imageName: "Chart", title: "Simulador") {},
+                 HomeCellModel(imageName: "Calendar", title: "Projetos") {},
+                 HomeCellModel(imageName: "Percent", title: "Investimentos") {},
+                 HomeCellModel(imageName: "Chart_alt", title: "Bolsa de valores") {}]
     
     let headerImageView: UIImageView = {
         let img = UIImageView()
@@ -104,6 +105,11 @@ extension HomeView: UICollectionViewDelegate, UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCollectionViewCell.reuseIdentifier, for: indexPath) as? HomeCollectionViewCell else { return UICollectionViewCell() }
         cell.setupCell(data: menus[indexPath.row])
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let menuItem = menus[indexPath.row]
+        menuItem.action()
     }
 }
 
