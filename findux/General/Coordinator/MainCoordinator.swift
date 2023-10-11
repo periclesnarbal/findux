@@ -37,4 +37,9 @@ final class MainCoordinator: BaseCoordinator {
         let presentationCoordinator = buildChildCoordinator(childType: PresentationCoordinator.self, parentCoordinator: self)
         presentationCoordinator.start()
     }
+    
+    func goToCoursesCoordinator() {
+        let presentationCoordinator = buildChildCoordinator(childType: CoursesCoordinator.self, parentCoordinator: self)
+        presentationCoordinator.start()
+    }
 }

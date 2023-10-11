@@ -43,7 +43,7 @@ class PasswordViewModel {
         if validateSignInFields(username: username, password: password) {
             let loginData = LoginModel(username: username, password: password)
             
-            if let savedData: UserModel = UserDefaultsManager.shared.readItem(loginData.username) {
+            if let savedData: UserModel = userDefaults.readItem(loginData.username) {
                 if loginData.password == savedData.password {
                     viewDelegate.loginSuccess()
                 } else {
@@ -58,7 +58,7 @@ class PasswordViewModel {
     func signUpAction(email: String, username: String, password: String, checkPassword: String) {
         if validateSignUpFields(email: email, username: username, password: password, checkPassword: checkPassword) {
             let signUpData = UserModel(username: username, password: password, email: email)
-            UserDefaultsManager.shared.createItem(signUpData.username, value: signUpData)
+            userDefaults.createItem(signUpData.username, value: signUpData)
             viewDelegate.loginSuccess()
         }
     }

@@ -26,6 +26,8 @@
 		B71F5E112AC1B789009C992F /* SignStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71F5E102AC1B789009C992F /* SignStatus.swift */; };
 		B72728FD2AC7179E00444A0B /* HomeCellLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72728FC2AC7179E00444A0B /* HomeCellLayout.swift */; };
 		B727BCB72AC5E6F20077B515 /* HomeCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B727BCB62AC5E6F20077B515 /* HomeCellModel.swift */; };
+		B72CBE102AD5AAD400475A3D /* PresentationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72CBE0F2AD5AAD400475A3D /* PresentationViewModel.swift */; };
+		B72CBE132AD5AD3B00475A3D /* PresentationViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72CBE122AD5AD3B00475A3D /* PresentationViewData.swift */; };
 		B7368F892AC5C6F000533673 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7368F882AC5C6F000533673 /* HomeCollectionViewCell.swift */; };
 		B736912F2A7AE57E00A67F4B /* UINavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B736912E2A7AE57E00A67F4B /* UINavigationControllerExtension.swift */; };
 		B73774B72A9D192600B56B74 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73774B62A9D192600B56B74 /* BaseView.swift */; };
@@ -71,6 +73,9 @@
 		B7C068302A993C9E00A5F9B2 /* ChildCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C0682F2A993C9E00A5F9B2 /* ChildCoordinator.swift */; };
 		B7D262D92A4E29A6001757B6 /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D262D82A4E29A6001757B6 /* ProfileCoordinator.swift */; };
 		B7D262DB2A4E2A43001757B6 /* MaterialCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D262DA2A4E2A43001757B6 /* MaterialCoordinator.swift */; };
+		B7EF65E92AD6E119006D7E8A /* CoursesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EF65E82AD6E119006D7E8A /* CoursesCoordinator.swift */; };
+		B7EF65EB2AD6EDFB006D7E8A /* CoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EF65EA2AD6EDFB006D7E8A /* CoursesViewController.swift */; };
+		B7EF65ED2AD6EF05006D7E8A /* CoursesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EF65EC2AD6EF05006D7E8A /* CoursesView.swift */; };
 		B7FB6BA42AA0D70600F944E7 /* PasswordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7FB6BA32AA0D70600F944E7 /* PasswordView.xib */; };
 		B7FC49312ACB153300193A9E /* PresentationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FC49302ACB153300193A9E /* PresentationCoordinator.swift */; };
 		B7FC49342ACB158500193A9E /* PresentationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FC49332ACB158500193A9E /* PresentationViewController.swift */; };
@@ -118,6 +123,8 @@
 		B71F5E102AC1B789009C992F /* SignStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignStatus.swift; sourceTree = "<group>"; };
 		B72728FC2AC7179E00444A0B /* HomeCellLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCellLayout.swift; sourceTree = "<group>"; };
 		B727BCB62AC5E6F20077B515 /* HomeCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCellModel.swift; sourceTree = "<group>"; };
+		B72CBE0F2AD5AAD400475A3D /* PresentationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationViewModel.swift; sourceTree = "<group>"; };
+		B72CBE122AD5AD3B00475A3D /* PresentationViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationViewData.swift; sourceTree = "<group>"; };
 		B7368F882AC5C6F000533673 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		B736912E2A7AE57E00A67F4B /* UINavigationControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerExtension.swift; sourceTree = "<group>"; };
 		B73774B62A9D192600B56B74 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
@@ -162,6 +169,9 @@
 		B7C0682F2A993C9E00A5F9B2 /* ChildCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildCoordinator.swift; sourceTree = "<group>"; };
 		B7D262D82A4E29A6001757B6 /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
 		B7D262DA2A4E2A43001757B6 /* MaterialCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialCoordinator.swift; sourceTree = "<group>"; };
+		B7EF65E82AD6E119006D7E8A /* CoursesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesCoordinator.swift; sourceTree = "<group>"; };
+		B7EF65EA2AD6EDFB006D7E8A /* CoursesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesViewController.swift; sourceTree = "<group>"; };
+		B7EF65EC2AD6EF05006D7E8A /* CoursesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesView.swift; sourceTree = "<group>"; };
 		B7FB6BA32AA0D70600F944E7 /* PasswordView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PasswordView.xib; sourceTree = "<group>"; };
 		B7FC49302ACB153300193A9E /* PresentationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationCoordinator.swift; sourceTree = "<group>"; };
 		B7FC49332ACB158500193A9E /* PresentationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationViewController.swift; sourceTree = "<group>"; };
@@ -290,6 +300,22 @@
 			isa = PBXGroup;
 			children = (
 				B727BCB62AC5E6F20077B515 /* HomeCellModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B72CBE0E2AD5AAB400475A3D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B72CBE0F2AD5AAD400475A3D /* PresentationViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B72CBE112AD5AD2300475A3D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B72CBE122AD5AD3B00475A3D /* PresentationViewData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -501,6 +527,7 @@
 		B7C068332A993D3900A5F9B2 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				B7EF65E42AD6E000006D7E8A /* Courses */,
 				B7FC492D2ACB14AE00193A9E /* Presentation */,
 				B7C068242A98E8B100A5F9B2 /* Password */,
 				B78D92012A8FFDD900AE57E4 /* Home */,
@@ -548,10 +575,46 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		B7EF65E42AD6E000006D7E8A /* Courses */ = {
+			isa = PBXGroup;
+			children = (
+				B7EF65E72AD6E0E4006D7E8A /* Coordinator */,
+				B7EF65E62AD6E0DD006D7E8A /* ViewController */,
+				B7EF65E52AD6E0D8006D7E8A /* View */,
+			);
+			path = Courses;
+			sourceTree = "<group>";
+		};
+		B7EF65E52AD6E0D8006D7E8A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B7EF65EC2AD6EF05006D7E8A /* CoursesView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B7EF65E62AD6E0DD006D7E8A /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B7EF65EA2AD6EDFB006D7E8A /* CoursesViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		B7EF65E72AD6E0E4006D7E8A /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				B7EF65E82AD6E119006D7E8A /* CoursesCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 		B7FC492D2ACB14AE00193A9E /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				B72CBE112AD5AD2300475A3D /* Model */,
 				B7FC49352ACB15AE00193A9E /* View */,
+				B72CBE0E2AD5AAB400475A3D /* ViewModel */,
 				B7FC49322ACB156000193A9E /* ViewController */,
 				B7FC492E2ACB14FD00193A9E /* Coordinator */,
 			);
@@ -748,6 +811,7 @@
 				B7FC49342ACB158500193A9E /* PresentationViewController.swift in Sources */,
 				B70D4A002AAB98A20069D4BF /* ViewControllerPreview.swift in Sources */,
 				B71F5E112AC1B789009C992F /* SignStatus.swift in Sources */,
+				B7EF65ED2AD6EF05006D7E8A /* CoursesView.swift in Sources */,
 				B7C068292A98EBBE00A5F9B2 /* UIViewExtension.swift in Sources */,
 				B70D49FC2AAB96F40069D4BF /* SeparatorView.swift in Sources */,
 				B79F9FCB2A4DDE730000B973 /* MainCoordinator.swift in Sources */,
@@ -760,8 +824,12 @@
 				B70D4A022AAB98D50069D4BF /* ViewPreview.swift in Sources */,
 				B7027A102AC3634E00E9B249 /* LoginError.swift in Sources */,
 				B71B91C32A4CAD5B00843ACA /* SceneDelegate.swift in Sources */,
+				B7EF65E92AD6E119006D7E8A /* CoursesCoordinator.swift in Sources */,
+				B7EF65EB2AD6EDFB006D7E8A /* CoursesViewController.swift in Sources */,
+				B72CBE132AD5AD3B00475A3D /* PresentationViewData.swift in Sources */,
 				B79F9FC52A4CE8050000B973 /* MaterialViewController.swift in Sources */,
 				B78D920F2A900FCB00AE57E4 /* MaterialTwoViewController.swift in Sources */,
+				B72CBE102AD5AAD400475A3D /* PresentationViewModel.swift in Sources */,
 				B7027A162AC4585300E9B249 /* FieldError.swift in Sources */,
 				B79F9FC12A4CB4B00000B973 /* HomeCoordinator.swift in Sources */,
 				B78D920D2A900F3D00AE57E4 /* ProfileTwoViewController.swift in Sources */,

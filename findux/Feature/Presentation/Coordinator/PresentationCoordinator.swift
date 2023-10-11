@@ -8,6 +8,7 @@
 import UIKit
 
 final class PresentationCoordinator: BaseChildCoordinator<MainCoordinator> {
+    let userDefaults = UserDefaultsManager.shared
     
     override func start() {
         goToPresentationViewController()
@@ -16,11 +17,14 @@ final class PresentationCoordinator: BaseChildCoordinator<MainCoordinator> {
     func goToPresentationViewController() {
         let vc = PresentationViewController()
         let view = PresentationView()
-//        let _ = PresentationView(viewDelegate: view, userDefaults: UserDefaultsManager.shared, fieldValidator: FieldValidatorHelper())
+        _ = PresentationViewModel(viewDelegate: view, userDefaults: userDefaults)
         vc.loadContentView(view)
-//        vc.fullAccessDelegate = view
         view.coordinatorDelegate = self
         navigationController.pushViewController(vc, animated: true)
+    }
+    
+    func goToCourses() {
+        parentCoordinator.goToCoursesCoordinator()
     }
 }
 

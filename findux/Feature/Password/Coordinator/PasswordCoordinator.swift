@@ -10,6 +10,8 @@ import GoogleSignIn
 
 final class PasswordCoordinator: BaseChildCoordinator<MainCoordinator> {
     
+    let userDefaults = UserDefaultsManager.shared
+    
     override func start() {
         goToPasswordViewController()
     }
@@ -17,7 +19,7 @@ final class PasswordCoordinator: BaseChildCoordinator<MainCoordinator> {
     func goToPasswordViewController() {
         let vc = PasswordViewController()
         let view = PasswordView()
-        let _ = PasswordViewModel(viewDelegate: view, userDefaults: UserDefaultsManager.shared, fieldValidator: FieldValidatorHelper())
+        let _ = PasswordViewModel(viewDelegate: view, userDefaults: userDefaults, fieldValidator: FieldValidatorHelper())
         vc.loadContentView(view)
         vc.fullAccessDelegate = view
         view.coordinatorDelegate = self
