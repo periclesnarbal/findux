@@ -8,9 +8,15 @@
 import UIKit
 import SwiftUI
 
+protocol PresentationViewProtocol: AnyObject {
+    var viewModelDelegate: PresentationViewModelProtocol? { get set }
+    
+    func setupView(dataModel: PresentationViewData)
+}
+
 class PresentationView: BaseView<PresentationCoordinator> {
     
-    var viewModelDelegate: PresentationViewModel?
+    var viewModelDelegate: PresentationViewModelProtocol?
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
@@ -18,8 +24,8 @@ class PresentationView: BaseView<PresentationCoordinator> {
     @IBOutlet weak var continueButton: UIButton!
     @IBOutlet weak var dontShowAgainSwitch: UISwitch!
     
-    @IBAction func continueButtonAction(_ sender: UIButton) { // TODO: VAI PRA PROXIMA VIEW
-        coordinatorDelegate?.goToCourses()
+    @IBAction func continueButtonAction(_ sender: UIButton) {
+        coordinatorDelegate?.dismiss()
     }
     
     @IBAction func dontShowAgainSwitchAction(_ sender: UISwitch) {
@@ -41,7 +47,9 @@ class PresentationView: BaseView<PresentationCoordinator> {
             addViewToBounds(view)
         }
     }
-    
+}
+
+extension PresentationView: PresentationViewProtocol {
     func setupView(dataModel: PresentationViewData) {
         titleLabel.text = dataModel.title
         descriptionLabel.text = dataModel.description

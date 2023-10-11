@@ -23,21 +23,7 @@ final class HomeCoordinator: BaseChildCoordinator<MainCoordinator> {
         navigationController.pushViewController(vc, animated: true)
     }
     
-    func goToHomeTwoViewController() {
-        let vc = HomeTwoViewController()
-        let view = HomeTwoView()
-        vc.loadContentView(view)
-        vc.lifeCycleDelegate = view
-        vc.fullAccessDelegate = view
-        view.coordinatorDelegate = self
-        navigationController.pushViewController(vc, animated: true)
-    }
-    
-    func goToProfile() {
-        parentCoordinator.goToProfileCoordinator()
-    }
-    
-    func goToPresentation() {
-        parentCoordinator.goToPresentationCoordinator()
+    func goToCourses() {
+        parentCoordinator.goToCoursesCoordinator()
     }
 }

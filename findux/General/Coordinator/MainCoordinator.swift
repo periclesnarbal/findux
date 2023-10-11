@@ -18,16 +18,6 @@ final class MainCoordinator: BaseCoordinator {
         homeCoordinator.start()
     }
     
-    func goToProfileCoordinator() {
-        let profileCoordinator =  buildChildCoordinator(childType: ProfileCoordinator.self, parentCoordinator: self)
-        profileCoordinator.start()
-    }
-    
-    func goToMaterialCoordinator() {
-        let materialCoordinator =  buildChildCoordinator(childType: MaterialCoordinator.self, parentCoordinator: self)
-        materialCoordinator.start()
-    }
-    
     func goToPasswordCoordinator() {
         let passwordCoordinator = buildChildCoordinator(childType: PasswordCoordinator.self, parentCoordinator: self)
         passwordCoordinator.start()

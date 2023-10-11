@@ -19,6 +19,12 @@ final class CoursesCoordinator: BaseChildCoordinator<MainCoordinator> {
         vc.loadContentView(view)
         view.coordinatorDelegate = self
         navigationController.pushViewController(vc, animated: true)
+        
+        goToPresent()
+    }
+    
+    func goToPresent() {
+        parentCoordinator.goToPresentationCoordinator()
     }
 }
 

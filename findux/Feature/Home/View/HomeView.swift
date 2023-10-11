@@ -11,7 +11,7 @@ import SwiftUI
 class HomeView: BaseView<HomeCoordinator> {
     
     lazy var menus = [HomeCellModel(imageName: "Book", title: "Cursos") { [weak self] in
-                                        self?.coordinatorDelegate?.goToPresentation() },
+                                        self?.coordinatorDelegate?.goToCourses() },
                  HomeCellModel(imageName: "OpenBook", title: "Glossário") {},
                  HomeCellModel(imageName: "Chart", title: "Simulador") {},
                  HomeCellModel(imageName: "Calendar", title: "Projetos") {},

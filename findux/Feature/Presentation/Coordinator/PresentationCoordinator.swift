@@ -17,14 +17,14 @@ final class PresentationCoordinator: BaseChildCoordinator<MainCoordinator> {
     func goToPresentationViewController() {
         let vc = PresentationViewController()
         let view = PresentationView()
-        _ = PresentationViewModel(viewDelegate: view, userDefaults: userDefaults)
+        _ = PresentationCourseViewModel(viewDelegate: view, userDefaults: userDefaults)
         vc.loadContentView(view)
         view.coordinatorDelegate = self
-        navigationController.pushViewController(vc, animated: true)
+        navigationController.present(vc, animated: true)
     }
     
-    func goToCourses() {
-        parentCoordinator.goToCoursesCoordinator()
+    func dismiss() {
+        navigationController.dismiss(animated: true)
     }
 }
 

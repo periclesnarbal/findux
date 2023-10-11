@@ -26,18 +26,14 @@
 		B71F5E112AC1B789009C992F /* SignStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71F5E102AC1B789009C992F /* SignStatus.swift */; };
 		B72728FD2AC7179E00444A0B /* HomeCellLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72728FC2AC7179E00444A0B /* HomeCellLayout.swift */; };
 		B727BCB72AC5E6F20077B515 /* HomeCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B727BCB62AC5E6F20077B515 /* HomeCellModel.swift */; };
-		B72CBE102AD5AAD400475A3D /* PresentationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72CBE0F2AD5AAD400475A3D /* PresentationViewModel.swift */; };
+		B72CBE102AD5AAD400475A3D /* PresentationViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72CBE0F2AD5AAD400475A3D /* PresentationViewModelProtocol.swift */; };
 		B72CBE132AD5AD3B00475A3D /* PresentationViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72CBE122AD5AD3B00475A3D /* PresentationViewData.swift */; };
 		B7368F892AC5C6F000533673 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7368F882AC5C6F000533673 /* HomeCollectionViewCell.swift */; };
 		B736912F2A7AE57E00A67F4B /* UINavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B736912E2A7AE57E00A67F4B /* UINavigationControllerExtension.swift */; };
 		B73774B72A9D192600B56B74 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73774B62A9D192600B56B74 /* BaseView.swift */; };
+		B76265D52AD7288E003D134C /* PresentationCourseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76265D42AD7288E003D134C /* PresentationCourseViewModel.swift */; };
 		B7644D4F2ACF034000C3D4E7 /* PresentationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7644D4E2ACF034000C3D4E7 /* PresentationView.xib */; };
 		B76BEC502A99410F00A24FEE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76BEC4F2A99410F00A24FEE /* HomeView.swift */; };
-		B76BEC522A99412800A24FEE /* HomeTwoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76BEC512A99412800A24FEE /* HomeTwoView.swift */; };
-		B76BEC542A99414E00A24FEE /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76BEC532A99414E00A24FEE /* ProfileView.swift */; };
-		B76BEC572A99417000A24FEE /* ProfileTwoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76BEC562A99417000A24FEE /* ProfileTwoView.swift */; };
-		B76BEC592A99418E00A24FEE /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76BEC582A99418E00A24FEE /* MaterialView.swift */; };
-		B76BEC5B2A9941A000A24FEE /* MaterialTwoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76BEC5A2A9941A000A24FEE /* MaterialTwoView.swift */; };
 		B76BEC5D2A9941C000A24FEE /* PasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76BEC5C2A9941C000A24FEE /* PasswordView.swift */; };
 		B76BEC5F2A99420200A24FEE /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76BEC5E2A99420200A24FEE /* BaseViewController.swift */; };
 		B76BEC612A99424200A24FEE /* LifeCycleViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76BEC602A99424200A24FEE /* LifeCycleViewControllerDelegate.swift */; };
@@ -48,9 +44,6 @@
 		B784D4C12A86AD6D00CD0E39 /* BaseChildCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B784D4C02A86AD6D00CD0E39 /* BaseChildCoordinator.swift */; };
 		B784D4C32A86C75B00CD0E39 /* BaseCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B784D4C22A86C75B00CD0E39 /* BaseCoordinatorTests.swift */; };
 		B7850DEC2AB5EBD700106DFD /* LinkButtonLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7850DEB2AB5EBD700106DFD /* LinkButtonLabel.swift */; };
-		B78D920B2A900E0200AE57E4 /* HomeTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78D920A2A900E0200AE57E4 /* HomeTwoViewController.swift */; };
-		B78D920D2A900F3D00AE57E4 /* ProfileTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78D920C2A900F3D00AE57E4 /* ProfileTwoViewController.swift */; };
-		B78D920F2A900FCB00AE57E4 /* MaterialTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78D920E2A900FCB00AE57E4 /* MaterialTwoViewController.swift */; };
 		B7923BB92A9FB2880095B443 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7923BB82A9FB2880095B443 /* Network.swift */; };
 		B79839952AA8DE1E00FD269D /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = B79839942AA8DE1E00FD269D /* GoogleSignIn */; };
 		B79839972AA8DF2200FD269D /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = B79839962AA8DF2200FD269D /* credentials.plist */; };
@@ -62,8 +55,6 @@
 		B79F9FBC2A4CB0BD0000B973 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79F9FBB2A4CB0BD0000B973 /* Coordinator.swift */; };
 		B79F9FBF2A4CB1E40000B973 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79F9FBE2A4CB1E40000B973 /* BaseCoordinator.swift */; };
 		B79F9FC12A4CB4B00000B973 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79F9FC02A4CB4B00000B973 /* HomeCoordinator.swift */; };
-		B79F9FC32A4CE7C40000B973 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79F9FC22A4CE7C40000B973 /* ProfileViewController.swift */; };
-		B79F9FC52A4CE8050000B973 /* MaterialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79F9FC42A4CE8050000B973 /* MaterialViewController.swift */; };
 		B79F9FC82A4D23390000B973 /* ViewCoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79F9FC72A4D23390000B973 /* ViewCoordinatorDelegate.swift */; };
 		B79F9FCB2A4DDE730000B973 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79F9FCA2A4DDE730000B973 /* MainCoordinator.swift */; };
 		B7C068272A98E92900A5F9B2 /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C068262A98E92900A5F9B2 /* PasswordViewController.swift */; };
@@ -71,8 +62,6 @@
 		B7C0682B2A98F26A00A5F9B2 /* PasswordCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C0682A2A98F26A00A5F9B2 /* PasswordCoordinator.swift */; };
 		B7C0682E2A98F61100A5F9B2 /* BaseViewEmbedScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C0682D2A98F61100A5F9B2 /* BaseViewEmbedScrollViewController.swift */; };
 		B7C068302A993C9E00A5F9B2 /* ChildCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C0682F2A993C9E00A5F9B2 /* ChildCoordinator.swift */; };
-		B7D262D92A4E29A6001757B6 /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D262D82A4E29A6001757B6 /* ProfileCoordinator.swift */; };
-		B7D262DB2A4E2A43001757B6 /* MaterialCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D262DA2A4E2A43001757B6 /* MaterialCoordinator.swift */; };
 		B7EF65E92AD6E119006D7E8A /* CoursesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EF65E82AD6E119006D7E8A /* CoursesCoordinator.swift */; };
 		B7EF65EB2AD6EDFB006D7E8A /* CoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EF65EA2AD6EDFB006D7E8A /* CoursesViewController.swift */; };
 		B7EF65ED2AD6EF05006D7E8A /* CoursesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EF65EC2AD6EF05006D7E8A /* CoursesView.swift */; };
@@ -123,18 +112,14 @@
 		B71F5E102AC1B789009C992F /* SignStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignStatus.swift; sourceTree = "<group>"; };
 		B72728FC2AC7179E00444A0B /* HomeCellLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCellLayout.swift; sourceTree = "<group>"; };
 		B727BCB62AC5E6F20077B515 /* HomeCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCellModel.swift; sourceTree = "<group>"; };
-		B72CBE0F2AD5AAD400475A3D /* PresentationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationViewModel.swift; sourceTree = "<group>"; };
+		B72CBE0F2AD5AAD400475A3D /* PresentationViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationViewModelProtocol.swift; sourceTree = "<group>"; };
 		B72CBE122AD5AD3B00475A3D /* PresentationViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationViewData.swift; sourceTree = "<group>"; };
 		B7368F882AC5C6F000533673 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		B736912E2A7AE57E00A67F4B /* UINavigationControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerExtension.swift; sourceTree = "<group>"; };
 		B73774B62A9D192600B56B74 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		B76265D42AD7288E003D134C /* PresentationCourseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationCourseViewModel.swift; sourceTree = "<group>"; };
 		B7644D4E2ACF034000C3D4E7 /* PresentationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PresentationView.xib; sourceTree = "<group>"; };
 		B76BEC4F2A99410F00A24FEE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		B76BEC512A99412800A24FEE /* HomeTwoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTwoView.swift; sourceTree = "<group>"; };
-		B76BEC532A99414E00A24FEE /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
-		B76BEC562A99417000A24FEE /* ProfileTwoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTwoView.swift; sourceTree = "<group>"; };
-		B76BEC582A99418E00A24FEE /* MaterialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
-		B76BEC5A2A9941A000A24FEE /* MaterialTwoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialTwoView.swift; sourceTree = "<group>"; };
 		B76BEC5C2A9941C000A24FEE /* PasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordView.swift; sourceTree = "<group>"; };
 		B76BEC5E2A99420200A24FEE /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		B76BEC602A99424200A24FEE /* LifeCycleViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCycleViewControllerDelegate.swift; sourceTree = "<group>"; };
@@ -145,9 +130,6 @@
 		B784D4C02A86AD6D00CD0E39 /* BaseChildCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseChildCoordinator.swift; sourceTree = "<group>"; };
 		B784D4C22A86C75B00CD0E39 /* BaseCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinatorTests.swift; sourceTree = "<group>"; };
 		B7850DEB2AB5EBD700106DFD /* LinkButtonLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkButtonLabel.swift; sourceTree = "<group>"; };
-		B78D920A2A900E0200AE57E4 /* HomeTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTwoViewController.swift; sourceTree = "<group>"; };
-		B78D920C2A900F3D00AE57E4 /* ProfileTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTwoViewController.swift; sourceTree = "<group>"; };
-		B78D920E2A900FCB00AE57E4 /* MaterialTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialTwoViewController.swift; sourceTree = "<group>"; };
 		B7923BB82A9FB2880095B443 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		B79839962AA8DF2200FD269D /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = credentials.plist; sourceTree = "<group>"; };
 		B79839982AA8FDD900FD269D /* GoogleSignInCredentialsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInCredentialsModel.swift; sourceTree = "<group>"; };
@@ -158,8 +140,6 @@
 		B79F9FBB2A4CB0BD0000B973 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		B79F9FBE2A4CB1E40000B973 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		B79F9FC02A4CB4B00000B973 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
-		B79F9FC22A4CE7C40000B973 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		B79F9FC42A4CE8050000B973 /* MaterialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialViewController.swift; sourceTree = "<group>"; };
 		B79F9FC72A4D23390000B973 /* ViewCoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCoordinatorDelegate.swift; sourceTree = "<group>"; };
 		B79F9FCA2A4DDE730000B973 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		B7C068262A98E92900A5F9B2 /* PasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
@@ -167,8 +147,6 @@
 		B7C0682A2A98F26A00A5F9B2 /* PasswordCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordCoordinator.swift; sourceTree = "<group>"; };
 		B7C0682D2A98F61100A5F9B2 /* BaseViewEmbedScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewEmbedScrollViewController.swift; sourceTree = "<group>"; };
 		B7C0682F2A993C9E00A5F9B2 /* ChildCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildCoordinator.swift; sourceTree = "<group>"; };
-		B7D262D82A4E29A6001757B6 /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
-		B7D262DA2A4E2A43001757B6 /* MaterialCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialCoordinator.swift; sourceTree = "<group>"; };
 		B7EF65E82AD6E119006D7E8A /* CoursesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesCoordinator.swift; sourceTree = "<group>"; };
 		B7EF65EA2AD6EDFB006D7E8A /* CoursesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesViewController.swift; sourceTree = "<group>"; };
 		B7EF65EC2AD6EF05006D7E8A /* CoursesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesView.swift; sourceTree = "<group>"; };
@@ -307,7 +285,8 @@
 		B72CBE0E2AD5AAB400475A3D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				B72CBE0F2AD5AAD400475A3D /* PresentationViewModel.swift */,
+				B72CBE0F2AD5AAD400475A3D /* PresentationViewModelProtocol.swift */,
+				B76265D42AD7288E003D134C /* PresentationCourseViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -340,26 +319,6 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		B78D92022A8FFDE000AE57E4 /* Profile */ = {
-			isa = PBXGroup;
-			children = (
-				B78D92062A90002600AE57E4 /* Coordinator */,
-				B78D92082A90005200AE57E4 /* ViewController */,
-				B7C068362A993D7000A5F9B2 /* View */,
-			);
-			path = Profile;
-			sourceTree = "<group>";
-		};
-		B78D92032A8FFDE800AE57E4 /* Material */ = {
-			isa = PBXGroup;
-			children = (
-				B78D92052A90001E00AE57E4 /* Coordinator */,
-				B78D92092A90005B00AE57E4 /* ViewController */,
-				B7C068372A993D8000A5F9B2 /* View */,
-			);
-			path = Material;
-			sourceTree = "<group>";
-		};
 		B78D92042A90001500AE57E4 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
@@ -368,45 +327,10 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
-		B78D92052A90001E00AE57E4 /* Coordinator */ = {
-			isa = PBXGroup;
-			children = (
-				B7D262DA2A4E2A43001757B6 /* MaterialCoordinator.swift */,
-			);
-			path = Coordinator;
-			sourceTree = "<group>";
-		};
-		B78D92062A90002600AE57E4 /* Coordinator */ = {
-			isa = PBXGroup;
-			children = (
-				B7D262D82A4E29A6001757B6 /* ProfileCoordinator.swift */,
-			);
-			path = Coordinator;
-			sourceTree = "<group>";
-		};
 		B78D92072A90004900AE57E4 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 				B71B91C42A4CAD5B00843ACA /* HomeViewController.swift */,
-				B78D920A2A900E0200AE57E4 /* HomeTwoViewController.swift */,
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
-		B78D92082A90005200AE57E4 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				B79F9FC22A4CE7C40000B973 /* ProfileViewController.swift */,
-				B78D920C2A900F3D00AE57E4 /* ProfileTwoViewController.swift */,
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
-		B78D92092A90005B00AE57E4 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				B79F9FC42A4CE8050000B973 /* MaterialViewController.swift */,
-				B78D920E2A900FCB00AE57E4 /* MaterialTwoViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -531,8 +455,6 @@
 				B7FC492D2ACB14AE00193A9E /* Presentation */,
 				B7C068242A98E8B100A5F9B2 /* Password */,
 				B78D92012A8FFDD900AE57E4 /* Home */,
-				B78D92022A8FFDE000AE57E4 /* Profile */,
-				B78D92032A8FFDE800AE57E4 /* Material */,
 			);
 			path = Feature;
 			sourceTree = "<group>";
@@ -550,27 +472,8 @@
 			isa = PBXGroup;
 			children = (
 				B76BEC4F2A99410F00A24FEE /* HomeView.swift */,
-				B76BEC512A99412800A24FEE /* HomeTwoView.swift */,
 				B7368F882AC5C6F000533673 /* HomeCollectionViewCell.swift */,
 				B72728FC2AC7179E00444A0B /* HomeCellLayout.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		B7C068362A993D7000A5F9B2 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				B76BEC532A99414E00A24FEE /* ProfileView.swift */,
-				B76BEC562A99417000A24FEE /* ProfileTwoView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		B7C068372A993D8000A5F9B2 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				B76BEC582A99418E00A24FEE /* MaterialView.swift */,
-				B76BEC5A2A9941A000A24FEE /* MaterialTwoView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -785,17 +688,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7D262D92A4E29A6001757B6 /* ProfileCoordinator.swift in Sources */,
 				B7787AA92AB2533B00E281FB /* EyeButton.swift in Sources */,
 				B79839992AA8FDD900FD269D /* GoogleSignInCredentialsModel.swift in Sources */,
 				B79F9FBC2A4CB0BD0000B973 /* Coordinator.swift in Sources */,
 				B7368F892AC5C6F000533673 /* HomeCollectionViewCell.swift in Sources */,
-				B76BEC5B2A9941A000A24FEE /* MaterialTwoView.swift in Sources */,
 				B73774B72A9D192600B56B74 /* BaseView.swift in Sources */,
-				B76BEC522A99412800A24FEE /* HomeTwoView.swift in Sources */,
 				B7923BB92A9FB2880095B443 /* Network.swift in Sources */,
 				B76BEC5F2A99420200A24FEE /* BaseViewController.swift in Sources */,
-				B76BEC592A99418E00A24FEE /* MaterialView.swift in Sources */,
 				B77CE8C42AC1D17D003C7E2A /* UserModel.swift in Sources */,
 				B79E3AA72A8EA7AA00C8BD2E /* CoordinatorNavigationController.swift in Sources */,
 				B736912F2A7AE57E00A67F4B /* UINavigationControllerExtension.swift in Sources */,
@@ -804,10 +703,7 @@
 				B784D4C12A86AD6D00CD0E39 /* BaseChildCoordinator.swift in Sources */,
 				B7C068272A98E92900A5F9B2 /* PasswordViewController.swift in Sources */,
 				B7FC49372ACB15F400193A9E /* PresentationView.swift in Sources */,
-				B76BEC572A99417000A24FEE /* ProfileTwoView.swift in Sources */,
-				B7D262DB2A4E2A43001757B6 /* MaterialCoordinator.swift in Sources */,
 				B71B91C12A4CAD5B00843ACA /* AppDelegate.swift in Sources */,
-				B78D920B2A900E0200AE57E4 /* HomeTwoViewController.swift in Sources */,
 				B7FC49342ACB158500193A9E /* PresentationViewController.swift in Sources */,
 				B70D4A002AAB98A20069D4BF /* ViewControllerPreview.swift in Sources */,
 				B71F5E112AC1B789009C992F /* SignStatus.swift in Sources */,
@@ -816,23 +712,19 @@
 				B70D49FC2AAB96F40069D4BF /* SeparatorView.swift in Sources */,
 				B79F9FCB2A4DDE730000B973 /* MainCoordinator.swift in Sources */,
 				B7C0682B2A98F26A00A5F9B2 /* PasswordCoordinator.swift in Sources */,
-				B76BEC542A99414E00A24FEE /* ProfileView.swift in Sources */,
+				B76265D52AD7288E003D134C /* PresentationCourseViewModel.swift in Sources */,
 				B79F9FBF2A4CB1E40000B973 /* BaseCoordinator.swift in Sources */,
 				B79C7B242ABCE2290051A4DC /* UserDefaultsManager.swift in Sources */,
 				B71F5E0D2AC1B566009C992F /* LoginModel.swift in Sources */,
-				B79F9FC32A4CE7C40000B973 /* ProfileViewController.swift in Sources */,
 				B70D4A022AAB98D50069D4BF /* ViewPreview.swift in Sources */,
 				B7027A102AC3634E00E9B249 /* LoginError.swift in Sources */,
 				B71B91C32A4CAD5B00843ACA /* SceneDelegate.swift in Sources */,
 				B7EF65E92AD6E119006D7E8A /* CoursesCoordinator.swift in Sources */,
 				B7EF65EB2AD6EDFB006D7E8A /* CoursesViewController.swift in Sources */,
 				B72CBE132AD5AD3B00475A3D /* PresentationViewData.swift in Sources */,
-				B79F9FC52A4CE8050000B973 /* MaterialViewController.swift in Sources */,
-				B78D920F2A900FCB00AE57E4 /* MaterialTwoViewController.swift in Sources */,
-				B72CBE102AD5AAD400475A3D /* PresentationViewModel.swift in Sources */,
+				B72CBE102AD5AAD400475A3D /* PresentationViewModelProtocol.swift in Sources */,
 				B7027A162AC4585300E9B249 /* FieldError.swift in Sources */,
 				B79F9FC12A4CB4B00000B973 /* HomeCoordinator.swift in Sources */,
-				B78D920D2A900F3D00AE57E4 /* ProfileTwoViewController.swift in Sources */,
 				B76BEC632A995AB900A24FEE /* FullAccessViewControllerDelegate.swift in Sources */,
 				B76BEC612A99424200A24FEE /* LifeCycleViewControllerDelegate.swift in Sources */,
 				B76BEC5D2A9941C000A24FEE /* PasswordView.swift in Sources */,

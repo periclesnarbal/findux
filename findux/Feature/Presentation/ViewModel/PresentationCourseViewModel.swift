@@ -1,22 +1,22 @@
 //
-//  PresentationViewModel.swift
+//  PresentationCourseViewModel.swift
 //  findux
 //
-//  Created by Péricles Narbal on 10/10/23.
+//  Created by Péricles Narbal on 11/10/23.
 //
 
 import Foundation
 
-class PresentationViewModel {
+class PresentationCourseViewModel: PresentationViewModelProtocol {
     
-    unowned var viewDelegate: PresentationView
+    unowned var viewDelegate: PresentationViewProtocol
     let userDefaults: UserDefaultsManager
     let dataModel = PresentationViewData(
         title: "Cursos",
         description: "Aqui você pode encontrar um compilado de cursos escolhidos criteriosamente pela equipe do findux",
         buttonTitle: "Continuar")
     
-    init(viewDelegate: PresentationView, userDefaults: UserDefaultsManager) {
+    required init(viewDelegate: PresentationViewProtocol, userDefaults: UserDefaultsManager) {
         self.viewDelegate = viewDelegate
         self.userDefaults = userDefaults
         
