@@ -47,6 +47,9 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V0T-69-VCM">
                             <rect key="frame" x="0.0" y="161" width="288" height="4"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="4" id="VDd-Nq-OCt"/>
+                            </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FAo-Ic-20M">
                             <rect key="frame" x="0.0" y="173" width="288" height="17"/>
@@ -67,9 +70,6 @@
                             </constraints>
                         </view>
                     </subviews>
-                    <constraints>
-                        <constraint firstAttribute="height" priority="750" constant="190" id="cnp-H2-foH"/>
-                    </constraints>
                 </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

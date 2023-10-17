@@ -47,8 +47,6 @@ class CoursesTableViewCell: UITableViewCell {
         goToCourseLinkButton.action = { [weak self] in
             self?.action?()
         }
-        
-        autoresizingMask = [.flexibleWidth, .flexibleHeight]
     }
     
     func setupConstraints() {

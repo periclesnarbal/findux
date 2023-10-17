@@ -47,9 +47,6 @@ class CoursesView: BaseView<CoursesCoordinator> {
         
         tableView.delegate = self
         tableView.dataSource = self
-        
-        tableView.estimatedRowHeight = 220
-        tableView.rowHeight = UITableView.automaticDimension
     }
     
     func setupConstraints() {
@@ -67,10 +64,6 @@ extension CoursesView: UITableViewDelegate, UITableViewDataSource {
         let data = courses[indexPath.row]
         cell.setupCell(data: data)
         return cell
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
     }
 }
 
