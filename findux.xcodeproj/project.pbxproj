@@ -10,6 +10,8 @@
 		B7027A102AC3634E00E9B249 /* LoginError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7027A0F2AC3634E00E9B249 /* LoginError.swift */; };
 		B7027A162AC4585300E9B249 /* FieldError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7027A152AC4585300E9B249 /* FieldError.swift */; };
 		B7027A192AC45AFB00E9B249 /* CustomErrorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7027A182AC45AFB00E9B249 /* CustomErrorProtocol.swift */; };
+		B70688562ADF0D7F005DDBC6 /* CoursesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70688552ADF0D7F005DDBC6 /* CoursesTableViewCell.swift */; };
+		B70688582ADF0F59005DDBC6 /* CoursesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B70688572ADF0F59005DDBC6 /* CoursesTableViewCell.xib */; };
 		B70C358D2AC34C7600A55AC8 /* PasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70C358C2AC34C7600A55AC8 /* PasswordViewModel.swift */; };
 		B70D49FC2AAB96F40069D4BF /* SeparatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70D49FB2AAB96F40069D4BF /* SeparatorView.swift */; };
 		B70D4A002AAB98A20069D4BF /* ViewControllerPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70D49FF2AAB98A20069D4BF /* ViewControllerPreview.swift */; };
@@ -41,6 +43,7 @@
 		B7787AA72AB2501300E281FB /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7787AA62AB2501300E281FB /* PasswordTextField.swift */; };
 		B7787AA92AB2533B00E281FB /* EyeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7787AA82AB2533B00E281FB /* EyeButton.swift */; };
 		B77CE8C42AC1D17D003C7E2A /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77CE8C32AC1D17D003C7E2A /* UserModel.swift */; };
+		B77FD9BE2ADF191300E5803D /* CoursesCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77FD9BD2ADF191300E5803D /* CoursesCellModel.swift */; };
 		B784D4C12A86AD6D00CD0E39 /* BaseChildCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B784D4C02A86AD6D00CD0E39 /* BaseChildCoordinator.swift */; };
 		B784D4C32A86C75B00CD0E39 /* BaseCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B784D4C22A86C75B00CD0E39 /* BaseCoordinatorTests.swift */; };
 		B7850DEC2AB5EBD700106DFD /* LinkButtonLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7850DEB2AB5EBD700106DFD /* LinkButtonLabel.swift */; };
@@ -92,6 +95,8 @@
 		B7027A0F2AC3634E00E9B249 /* LoginError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginError.swift; sourceTree = "<group>"; };
 		B7027A152AC4585300E9B249 /* FieldError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldError.swift; sourceTree = "<group>"; };
 		B7027A182AC45AFB00E9B249 /* CustomErrorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomErrorProtocol.swift; sourceTree = "<group>"; };
+		B70688552ADF0D7F005DDBC6 /* CoursesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesTableViewCell.swift; sourceTree = "<group>"; };
+		B70688572ADF0F59005DDBC6 /* CoursesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoursesTableViewCell.xib; sourceTree = "<group>"; };
 		B70C358C2AC34C7600A55AC8 /* PasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewModel.swift; sourceTree = "<group>"; };
 		B70D49FB2AAB96F40069D4BF /* SeparatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeparatorView.swift; sourceTree = "<group>"; };
 		B70D49FF2AAB98A20069D4BF /* ViewControllerPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPreview.swift; sourceTree = "<group>"; };
@@ -127,6 +132,7 @@
 		B7787AA62AB2501300E281FB /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
 		B7787AA82AB2533B00E281FB /* EyeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeButton.swift; sourceTree = "<group>"; };
 		B77CE8C32AC1D17D003C7E2A /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		B77FD9BD2ADF191300E5803D /* CoursesCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesCellModel.swift; sourceTree = "<group>"; };
 		B784D4C02A86AD6D00CD0E39 /* BaseChildCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseChildCoordinator.swift; sourceTree = "<group>"; };
 		B784D4C22A86C75B00CD0E39 /* BaseCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinatorTests.swift; sourceTree = "<group>"; };
 		B7850DEB2AB5EBD700106DFD /* LinkButtonLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkButtonLabel.swift; sourceTree = "<group>"; };
@@ -308,6 +314,14 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		B77FD9BC2ADF190300E5803D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B77FD9BD2ADF191300E5803D /* CoursesCellModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		B78D92012A8FFDD900AE57E4 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -481,6 +495,7 @@
 		B7EF65E42AD6E000006D7E8A /* Courses */ = {
 			isa = PBXGroup;
 			children = (
+				B77FD9BC2ADF190300E5803D /* Model */,
 				B7EF65E72AD6E0E4006D7E8A /* Coordinator */,
 				B7EF65E62AD6E0DD006D7E8A /* ViewController */,
 				B7EF65E52AD6E0D8006D7E8A /* View */,
@@ -492,6 +507,8 @@
 			isa = PBXGroup;
 			children = (
 				B7EF65EC2AD6EF05006D7E8A /* CoursesView.swift */,
+				B70688552ADF0D7F005DDBC6 /* CoursesTableViewCell.swift */,
+				B70688572ADF0F59005DDBC6 /* CoursesTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -660,6 +677,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7644D4F2ACF034000C3D4E7 /* PresentationView.xib in Resources */,
+				B70688582ADF0F59005DDBC6 /* CoursesTableViewCell.xib in Resources */,
 				B71B91CD2A4CAD5C00843ACA /* LaunchScreen.storyboard in Resources */,
 				B79839972AA8DF2200FD269D /* credentials.plist in Resources */,
 				B71B91CA2A4CAD5C00843ACA /* Assets.xcassets in Resources */,
@@ -730,7 +748,9 @@
 				B76BEC5D2A9941C000A24FEE /* PasswordView.swift in Sources */,
 				B79F9FC82A4D23390000B973 /* ViewCoordinatorDelegate.swift in Sources */,
 				B7787AA72AB2501300E281FB /* PasswordTextField.swift in Sources */,
+				B70688562ADF0D7F005DDBC6 /* CoursesTableViewCell.swift in Sources */,
 				B79C7B222ABCDC280051A4DC /* KeychainManager.swift in Sources */,
+				B77FD9BE2ADF191300E5803D /* CoursesCellModel.swift in Sources */,
 				B70C358D2AC34C7600A55AC8 /* PasswordViewModel.swift in Sources */,
 				B7FC49312ACB153300193A9E /* PresentationCoordinator.swift in Sources */,
 				B79C7B272ABDDCC40051A4DC /* FieldValidatorHelper.swift in Sources */,

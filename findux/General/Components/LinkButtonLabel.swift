@@ -9,8 +9,8 @@ import UIKit
 import SwiftUI
 
 class LinkButtonLabel: UILabel {
-    let defaultSize: Double = 14
-    let defaultColor: UIColor = .link
+    private let defaultSize: Double = 14
+    private let defaultColor: UIColor = .link
     
     var action: (() -> Void)?
     
@@ -35,7 +35,7 @@ class LinkButtonLabel: UILabel {
         self.addGestureRecognizer(tap)
     }
     
-    @objc func linkButtonAction() {
+    @objc private func linkButtonAction() {
         { [weak self] in
             self?.action?()
         }()
