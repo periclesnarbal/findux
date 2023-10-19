@@ -11,5 +11,7 @@ final class CoursesViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("COURSES VIEW CONTROLLER")
+        
+        view.backgroundColor = .white
     }
 }

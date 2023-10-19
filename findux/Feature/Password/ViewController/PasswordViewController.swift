@@ -11,5 +11,7 @@ class PasswordViewController: BaseViewEmbedScrollViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("PASSWORD VIEW CONTROLLER")
+        
+        view.backgroundColor = .white
     }
 }

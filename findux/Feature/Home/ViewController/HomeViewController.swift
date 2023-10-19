@@ -11,6 +11,8 @@ final class HomeViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("HOME VIEW CONTROLLER")
+        
+        view.backgroundColor = .white
     }
 }
 

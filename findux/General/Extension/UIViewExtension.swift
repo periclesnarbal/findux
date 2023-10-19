@@ -10,10 +10,10 @@ import UIKit
 extension UIView {
     func embedConstraints(_ view: UIView, padding: UIEdgeInsets = .zero) {
         NSLayoutConstraint.activate([
-            view.leadingAnchor.constraint(equalTo: leadingAnchor, constant: padding.left),
-            view.topAnchor.constraint(equalTo: topAnchor, constant: padding.top),
-            view.trailingAnchor.constraint(equalTo: trailingAnchor, constant: padding.right),
-            view.bottomAnchor.constraint(equalTo: bottomAnchor, constant: padding.bottom)
+            view.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: padding.left),
+            view.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: padding.top),
+            view.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: padding.right),
+            view.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: padding.bottom)
         ])
     }
     
