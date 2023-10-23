@@ -113,13 +113,11 @@ extension HomeView: UICollectionViewDelegate, UICollectionViewDataSource {
     }
 }
 
-//extension HomeView: LifeCycleViewControllerDelegate {
-//    func viewDidLoad() {
-//        backgroundColor = .red
-//    }
-//}
-//
-//extension HomeView: FullAccessViewControllerDelegate {
+extension HomeView: FullAccessViewControllerDelegate {
+    func getNavigationController(_ navigationController: UINavigationController?) {
+        navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
 //    func getNavigationItem(_ navigationItem: UINavigationItem) {
 //        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(goToPasswordViewController))
 //    }
@@ -133,7 +131,7 @@ extension HomeView: UICollectionViewDelegate, UICollectionViewDataSource {
 //    func goToPasswordViewController() {
 //        coordinatorDelegate?.goToPassword()
 //    }
-//}
+}
 
 struct HomeViewPreview: PreviewProvider {
     static var previews: some View {

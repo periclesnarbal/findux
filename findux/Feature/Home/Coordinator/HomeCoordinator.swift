@@ -18,7 +18,7 @@ final class HomeCoordinator: BaseChildCoordinator<MainCoordinator> {
         let view = HomeView()
         vc.loadContentView(view)
 //        vc.lifeCycleDelegate = view
-//        vc.fullAccessDelegate = view
+        vc.fullAccessDelegate = view
         view.coordinatorDelegate = self
         navigationController.pushViewController(vc, animated: true)
     }

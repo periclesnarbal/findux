@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class CoursesView: BaseView<CoursesCoordinator> {
     
@@ -64,6 +65,24 @@ extension CoursesView: UITableViewDelegate, UITableViewDataSource {
         let data = courses[indexPath.row]
         cell.setupCell(data: data)
         return cell
+    }
+}
+
+extension CoursesView: FullAccessViewControllerDelegate {
+    func getNavigationController(_ navigationController: UINavigationController?) {
+        navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
+    func getNavigationItem(_ navigationItem: UINavigationItem) {
+        navigationItem.title = "Cursos"
+    }
+}
+
+struct CoursesViewPreview: PreviewProvider {
+    static var previews: some View {
+        ViewPreview {
+            CoursesView()
+        }.edgesIgnoringSafeArea(.all)
     }
 }
 

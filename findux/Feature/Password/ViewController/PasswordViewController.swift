@@ -12,6 +12,6 @@ class PasswordViewController: BaseViewEmbedScrollViewController {
         super.viewDidLoad()
         print("PASSWORD VIEW CONTROLLER")
         
-        view.backgroundColor = .white
+        view.backgroundColor = .secondarySystemBackground
     }
 }

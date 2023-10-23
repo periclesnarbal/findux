@@ -17,6 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         googleSignInSetup()
         googleSignInRestoreSeccion()
         
+        UINavigationBar.appearance().tintColor = .black
+        
         return true
     }
     

@@ -17,6 +17,7 @@ final class CoursesCoordinator: BaseChildCoordinator<MainCoordinator> {
         let vc = CoursesViewController()
         let view = CoursesView()
         vc.loadContentView(view)
+        vc.fullAccessDelegate = view
         view.coordinatorDelegate = self
         navigationController.pushViewController(vc, animated: true)
         

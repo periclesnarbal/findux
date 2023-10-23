@@ -44,7 +44,7 @@ class BaseViewController: UIViewController {
         setupConstraints()
         
         lifeCycleDelegate?.viewDidLoad()
-        fullAccessDelegate?.getNavigationController(navigationController)
+        
         fullAccessDelegate?.getNavigationItem(navigationItem)
         fullAccessDelegate?.getViewController(self)
     }
@@ -52,6 +52,8 @@ class BaseViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         lifeCycleDelegate?.viewWillAppear(animated)
+        
+        fullAccessDelegate?.getNavigationController(navigationController)
     }
     
     override func viewWillLayoutSubviews() {
