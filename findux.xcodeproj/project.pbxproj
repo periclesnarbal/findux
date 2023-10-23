@@ -29,12 +29,12 @@
 		B72728FD2AC7179E00444A0B /* HomeCellLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72728FC2AC7179E00444A0B /* HomeCellLayout.swift */; };
 		B727BCB72AC5E6F20077B515 /* HomeCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B727BCB62AC5E6F20077B515 /* HomeCellModel.swift */; };
 		B72CBE102AD5AAD400475A3D /* PresentationViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72CBE0F2AD5AAD400475A3D /* PresentationViewModelProtocol.swift */; };
-		B72CBE132AD5AD3B00475A3D /* PresentationViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72CBE122AD5AD3B00475A3D /* PresentationViewData.swift */; };
+		B72CBE132AD5AD3B00475A3D /* PresentationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72CBE122AD5AD3B00475A3D /* PresentationModel.swift */; };
 		B72E916B2AE6B5E700300971 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B72E916D2AE6B5E700300971 /* Localizable.strings */; };
 		B7368F892AC5C6F000533673 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7368F882AC5C6F000533673 /* HomeCollectionViewCell.swift */; };
 		B736912F2A7AE57E00A67F4B /* UINavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B736912E2A7AE57E00A67F4B /* UINavigationControllerExtension.swift */; };
 		B73774B72A9D192600B56B74 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73774B62A9D192600B56B74 /* BaseView.swift */; };
-		B76265D52AD7288E003D134C /* PresentationCourseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76265D42AD7288E003D134C /* PresentationCourseViewModel.swift */; };
+		B76265D52AD7288E003D134C /* PresentationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76265D42AD7288E003D134C /* PresentationViewModel.swift */; };
 		B7644D4F2ACF034000C3D4E7 /* PresentationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7644D4E2ACF034000C3D4E7 /* PresentationView.xib */; };
 		B76BEC502A99410F00A24FEE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76BEC4F2A99410F00A24FEE /* HomeView.swift */; };
 		B76BEC5D2A9941C000A24FEE /* PasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76BEC5C2A9941C000A24FEE /* PasswordView.swift */; };
@@ -119,12 +119,12 @@
 		B72728FC2AC7179E00444A0B /* HomeCellLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCellLayout.swift; sourceTree = "<group>"; };
 		B727BCB62AC5E6F20077B515 /* HomeCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCellModel.swift; sourceTree = "<group>"; };
 		B72CBE0F2AD5AAD400475A3D /* PresentationViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationViewModelProtocol.swift; sourceTree = "<group>"; };
-		B72CBE122AD5AD3B00475A3D /* PresentationViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationViewData.swift; sourceTree = "<group>"; };
+		B72CBE122AD5AD3B00475A3D /* PresentationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationModel.swift; sourceTree = "<group>"; };
 		B72E916C2AE6B5E700300971 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		B7368F882AC5C6F000533673 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		B736912E2A7AE57E00A67F4B /* UINavigationControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerExtension.swift; sourceTree = "<group>"; };
 		B73774B62A9D192600B56B74 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
-		B76265D42AD7288E003D134C /* PresentationCourseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationCourseViewModel.swift; sourceTree = "<group>"; };
+		B76265D42AD7288E003D134C /* PresentationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationViewModel.swift; sourceTree = "<group>"; };
 		B7644D4E2ACF034000C3D4E7 /* PresentationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PresentationView.xib; sourceTree = "<group>"; };
 		B76BEC4F2A99410F00A24FEE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		B76BEC5C2A9941C000A24FEE /* PasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordView.swift; sourceTree = "<group>"; };
@@ -295,7 +295,7 @@
 			isa = PBXGroup;
 			children = (
 				B72CBE0F2AD5AAD400475A3D /* PresentationViewModelProtocol.swift */,
-				B76265D42AD7288E003D134C /* PresentationCourseViewModel.swift */,
+				B76265D42AD7288E003D134C /* PresentationViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -303,7 +303,7 @@
 		B72CBE112AD5AD2300475A3D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				B72CBE122AD5AD3B00475A3D /* PresentationViewData.swift */,
+				B72CBE122AD5AD3B00475A3D /* PresentationModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -735,7 +735,7 @@
 				B70D49FC2AAB96F40069D4BF /* SeparatorView.swift in Sources */,
 				B79F9FCB2A4DDE730000B973 /* MainCoordinator.swift in Sources */,
 				B7C0682B2A98F26A00A5F9B2 /* PasswordCoordinator.swift in Sources */,
-				B76265D52AD7288E003D134C /* PresentationCourseViewModel.swift in Sources */,
+				B76265D52AD7288E003D134C /* PresentationViewModel.swift in Sources */,
 				B79F9FBF2A4CB1E40000B973 /* BaseCoordinator.swift in Sources */,
 				B79C7B242ABCE2290051A4DC /* UserDefaultsManager.swift in Sources */,
 				B71F5E0D2AC1B566009C992F /* LoginModel.swift in Sources */,
@@ -744,7 +744,7 @@
 				B71B91C32A4CAD5B00843ACA /* SceneDelegate.swift in Sources */,
 				B7EF65E92AD6E119006D7E8A /* CoursesCoordinator.swift in Sources */,
 				B7EF65EB2AD6EDFB006D7E8A /* CoursesViewController.swift in Sources */,
-				B72CBE132AD5AD3B00475A3D /* PresentationViewData.swift in Sources */,
+				B72CBE132AD5AD3B00475A3D /* PresentationModel.swift in Sources */,
 				B72CBE102AD5AAD400475A3D /* PresentationViewModelProtocol.swift in Sources */,
 				B7027A162AC4585300E9B249 /* FieldError.swift in Sources */,
 				B79F9FC12A4CB4B00000B973 /* HomeCoordinator.swift in Sources */,

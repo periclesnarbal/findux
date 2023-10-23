@@ -10,14 +10,14 @@ import UIKit
 final class PresentationCoordinator: BaseChildCoordinator<MainCoordinator> {
     let userDefaults = UserDefaultsManager.shared
     
-    override func start() {
-        goToPresentationViewController()
+    func start(presentationModel: PresentationModel) {
+        goToPresentationViewController(presentationModel: presentationModel)
     }
     
-    func goToPresentationViewController() {
+    func goToPresentationViewController(presentationModel: PresentationModel) {
         let vc = PresentationViewController()
         let view = PresentationView()
-        _ = PresentationCourseViewModel(viewDelegate: view, userDefaults: userDefaults)
+        _ = PresentationViewModel(viewDelegate: view, userDefaults: userDefaults, presentationModel: presentationModel)
         vc.loadContentView(view)
         view.coordinatorDelegate = self
         navigationController.present(vc, animated: true)

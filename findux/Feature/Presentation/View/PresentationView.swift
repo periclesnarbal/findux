@@ -11,7 +11,7 @@ import SwiftUI
 protocol PresentationViewProtocol: AnyObject {
     var viewModelDelegate: PresentationViewModelProtocol? { get set }
     
-    func setupView(dataModel: PresentationViewData)
+    func setupView(presentationModel: PresentationModel)
 }
 
 class PresentationView: BaseView<PresentationCoordinator> {
@@ -50,10 +50,10 @@ class PresentationView: BaseView<PresentationCoordinator> {
 }
 
 extension PresentationView: PresentationViewProtocol {
-    func setupView(dataModel: PresentationViewData) {
-        titleLabel.text = dataModel.title
-        descriptionLabel.text = dataModel.description
-        continueButton.setTitle(dataModel.buttonTitle, for: .normal)
+    func setupView(presentationModel: PresentationModel) {
+        titleLabel.text = presentationModel.title
+        descriptionLabel.text = presentationModel.description
+        continueButton.setTitle(presentationModel.buttonTitle, for: .normal)
     }
 }
 

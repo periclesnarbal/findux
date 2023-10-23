@@ -8,6 +8,14 @@
 import UIKit
 
 final class HomeCoordinator: BaseChildCoordinator<MainCoordinator> {
+    typealias Closure = () -> Void
+    
+    let userDefaults = UserDefaultsManager.shared
+    
+    let cursesModel = PresentationModel(
+        title: "Cursos",
+        description: "Aqui você pode encontrar um compilado de cursos escolhidos criteriosamente pela equipe do findux",
+        buttonTitle: "Continuar")
     
     override func start() {
         goToHomeViewController()
@@ -24,6 +32,16 @@ final class HomeCoordinator: BaseChildCoordinator<MainCoordinator> {
     }
     
     func goToCourses() {
-        parentCoordinator.goToCoursesCoordinator()
+        goToPageWithPresentation(presentationModel: cursesModel, completion: parentCoordinator.goToCoursesCoordinator)
+    }
+    
+    func goToPageWithPresentation(presentationModel: PresentationModel, completion: (Closure?) -> Void) {
+        completion { [weak self] in
+            guard let weakSelf = self else { return }
+            let hidePresentation = weakSelf.userDefaults.readItem(presentationModel.title ?? "") ?? false
+            if !hidePresentation {
+                weakSelf.parentCoordinator.goToPresentationCoordinator(presentationModel: presentationModel)
+            }
+        }
     }
 }

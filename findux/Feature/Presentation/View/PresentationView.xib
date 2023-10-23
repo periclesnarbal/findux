@@ -47,7 +47,7 @@
                         <action selector="continueButtonAction:" destination="-1" eventType="touchUpInside" id="zOr-gJ-l7g"/>
                     </connections>
                 </button>
-                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hNw-XA-QpZ">
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hNw-XA-QpZ">
                     <rect key="frame" x="16" y="637" width="51" height="31"/>
                     <connections>
                         <action selector="dontShowAgainSwitchAction:" destination="-1" eventType="valueChanged" id="1aO-Fl-y3M"/>

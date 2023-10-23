@@ -8,6 +8,7 @@
 import UIKit
 
 final class MainCoordinator: BaseCoordinator {
+    typealias Closure = () -> Void
     
     override func start() {
         goToPasswordCoordinator()
@@ -23,13 +24,13 @@ final class MainCoordinator: BaseCoordinator {
         passwordCoordinator.start()
     }
     
-    func goToPresentationCoordinator() {
+    func goToPresentationCoordinator(presentationModel: PresentationModel) {
         let presentationCoordinator = buildChildCoordinator(childType: PresentationCoordinator.self, parentCoordinator: self)
-        presentationCoordinator.start()
+        presentationCoordinator.start(presentationModel: presentationModel)
     }
     
-    func goToCoursesCoordinator() {
+    func goToCoursesCoordinator(completion: Closure?) {
         let presentationCoordinator = buildChildCoordinator(childType: CoursesCoordinator.self, parentCoordinator: self)
-        presentationCoordinator.start()
+        presentationCoordinator.start(completion: completion)
     }
 }

@@ -8,12 +8,13 @@
 import UIKit
 
 final class CoursesCoordinator: BaseChildCoordinator<MainCoordinator> {
+    typealias Closure = () -> Void
     
-    override func start() {
-        goToCoursesViewController()
+    func start(completion: Closure?) {
+        goToCoursesViewController(completion: completion)
     }
     
-    func goToCoursesViewController() {
+    func goToCoursesViewController(completion: Closure?) {
         let vc = CoursesViewController()
         let view = CoursesView()
         vc.loadContentView(view)
@@ -21,11 +22,7 @@ final class CoursesCoordinator: BaseChildCoordinator<MainCoordinator> {
         view.coordinatorDelegate = self
         navigationController.pushViewController(vc, animated: true)
         
-        goToPresent()
-    }
-    
-    func goToPresent() {
-        parentCoordinator.goToPresentationCoordinator()
+        completion?()
     }
 }
 

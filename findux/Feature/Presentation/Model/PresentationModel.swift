@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct PresentationViewData {
+struct PresentationModel {
     let title: String?
     let description: String?
     let buttonTitle: String?
