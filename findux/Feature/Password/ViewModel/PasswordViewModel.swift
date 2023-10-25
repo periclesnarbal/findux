@@ -12,6 +12,7 @@ class PasswordViewModel {
     unowned var viewDelegate: PasswordView
     
     let userDefaults: UserDefaultsManager
+    let keychain: KeychainManager = KeychainManager.shared
     let fieldValidator: FieldValidatorHelper
     
     init(viewDelegate: PasswordView, userDefaults: UserDefaultsManager, fieldValidator: FieldValidatorHelper) {
@@ -29,8 +30,8 @@ class PasswordViewModel {
     func confirmButtonAction(user: UserModel, checkPassword: String) {
         do {
             switch signStatus {
-            case .sign_in: return try signInAction(username: user.username, password: user.password)
-            case .sign_up: return signUpAction(email: user.email, username: user.username, password: user.password, checkPassword: checkPassword)
+            case .sign_in: return try signInAction(user: user)
+            case .sign_up: return signUpAction(user: user, checkPassword: checkPassword)
             }
         } catch {
             if let error = error as? CustomErrorProtocol {
@@ -39,13 +40,12 @@ class PasswordViewModel {
         }
     }
     
-    func signInAction(username: String, password: String) throws {
-        if validateSignInFields(username: username, password: password) {
-            let loginData = LoginModel(username: username, password: password)
-            
-            if let savedData: UserModel = userDefaults.readItem(loginData.username) {
-                if loginData.password == savedData.password {
-                    viewDelegate.loginSuccess()
+    func signInAction(user: UserModel) throws {
+        if validateSignInFields(username: user.username, password: user.password) {
+            if let userProfile: UserProfile = userDefaults.readItem(user.username) {
+                let savedPassword = keychain.retrieveInfo(forKey: userProfile.username)
+                if user.password == savedPassword {
+                    loginSuccess(user: userProfile)
                 } else {
                     throw LoginError.invalidPassword(title: "Erro", message: "Senha incorreta, por favor verifique seus dados e tente novamente")
                 }
@@ -55,12 +55,18 @@ class PasswordViewModel {
         }
     }
     
-    func signUpAction(email: String, username: String, password: String, checkPassword: String) {
-        if validateSignUpFields(email: email, username: username, password: password, checkPassword: checkPassword) {
-            let signUpData = UserModel(username: username, password: password, email: email)
-            userDefaults.createItem(signUpData.username, value: signUpData)
-            viewDelegate.loginSuccess()
+    func signUpAction(user: UserModel, checkPassword: String) {
+        if validateSignUpFields(user: user, checkPassword: checkPassword) {
+            keychain.saveInfo(forKey: user.username, info: user.password)
+            let userProfile = UserProfile(username: user.username, email: user.email)
+            userDefaults.createItem(userProfile.username, value: userProfile)
+            loginSuccess(user: userProfile)
         }
+    }
+    
+    private func loginSuccess(user: UserProfile) {
+        UserGIDProfile.shared.manualInsert(user: user)
+        viewDelegate.loginSuccess()
     }
     
     func validateSignInFields(username: String?, password: String?) -> Bool {
@@ -69,12 +75,12 @@ class PasswordViewModel {
         return (!username.isEmpty && !password.isEmpty)
     }
     
-    func validateSignUpFields(email: String?, username: String?, password: String?, checkPassword: String?) -> Bool {
+    func validateSignUpFields(user: UserModel, checkPassword: String?) -> Bool {
         do {
-            try fieldValidator.validateEmail(email)
-            try fieldValidator.validateUsername(username)
-            try fieldValidator.validatePassword(password)
-            try fieldValidator.validatePasswordMatch(password, checkPassword)
+            try fieldValidator.validateEmail(user.email)
+            try fieldValidator.validateUsername(user.username)
+            try fieldValidator.validatePassword(user.password)
+            try fieldValidator.validatePasswordMatch(user.password, checkPassword)
         } catch {
             if let error = error as? CustomErrorProtocol {
                 viewDelegate.loginFailure(error: error)

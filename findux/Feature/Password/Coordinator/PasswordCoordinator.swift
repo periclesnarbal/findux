@@ -22,6 +22,7 @@ final class PasswordCoordinator: BaseChildCoordinator<MainCoordinator> {
         let _ = PasswordViewModel(viewDelegate: view, userDefaults: userDefaults, fieldValidator: FieldValidatorHelper())
         vc.loadContentView(view)
         vc.fullAccessDelegate = view
+        vc.lifeCycleDelegate = view
         view.coordinatorDelegate = self
         navigationController.pushViewController(vc, animated: true)
     }

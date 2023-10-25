@@ -1,5 +1,5 @@
 //
-//  LoginModel.swift
+//  UserProfile.swift
 //  findux
 //
 //  Created by Péricles Narbal on 25/09/23.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct LoginModel {
+struct UserProfile: Codable {
     let username: String
-    let password: String
+    let email: String
 }

@@ -12,7 +12,7 @@ import SwiftUI
 class PasswordView: BaseView<PasswordCoordinator> {
     
     var viewModelDelegate: PasswordViewModel?
-   
+    
     @IBOutlet weak var googleSignInButton: GIDSignInButton!
     @IBOutlet weak var separatorView: SeparatorView!
     
@@ -50,7 +50,7 @@ class PasswordView: BaseView<PasswordCoordinator> {
     
     func commomInit() {
         if let view: UIView = loadViewFromNib() {
-           addViewToBounds(view)
+            addViewToBounds(view)
         }
         
         fieldViewSetup(views: fieldStackView.arrangedSubviews)
@@ -87,6 +87,10 @@ class PasswordView: BaseView<PasswordCoordinator> {
         }
     }
     
+    private func clearAllFields(fields: [UITextField]) {
+        fields.forEach({ $0.text = nil })
+    }
+    
     func loginSuccess() {
         coordinatorDelegate?.goToHomeScreen()
     }
@@ -95,7 +99,7 @@ class PasswordView: BaseView<PasswordCoordinator> {
         let error = error.getDescription()
         coordinatorDelegate?.showAlert(title: error.title, message: error.message)
     }
-
+    
     private func fieldViewSetup(views: [UIView]) {
         views.forEach {
             $0.layer.cornerRadius = 10
@@ -111,13 +115,12 @@ extension PasswordView: FullAccessViewControllerDelegate {
     }
 }
 
-//extension PasswordView: LifeCycleViewControllerDelegate {
-//    func loadView() {
-//        if let view: UIView = loadViewFromNib() {
-//            addViewToBounds(view)
-//        }
-//    }
-//}
+extension PasswordView: LifeCycleViewControllerDelegate {
+    func viewDidDisappear(_ animated: Bool) {
+        clearAllFields(fields: [emailTextField, userTextField, passwordTextField, checkPasswordTextField])
+        viewModelDelegate?.signStatus = .sign_in
+    }
+}
 
 struct PasswordViewPreview: PreviewProvider {
     static var previews: some View {

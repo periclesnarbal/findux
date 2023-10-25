@@ -11,12 +11,12 @@ import SwiftUI
 class HomeView: BaseView<HomeCoordinator> {
     
     lazy var menus = [HomeCellModel(imageName: "Book", title: "Cursos") { [weak self] in
-                                        self?.coordinatorDelegate?.goToCourses() },
-                 HomeCellModel(imageName: "OpenBook", title: "Glossário") {},
-                 HomeCellModel(imageName: "Chart", title: "Simulador") {},
-                 HomeCellModel(imageName: "Calendar", title: "Projetos") {},
-                 HomeCellModel(imageName: "Percent", title: "Investimentos") {},
-                 HomeCellModel(imageName: "Chart_alt", title: "Bolsa de valores") {}]
+        self?.coordinatorDelegate?.goToCourses() },
+                      HomeCellModel(imageName: "OpenBook", title: "Glossário") {},
+                      HomeCellModel(imageName: "Chart", title: "Simulador") {},
+                      HomeCellModel(imageName: "Calendar", title: "Projetos") {},
+                      HomeCellModel(imageName: "Percent", title: "Investimentos") {},
+                      HomeCellModel(imageName: "Chart_alt", title: "Bolsa de valores") {}]
     
     let headerImageView: UIImageView = {
         let img = UIImageView()
@@ -92,7 +92,7 @@ class HomeView: BaseView<HomeCoordinator> {
     }
     
     @objc func profileButtonAction() {
-        print("MOSTRAR PROFILE")
+        coordinatorDelegate?.openProfileModal()
     }
 }
 
@@ -117,20 +117,6 @@ extension HomeView: FullAccessViewControllerDelegate {
     func getNavigationController(_ navigationController: UINavigationController?) {
         navigationController?.setNavigationBarHidden(true, animated: true)
     }
-    
-//    func getNavigationItem(_ navigationItem: UINavigationItem) {
-//        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(goToPasswordViewController))
-//    }
-//
-//    @objc
-//    func goToHomeTwoViewController() {
-//        coordinatorDelegate?.goToHomeTwoViewController()
-//    }
-//
-//    @objc
-//    func goToPasswordViewController() {
-//        coordinatorDelegate?.goToPassword()
-//    }
 }
 
 struct HomeViewPreview: PreviewProvider {
