@@ -20,8 +20,9 @@ class CoursesView: BaseView<CoursesCoordinator> {
         action: { print("ABEL IS ALIVE 2") })]
     
     let tableView: UITableView = {
-        let table = UITableView()
+        let table = UITableView(frame: .zero, style: .insetGrouped)
         table.translatesAutoresizingMaskIntoConstraints = false
+        table.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
         return table
     }()
     
@@ -42,6 +43,7 @@ class CoursesView: BaseView<CoursesCoordinator> {
     
     func setupView() {
         backgroundColor = .white
+        tableView.backgroundColor = .white
         addSubview(tableView)
         
         tableView.register(CoursesTableViewCell.self, forCellReuseIdentifier: CoursesTableViewCell.reuseIdentifier)
@@ -56,15 +58,27 @@ class CoursesView: BaseView<CoursesCoordinator> {
 }
 
 extension CoursesView: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         courses.count
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CoursesTableViewCell.reuseIdentifier, for: indexPath) as? CoursesTableViewCell else { return UITableViewCell()}
-        let data = courses[indexPath.row]
+        let data = courses[indexPath.section]
         cell.setupCell(data: data)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        0
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        UIView(frame: .zero)
     }
 }
 

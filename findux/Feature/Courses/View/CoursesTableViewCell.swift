@@ -43,7 +43,8 @@ class CoursesTableViewCell: UITableViewCell {
     
     func setupView() {
         contentView.addSubview(xibView)
-        
+        xibView.layer.borderColor = UIColor.systemGroupedBackground.cgColor
+        xibView.layer.borderWidth = 4
         goToCourseLinkButton.action = { [weak self] in
             self?.action?()
         }
