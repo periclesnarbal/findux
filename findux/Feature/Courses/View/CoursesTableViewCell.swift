@@ -56,8 +56,8 @@ class CoursesTableViewCell: UITableViewCell {
     
     func setupCell(data: CoursesCellModel) {
         titleLabel.text = data.title
-        authorLabel.text = data.author
-        descriptionLabel.text = data.description
+        authorLabel.text = "Autor(es): \(data.author ?? "")"
+        descriptionLabel.text = "Descrição: \(data.description ?? "")"
         action = data.action
     }
 }

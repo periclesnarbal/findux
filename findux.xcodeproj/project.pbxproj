@@ -34,6 +34,8 @@
 		B7368F892AC5C6F000533673 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7368F882AC5C6F000533673 /* HomeCollectionViewCell.swift */; };
 		B736912F2A7AE57E00A67F4B /* UINavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B736912E2A7AE57E00A67F4B /* UINavigationControllerExtension.swift */; };
 		B73774B72A9D192600B56B74 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73774B62A9D192600B56B74 /* BaseView.swift */; };
+		B762013B2AEAC28400DB4B3D /* courses.json in Resources */ = {isa = PBXBuildFile; fileRef = B762013A2AEAC28400DB4B3D /* courses.json */; };
+		B762013E2AEAC61700DB4B3D /* JSONManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B762013D2AEAC61700DB4B3D /* JSONManager.swift */; };
 		B76265D52AD7288E003D134C /* PresentationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76265D42AD7288E003D134C /* PresentationViewModel.swift */; };
 		B7644D4F2ACF034000C3D4E7 /* PresentationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7644D4E2ACF034000C3D4E7 /* PresentationView.xib */; };
 		B76BEC502A99410F00A24FEE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76BEC4F2A99410F00A24FEE /* HomeView.swift */; };
@@ -125,6 +127,8 @@
 		B7368F882AC5C6F000533673 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		B736912E2A7AE57E00A67F4B /* UINavigationControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerExtension.swift; sourceTree = "<group>"; };
 		B73774B62A9D192600B56B74 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		B762013A2AEAC28400DB4B3D /* courses.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = courses.json; sourceTree = "<group>"; };
+		B762013D2AEAC61700DB4B3D /* JSONManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONManager.swift; sourceTree = "<group>"; };
 		B76265D42AD7288E003D134C /* PresentationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationViewModel.swift; sourceTree = "<group>"; };
 		B7644D4E2ACF034000C3D4E7 /* PresentationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PresentationView.xib; sourceTree = "<group>"; };
 		B76BEC4F2A99410F00A24FEE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -378,6 +382,7 @@
 			children = (
 				B79C7B212ABCDC280051A4DC /* KeychainManager.swift */,
 				B79C7B232ABCE2290051A4DC /* UserDefaultsManager.swift */,
+				B762013D2AEAC61700DB4B3D /* JSONManager.swift */,
 			);
 			path = Persistence;
 			sourceTree = "<group>";
@@ -505,6 +510,7 @@
 				B7EF65E72AD6E0E4006D7E8A /* Coordinator */,
 				B7EF65E62AD6E0DD006D7E8A /* ViewController */,
 				B7EF65E52AD6E0D8006D7E8A /* View */,
+				B762013A2AEAC28400DB4B3D /* courses.json */,
 			);
 			path = Courses;
 			sourceTree = "<group>";
@@ -683,6 +689,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B762013B2AEAC28400DB4B3D /* courses.json in Resources */,
 				B7644D4F2ACF034000C3D4E7 /* PresentationView.xib in Resources */,
 				B70688582ADF0F59005DDBC6 /* CoursesTableViewCell.xib in Resources */,
 				B71B91CD2A4CAD5C00843ACA /* LaunchScreen.storyboard in Resources */,
@@ -739,6 +746,7 @@
 				B79F9FCB2A4DDE730000B973 /* MainCoordinator.swift in Sources */,
 				B7C0682B2A98F26A00A5F9B2 /* PasswordCoordinator.swift in Sources */,
 				B76265D52AD7288E003D134C /* PresentationViewModel.swift in Sources */,
+				B762013E2AEAC61700DB4B3D /* JSONManager.swift in Sources */,
 				B79F9FBF2A4CB1E40000B973 /* BaseCoordinator.swift in Sources */,
 				B79C7B242ABCE2290051A4DC /* UserDefaultsManager.swift in Sources */,
 				B7D566292AE8340900E56374 /* UserGIDProfile.swift in Sources */,

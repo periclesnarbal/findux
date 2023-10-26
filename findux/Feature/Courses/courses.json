@@ -1,0 +1,32 @@
+[
+    {
+        "title": "Formação de Multiplicadores da Série \"Eu e Meu Dinheiro\"",
+        "author": "Banco Central do Brasil",
+        "description": "Curso rápido em vídeos com conceitos básicos da educação financeira.",
+        "link": "https://www.escolavirtual.gov.br/curso/251"
+    },
+    {
+        "title": "Gestão de Finanças Pessoais",
+        "author": "Banco Central do Brasil",
+        "description": "Curso com animações e textos que aborda vários temas da educação financeira.",
+        "link": "https://www.escolavirtual.gov.br/curso/170"
+    },
+    {
+        "title": "Me Poupe! Invista com Nathalia Arcuri",
+        "author": "Enap - Escola Nacional de Administração Pública",
+        "description": "Vídeos bem humorados que trabalham o seu psicológico para ter uma relação melhor com seu dinheiro.",
+        "link": "https://www.escolavirtual.gov.br/curso/249"
+    },
+    {
+        "title": "Matemática Financeira",
+        "author": "Ministério da Fazenda",
+        "description": "Este curso aborda vários tópicos úteis para sua vida financeira.",
+        "link": "https://www.escolavirtual.gov.br/curso/93"
+    },
+    {
+        "title": "Tesouro Direto",
+        "author": "Secretaria do Tesouro Nacional",
+        "description": "Aprenda sobre a modalidade de investimento mais segura do país.",
+        "link": "https://www.escolavirtual.gov.br/curso/244"
+    }
+]

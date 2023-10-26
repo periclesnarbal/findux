@@ -10,14 +10,20 @@ import SwiftUI
 
 class CoursesView: BaseView<CoursesCoordinator> {
     
-    var courses = [CoursesCellModel(title: "Gestão de Finanças Pessoais",
-        author: "Autores: Banco Central do Brasil e Escola de Administração Fazendária",
-        description: "Descrição: Apresentar conceitos básicos de gestão de finanças pessoais e estimular a reflexão sobre temas do cotidiano das pessoas de forma lúdica por meio de vídeos animados.",
-        action: { print("ABEL IS ALIVE") }),
-                 CoursesCellModel(title: "Gestão de Finanças Pessoais 2",
-        author: "Autores: Banco Central do Brasil e Escola de Administração Fazendária",
-        description: "Descrição: Apresentar conceitos básicos de gestão de finanças pessoais e estimular a reflexão sobre temas do cotidiano das pessoas de forma lúdica por meio de vídeos animados.",
-        action: { print("ABEL IS ALIVE 2") })]
+    var coursesData: [CoursesModel] = {
+        if let path = Bundle.main.path(forResource: "courses", ofType: "json") {
+            do {
+                return try JSONManager.decodeFromFile(path)
+            } catch {
+                print(error)
+            }
+        }
+        return []
+    }()
+    
+    lazy var courses: [CoursesCellModel] = {
+        return coursesData.map { CoursesCellModel(courses: $0) { print("ABEL IS GONE")}}
+    }()
     
     let tableView: UITableView = {
         let table = UITableView(frame: .zero, style: .insetGrouped)
