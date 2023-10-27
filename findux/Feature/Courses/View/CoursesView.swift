@@ -22,7 +22,13 @@ class CoursesView: BaseView<CoursesCoordinator> {
     }()
     
     lazy var courses: [CoursesCellModel] = {
-        return coursesData.map { CoursesCellModel(courses: $0) { print("ABEL IS GONE")}}
+        return coursesData.map { [weak self] course in
+            return CoursesCellModel(courses: course) {
+                if let url = course.link {
+                    self?.coordinatorDelegate?.showInWebView(url: url)
+                }
+            }
+        }
     }()
     
     let tableView: UITableView = {

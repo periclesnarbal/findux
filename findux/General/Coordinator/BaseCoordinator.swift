@@ -70,6 +70,15 @@ extension BaseCoordinator {
         
         navigationController.present(alertController, animated: true, completion: nil)
     }
+    
+    func showInWebView(url: String) {
+        let vc = WebViewController()
+        guard let url = URL(string: url) else { return }
+        let webView = WebKitView(url: url)
+        vc.loadContentView(webView)
+        
+        navigationController.pushViewController(vc, animated: true)
+    }
 }
 
 extension BaseCoordinator: BaseCoordinatorNavigationControlDelegate {
