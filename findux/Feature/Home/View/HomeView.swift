@@ -13,7 +13,8 @@ class HomeView: BaseView<HomeCoordinator> {
     lazy var menus = [HomeCellModel(imageName: "Book", title: "Cursos") { [weak self] in
         self?.coordinatorDelegate?.goToCourses() },
                       HomeCellModel(imageName: "OpenBook", title: "Glossário") {},
-                      HomeCellModel(imageName: "Chart", title: "Simulador") {},
+                      HomeCellModel(imageName: "Chart", title: "Simulador") { [weak self] in
+        self?.coordinatorDelegate?.goToSimulator() },
                       HomeCellModel(imageName: "Calendar", title: "Projetos") {},
                       HomeCellModel(imageName: "Percent", title: "Investimentos") {},
                       HomeCellModel(imageName: "Chart_alt", title: "Bolsa de valores") {}]

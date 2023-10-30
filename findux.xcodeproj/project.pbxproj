@@ -34,6 +34,10 @@
 		B7368F892AC5C6F000533673 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7368F882AC5C6F000533673 /* HomeCollectionViewCell.swift */; };
 		B736912F2A7AE57E00A67F4B /* UINavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B736912E2A7AE57E00A67F4B /* UINavigationControllerExtension.swift */; };
 		B73774B72A9D192600B56B74 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73774B62A9D192600B56B74 /* BaseView.swift */; };
+		B752D6F52AEFF77A008790BF /* SimulatorCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B752D6F42AEFF77A008790BF /* SimulatorCoordinator.swift */; };
+		B752D6F72AEFFA43008790BF /* SimulatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B752D6F62AEFFA43008790BF /* SimulatorViewController.swift */; };
+		B752D6F92AEFFA78008790BF /* SimulatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B752D6F82AEFFA78008790BF /* SimulatorView.swift */; };
+		B752D6FB2AEFFA8E008790BF /* SimulatorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B752D6FA2AEFFA8E008790BF /* SimulatorView.xib */; };
 		B762013B2AEAC28400DB4B3D /* courses.json in Resources */ = {isa = PBXBuildFile; fileRef = B762013A2AEAC28400DB4B3D /* courses.json */; };
 		B762013E2AEAC61700DB4B3D /* JSONManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B762013D2AEAC61700DB4B3D /* JSONManager.swift */; };
 		B76265D52AD7288E003D134C /* PresentationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76265D42AD7288E003D134C /* PresentationViewModel.swift */; };
@@ -129,6 +133,10 @@
 		B7368F882AC5C6F000533673 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		B736912E2A7AE57E00A67F4B /* UINavigationControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerExtension.swift; sourceTree = "<group>"; };
 		B73774B62A9D192600B56B74 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		B752D6F42AEFF77A008790BF /* SimulatorCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorCoordinator.swift; sourceTree = "<group>"; };
+		B752D6F62AEFFA43008790BF /* SimulatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorViewController.swift; sourceTree = "<group>"; };
+		B752D6F82AEFFA78008790BF /* SimulatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorView.swift; sourceTree = "<group>"; };
+		B752D6FA2AEFFA8E008790BF /* SimulatorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimulatorView.xib; sourceTree = "<group>"; };
 		B762013A2AEAC28400DB4B3D /* courses.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = courses.json; sourceTree = "<group>"; };
 		B762013D2AEAC61700DB4B3D /* JSONManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONManager.swift; sourceTree = "<group>"; };
 		B76265D42AD7288E003D134C /* PresentationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationViewModel.swift; sourceTree = "<group>"; };
@@ -327,6 +335,41 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		B752D6F02AEFF6FA008790BF /* Simulator */ = {
+			isa = PBXGroup;
+			children = (
+				B752D6F32AEFF758008790BF /* ViewController */,
+				B752D6F22AEFF750008790BF /* View */,
+				B752D6F12AEFF748008790BF /* Coordinator */,
+			);
+			path = Simulator;
+			sourceTree = "<group>";
+		};
+		B752D6F12AEFF748008790BF /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				B752D6F42AEFF77A008790BF /* SimulatorCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		B752D6F22AEFF750008790BF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B752D6F82AEFFA78008790BF /* SimulatorView.swift */,
+				B752D6FA2AEFFA8E008790BF /* SimulatorView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B752D6F32AEFF758008790BF /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B752D6F62AEFFA43008790BF /* SimulatorViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		B77FD9BC2ADF190300E5803D /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -481,6 +524,7 @@
 		B7C068332A993D3900A5F9B2 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				B752D6F02AEFF6FA008790BF /* Simulator */,
 				B7EF65E42AD6E000006D7E8A /* Courses */,
 				B7FC492D2ACB14AE00193A9E /* Presentation */,
 				B7C068242A98E8B100A5F9B2 /* Password */,
@@ -719,6 +763,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B752D6FB2AEFFA8E008790BF /* SimulatorView.xib in Resources */,
 				B762013B2AEAC28400DB4B3D /* courses.json in Resources */,
 				B7644D4F2ACF034000C3D4E7 /* PresentationView.xib in Resources */,
 				B70688582ADF0F59005DDBC6 /* CoursesTableViewCell.xib in Resources */,
@@ -769,10 +814,12 @@
 				B71B91C12A4CAD5B00843ACA /* AppDelegate.swift in Sources */,
 				B7FC49342ACB158500193A9E /* PresentationViewController.swift in Sources */,
 				B70D4A002AAB98A20069D4BF /* ViewControllerPreview.swift in Sources */,
+				B752D6F52AEFF77A008790BF /* SimulatorCoordinator.swift in Sources */,
 				B71F5E112AC1B789009C992F /* SignStatus.swift in Sources */,
 				B7EF65ED2AD6EF05006D7E8A /* CoursesView.swift in Sources */,
 				B7C068292A98EBBE00A5F9B2 /* UIViewExtension.swift in Sources */,
 				B70D49FC2AAB96F40069D4BF /* SeparatorView.swift in Sources */,
+				B752D6F92AEFFA78008790BF /* SimulatorView.swift in Sources */,
 				B79F9FCB2A4DDE730000B973 /* MainCoordinator.swift in Sources */,
 				B7C0682B2A98F26A00A5F9B2 /* PasswordCoordinator.swift in Sources */,
 				B76265D52AD7288E003D134C /* PresentationViewModel.swift in Sources */,
@@ -805,6 +852,7 @@
 				B79C7B272ABDDCC40051A4DC /* FieldValidatorHelper.swift in Sources */,
 				B7850DEC2AB5EBD700106DFD /* LinkButtonLabel.swift in Sources */,
 				B76BEC502A99410F00A24FEE /* HomeView.swift in Sources */,
+				B752D6F72AEFFA43008790BF /* SimulatorViewController.swift in Sources */,
 				B7C0682E2A98F61100A5F9B2 /* BaseViewEmbedScrollViewController.swift in Sources */,
 				B7C068302A993C9E00A5F9B2 /* ChildCoordinator.swift in Sources */,
 				B7027A192AC45AFB00E9B249 /* CustomErrorProtocol.swift in Sources */,
