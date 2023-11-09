@@ -1,14 +1,14 @@
 //
-//  HomeCellLayout.swift
+//  DefaultCollectionFlowLayout.swift
 //  findux
 //
-//  Created by Péricles Narbal on 29/09/23.
+//  Created by Péricles Narbal on 09/11/23.
 //
 
 import UIKit
 import SwiftUI
 
-class HomeCollectionLayout: UICollectionViewFlowLayout {
+class DefaultCollectionFlowLayout: UICollectionViewFlowLayout {
     
     override init() {
         super.init()
@@ -39,10 +39,3 @@ class HomeCollectionLayout: UICollectionViewFlowLayout {
     }
 }
 
-struct HomeCollectionLayoutPreview: PreviewProvider {
-    static var previews: some View {
-        ViewPreview {
-            HomeView()
-        }.edgesIgnoringSafeArea(.all)
-    }
-}

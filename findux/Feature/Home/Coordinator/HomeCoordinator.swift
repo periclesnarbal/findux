@@ -46,7 +46,7 @@ final class HomeCoordinator: BaseChildCoordinator<MainCoordinator> {
     }
     
     func goToSimulator() {
-        goToPageWithPresentation(presentationModel: simulatorModel, completion: parentCoordinator.goToSimulatorCoordinator)
+        parentCoordinator.goToSimulatorCoordinator()
     }
     
     func goToPageWithPresentation(presentationModel: PresentationModel, completion: (Closure?) -> Void) {

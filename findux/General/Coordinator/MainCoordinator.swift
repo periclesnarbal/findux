@@ -34,8 +34,8 @@ final class MainCoordinator: BaseCoordinator {
         coursesCoordinator.start(completion: completion)
     }
     
-    func goToSimulatorCoordinator(completion: Closure?) {
+    func goToSimulatorCoordinator() {
         let simulatorCoordinator = buildChildCoordinator(childType: SimulatorCoordinator.self, parentCoordinator: self)
-        simulatorCoordinator.start(completion: completion)
+        simulatorCoordinator.start()
     }
 }
