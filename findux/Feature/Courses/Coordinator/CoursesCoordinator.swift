@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class CoursesCoordinator: BaseChildCoordinator<MainCoordinator> {
+final class CoursesCoordinator: BaseChildCoordinator<HomeCoordinator> {
     typealias Closure = () -> Void
     
     func start(completion: Closure?) {

@@ -35,7 +35,7 @@ class SimulatorView: BaseView<SimulatorCoordinator> {
     func commomInit() {
         backgroundColor = .white
         addSubview(collectionView)
-        embedConstraints(collectionView, padding: UIEdgeInsets(top: 8, left: 0, bottom: 0, right: 0))
+        embedConstraints(collectionView, padding: UIEdgeInsets(top: 16, left: 0, bottom: 0, right: 0))
         
         collectionView.register(SimulatorCollectionViewCell.self, forCellWithReuseIdentifier: SimulatorCollectionViewCell.reuseIdentifier)
         

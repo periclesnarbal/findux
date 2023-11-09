@@ -42,20 +42,22 @@ final class HomeCoordinator: BaseChildCoordinator<MainCoordinator> {
     }
     
     func goToCourses() {
-        goToPageWithPresentation(presentationModel: cursesModel, completion: parentCoordinator.goToCoursesCoordinator)
+        let coursesCoordinator = buildChildCoordinator(childType: CoursesCoordinator.self, parentCoordinator: self)
+        coursesCoordinator.start { [weak self] in
+            guard let weakSelf = self else { return }
+            weakSelf.goToPresentation(presentationModel: weakSelf.cursesModel)
+        }
     }
     
     func goToSimulator() {
-        parentCoordinator.goToSimulatorCoordinator()
+        let simulatorCoordinator = buildChildCoordinator(childType: SimulatorCoordinator.self, parentCoordinator: self)
+        simulatorCoordinator.start()
     }
     
-    func goToPageWithPresentation(presentationModel: PresentationModel, completion: (Closure?) -> Void) {
-        completion { [weak self] in
-            guard let weakSelf = self else { return }
-            let hidePresentation = weakSelf.userDefaults.readItem(presentationModel.title ?? "") ?? false
-            if !hidePresentation {
-                weakSelf.parentCoordinator.goToPresentationCoordinator(presentationModel: presentationModel)
-            }
+    func goToPresentation(presentationModel: PresentationModel) {
+        let hidePresentation = userDefaults.readItem(presentationModel.title ?? "") ?? false
+        if !hidePresentation {
+            parentCoordinator.goToPresentationCoordinator(presentationModel: presentationModel)
         }
     }
     

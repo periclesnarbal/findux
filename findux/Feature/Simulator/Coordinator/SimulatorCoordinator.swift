@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class SimulatorCoordinator: BaseChildCoordinator<MainCoordinator> {
+final class SimulatorCoordinator: BaseChildCoordinator<HomeCoordinator> {
     typealias Closure = () -> Void
     
     override func start() {
