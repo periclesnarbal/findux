@@ -18,15 +18,6 @@ final class HomeCoordinator: BaseChildCoordinator<MainCoordinator> {
         description: "Aqui você pode encontrar um compilado de cursos escolhidos criteriosamente pela equipe do findux",
         buttonTitle: "Continuar")
     
-    let simulatorModel = PresentationModel(
-        title: "Simulador",
-        description: """
-                Calcule aqui o o quanto você vai pagar ao todo por uma troca intertemporal, para ter agora o que você não tem o dinheiro para comprar.
-                
-                *Caso não sejam eles que você esteja calculando, Lembre-se de usar o Custo Efetivo Total como Juros.
-                """,
-        buttonTitle: "Continuar")
-    
     override func start() {
         goToHomeViewController()
     }

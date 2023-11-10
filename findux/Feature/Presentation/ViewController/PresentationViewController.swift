@@ -11,5 +11,7 @@ final class PresentationViewController: BaseViewEmbedScrollViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("PRESENTATION VIEW CONTROLLER")
+        
+        view.backgroundColor = .white
     }
 }

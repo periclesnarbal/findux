@@ -10,8 +10,12 @@ import SwiftUI
 
 class SimulatorView: BaseView<SimulatorCoordinator> {
     
-    lazy var menus = [SimulatorCellModel(imageName: "Calendar", title: "Financiamento") {},
-                      SimulatorCellModel(imageName: "Percent", title: "Investimento") {}]
+    lazy var menus = [SimulatorCellModel(imageName: "Percent", title: "Investimento") { [weak self] in
+        self?.coordinatorDelegate?.goToInvestiment()
+    },
+                      SimulatorCellModel(imageName: "Calendar", title: "Financiamento") { [weak self] in
+        self?.coordinatorDelegate?.goToFinancing()
+    }]
     
     let collectionView: UICollectionView = {
         let layout = SimulatorCollectionLayout()

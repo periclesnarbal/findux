@@ -78,6 +78,12 @@
 		B7C068302A993C9E00A5F9B2 /* ChildCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C0682F2A993C9E00A5F9B2 /* ChildCoordinator.swift */; };
 		B7D566292AE8340900E56374 /* UserGIDProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D566282AE8340900E56374 /* UserGIDProfile.swift */; };
 		B7DEDA1E2AEC10FB000D31D5 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DEDA1D2AEC10FB000D31D5 /* WebViewController.swift */; };
+		B7E8BF5C2AFE85680048A60E /* FinancingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E8BF5B2AFE85680048A60E /* FinancingViewController.swift */; };
+		B7E8BF5E2AFE857A0048A60E /* FinancingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E8BF5D2AFE857A0048A60E /* FinancingView.swift */; };
+		B7E8BF622AFE86380048A60E /* FinancingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7E8BF612AFE86380048A60E /* FinancingView.xib */; };
+		B7E8BF642AFE8D170048A60E /* InvestmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E8BF632AFE8D170048A60E /* InvestmentViewController.swift */; };
+		B7E8BF662AFE8D2C0048A60E /* InvestmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E8BF652AFE8D2C0048A60E /* InvestmentView.swift */; };
+		B7E8BF682AFE8D4F0048A60E /* InvestmentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7E8BF672AFE8D4F0048A60E /* InvestmentView.xib */; };
 		B7EF65E92AD6E119006D7E8A /* CoursesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EF65E82AD6E119006D7E8A /* CoursesCoordinator.swift */; };
 		B7EF65EB2AD6EDFB006D7E8A /* CoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EF65EA2AD6EDFB006D7E8A /* CoursesViewController.swift */; };
 		B7EF65ED2AD6EF05006D7E8A /* CoursesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EF65EC2AD6EF05006D7E8A /* CoursesView.swift */; };
@@ -179,6 +185,12 @@
 		B7C0682F2A993C9E00A5F9B2 /* ChildCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildCoordinator.swift; sourceTree = "<group>"; };
 		B7D566282AE8340900E56374 /* UserGIDProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGIDProfile.swift; sourceTree = "<group>"; };
 		B7DEDA1D2AEC10FB000D31D5 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		B7E8BF5B2AFE85680048A60E /* FinancingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinancingViewController.swift; sourceTree = "<group>"; };
+		B7E8BF5D2AFE857A0048A60E /* FinancingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinancingView.swift; sourceTree = "<group>"; };
+		B7E8BF612AFE86380048A60E /* FinancingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FinancingView.xib; sourceTree = "<group>"; };
+		B7E8BF632AFE8D170048A60E /* InvestmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentViewController.swift; sourceTree = "<group>"; };
+		B7E8BF652AFE8D2C0048A60E /* InvestmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentView.swift; sourceTree = "<group>"; };
+		B7E8BF672AFE8D4F0048A60E /* InvestmentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InvestmentView.xib; sourceTree = "<group>"; };
 		B7EF65E82AD6E119006D7E8A /* CoursesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesCoordinator.swift; sourceTree = "<group>"; };
 		B7EF65EA2AD6EDFB006D7E8A /* CoursesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesViewController.swift; sourceTree = "<group>"; };
 		B7EF65EC2AD6EF05006D7E8A /* CoursesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesView.swift; sourceTree = "<group>"; };
@@ -344,6 +356,7 @@
 		B752D6F02AEFF6FA008790BF /* Simulator */ = {
 			isa = PBXGroup;
 			children = (
+				B7E8BF5A2AFE840B0048A60E /* Feature */,
 				B77C09342AFD2185009D86D4 /* Model */,
 				B752D6F32AEFF758008790BF /* ViewController */,
 				B752D6F22AEFF750008790BF /* View */,
@@ -541,8 +554,6 @@
 		B7C068332A993D3900A5F9B2 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
-				B7E8BF592AFD77F30048A60E /* Investment */,
-				B7E8BF582AFD77CB0048A60E /* Financing */,
 				B752D6F02AEFF6FA008790BF /* Simulator */,
 				B7EF65E42AD6E000006D7E8A /* Courses */,
 				B7FC492D2ACB14AE00193A9E /* Presentation */,
@@ -599,6 +610,8 @@
 		B7E8BF582AFD77CB0048A60E /* Financing */ = {
 			isa = PBXGroup;
 			children = (
+				B7E8BF5F2AFE859A0048A60E /* Controller */,
+				B7E8BF602AFE85A10048A60E /* View */,
 			);
 			path = Financing;
 			sourceTree = "<group>";
@@ -606,8 +619,37 @@
 		B7E8BF592AFD77F30048A60E /* Investment */ = {
 			isa = PBXGroup;
 			children = (
+				B7E8BF632AFE8D170048A60E /* InvestmentViewController.swift */,
+				B7E8BF652AFE8D2C0048A60E /* InvestmentView.swift */,
+				B7E8BF672AFE8D4F0048A60E /* InvestmentView.xib */,
 			);
 			path = Investment;
+			sourceTree = "<group>";
+		};
+		B7E8BF5A2AFE840B0048A60E /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				B7E8BF592AFD77F30048A60E /* Investment */,
+				B7E8BF582AFD77CB0048A60E /* Financing */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		B7E8BF5F2AFE859A0048A60E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B7E8BF5B2AFE85680048A60E /* FinancingViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B7E8BF602AFE85A10048A60E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B7E8BF5D2AFE857A0048A60E /* FinancingView.swift */,
+				B7E8BF612AFE86380048A60E /* FinancingView.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		B7EF65E42AD6E000006D7E8A /* Courses */ = {
@@ -797,11 +839,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B762013B2AEAC28400DB4B3D /* courses.json in Resources */,
+				B7E8BF682AFE8D4F0048A60E /* InvestmentView.xib in Resources */,
 				B7644D4F2ACF034000C3D4E7 /* PresentationView.xib in Resources */,
 				B70688582ADF0F59005DDBC6 /* CoursesTableViewCell.xib in Resources */,
 				B71B91CD2A4CAD5C00843ACA /* LaunchScreen.storyboard in Resources */,
 				B72E916B2AE6B5E700300971 /* Localizable.strings in Resources */,
 				B79839972AA8DF2200FD269D /* credentials.plist in Resources */,
+				B7E8BF622AFE86380048A60E /* FinancingView.xib in Resources */,
 				B71B91CA2A4CAD5C00843ACA /* Assets.xcassets in Resources */,
 				B7FB6BA42AA0D70600F944E7 /* PasswordView.xib in Resources */,
 			);
@@ -832,6 +876,7 @@
 				B79839992AA8FDD900FD269D /* GoogleSignInCredentialsModel.swift in Sources */,
 				B79F9FBC2A4CB0BD0000B973 /* Coordinator.swift in Sources */,
 				B7368F892AC5C6F000533673 /* HomeCollectionViewCell.swift in Sources */,
+				B7E8BF662AFE8D2C0048A60E /* InvestmentView.swift in Sources */,
 				B73774B72A9D192600B56B74 /* BaseView.swift in Sources */,
 				B7923BB92A9FB2880095B443 /* Network.swift in Sources */,
 				B76BEC5F2A99420200A24FEE /* BaseViewController.swift in Sources */,
@@ -844,6 +889,7 @@
 				B7C068272A98E92900A5F9B2 /* PasswordViewController.swift in Sources */,
 				B7FC49372ACB15F400193A9E /* PresentationView.swift in Sources */,
 				B77C09362AFD21A7009D86D4 /* SimulatorCellModel.swift in Sources */,
+				B7E8BF5E2AFE857A0048A60E /* FinancingView.swift in Sources */,
 				B71B91C12A4CAD5B00843ACA /* AppDelegate.swift in Sources */,
 				B7FC49342ACB158500193A9E /* PresentationViewController.swift in Sources */,
 				B70D4A002AAB98A20069D4BF /* ViewControllerPreview.swift in Sources */,
@@ -892,6 +938,8 @@
 				B7C0682E2A98F61100A5F9B2 /* BaseViewEmbedScrollViewController.swift in Sources */,
 				B7C068302A993C9E00A5F9B2 /* ChildCoordinator.swift in Sources */,
 				B7027A192AC45AFB00E9B249 /* CustomErrorProtocol.swift in Sources */,
+				B7E8BF642AFE8D170048A60E /* InvestmentViewController.swift in Sources */,
+				B7E8BF5C2AFE85680048A60E /* FinancingViewController.swift in Sources */,
 				B72728FD2AC7179E00444A0B /* HomeCollectionLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
