@@ -391,6 +391,14 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		B76E305E2B041A900099362C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B7E8BF632AFE8D170048A60E /* InvestmentViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		B77C09342AFD2185009D86D4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -619,7 +627,7 @@
 		B7E8BF592AFD77F30048A60E /* Investment */ = {
 			isa = PBXGroup;
 			children = (
-				B7E8BF632AFE8D170048A60E /* InvestmentViewController.swift */,
+				B76E305E2B041A900099362C /* Controller */,
 				B7E8BF652AFE8D2C0048A60E /* InvestmentView.swift */,
 				B7E8BF672AFE8D4F0048A60E /* InvestmentView.xib */,
 			);
