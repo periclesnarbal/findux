@@ -9,7 +9,25 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InvestmentView"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InvestmentView">
+            <connections>
+                <outlet property="continueButton" destination="fy4-zn-1Fp" id="Yrc-YL-AHg"/>
+                <outlet property="finalValueField" destination="GZP-Qe-ApY" id="YnA-7c-17h"/>
+                <outlet property="fixingTypeSegment" destination="tEQ-wy-vcs" id="8eU-MS-TMx"/>
+                <outlet property="investingTermField" destination="QBr-t2-01e" id="dha-GW-KNI"/>
+                <outlet property="investingTypeSegment" destination="XRm-5W-tlM" id="Z0s-W8-FkE"/>
+                <outlet property="monthlyInvestingField" destination="ol9-2w-W2j" id="Gmk-9n-yiE"/>
+                <outlet property="profitRateField" destination="kBm-3m-0sm" id="pa4-2q-cSx"/>
+                <outlet property="profitUnitSegment" destination="jWk-VA-9ke" id="hpA-2t-lVc"/>
+                <outlet property="startInvestingAmountField" destination="K25-OW-eDT" id="hTV-p7-X1Q"/>
+                <outlet property="termUnitSegment" destination="sR1-yZ-iCA" id="evV-8h-l7e"/>
+                <outletCollection property="fieldArray" destination="K25-OW-eDT" collectionClass="NSMutableArray" id="Om3-ib-h3W"/>
+                <outletCollection property="fieldArray" destination="ol9-2w-W2j" collectionClass="NSMutableArray" id="eEA-oN-CLR"/>
+                <outletCollection property="fieldArray" destination="QBr-t2-01e" collectionClass="NSMutableArray" id="1wU-HW-Nog"/>
+                <outletCollection property="fieldArray" destination="kBm-3m-0sm" collectionClass="NSMutableArray" id="x55-kR-bHL"/>
+                <outletCollection property="fieldArray" destination="GZP-Qe-ApY" collectionClass="NSMutableArray" id="Y29-QI-3aH"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="320" height="665"/>
@@ -163,7 +181,7 @@
                                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QBr-t2-01e">
                                     <rect key="frame" x="16" y="47" width="288" height="34"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                    <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="continue"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="continue"/>
                                 </textField>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -189,10 +207,10 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <segmentedControl opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="jWk-VA-9ke">
-                                    <rect key="frame" x="185" y="8" width="119" height="32"/>
+                                    <rect key="frame" x="215" y="8" width="89" height="32"/>
                                     <segments>
-                                        <segment title="Anos"/>
-                                        <segment title="Meses"/>
+                                        <segment title="Ano"/>
+                                        <segment title="Mês"/>
                                     </segments>
                                 </segmentedControl>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gFd-iZ-WUR">
@@ -204,7 +222,7 @@
                                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kBm-3m-0sm">
                                     <rect key="frame" x="47.5" y="47" width="256.5" height="34"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                    <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="continue"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="continue"/>
                                 </textField>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
