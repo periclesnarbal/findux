@@ -10,14 +10,14 @@ import SwiftUI
 
 class InvestmentView: BaseView<SimulatorCoordinator> {
     enum MonthYear: String {
-        case month = "Meses"
-        case year = "Anos"
+        case month = "Mês"
+        case year = "Ano"
         case invalid = ""
         
         init?(rawValue: String) {
             switch rawValue {
-            case "Meses": self = .month
-            case "Anos": self = .year
+            case "Mês", "Meses": self = .month
+            case "Ano", "Anos": self = .year
             default: self = .invalid
             }
         }
@@ -32,7 +32,6 @@ class InvestmentView: BaseView<SimulatorCoordinator> {
     @IBOutlet weak var monthlyInvestingField: UITextField!
     @IBOutlet weak var investingTermField: UITextField!
     @IBOutlet weak var profitRateField: UITextField!
-    @IBOutlet weak var finalValueField: UITextField!
     
     @IBOutlet var fieldArray: [UITextField]!
     
@@ -55,7 +54,6 @@ class InvestmentView: BaseView<SimulatorCoordinator> {
         
         startInvestingAmountField.addTarget(self, action: #selector(formatCurrencyTextInput(sender: )), for: .editingChanged)
         monthlyInvestingField.addTarget(self, action: #selector(formatCurrencyTextInput(sender: )), for: .editingChanged)
-        finalValueField.addTarget(self, action: #selector(formatCurrencyTextInput(sender: )), for: .editingChanged)
         
         termUnitSegment.addTarget(self, action: #selector(formatTermUnit(sender: )), for: .valueChanged)
         profitUnitSegment.addTarget(self, action: #selector(formatProfitUnit(sender: )), for: .valueChanged)
@@ -70,7 +68,7 @@ class InvestmentView: BaseView<SimulatorCoordinator> {
         var timeValue: Double = 0
         
         guard let field = investingTermField,
-              let unit = getTimeUnit(from: sender),
+              let unit = getSegmentUnit(from: sender),
               let inputValue = field.text?.toDouble() else { return }
         
         switch unit {
@@ -89,7 +87,7 @@ class InvestmentView: BaseView<SimulatorCoordinator> {
         var timeValue: Double = 0
         
         guard let field = profitRateField,
-              let unit = getTimeUnit(from: sender),
+              let unit = getSegmentUnit(from: sender),
               let inputValue = field.text?.toDouble() else { return }
         
         switch unit {
@@ -101,7 +99,7 @@ class InvestmentView: BaseView<SimulatorCoordinator> {
         field.text = String(timeValue).replacingDotsForCommas()
     }
     
-    func getTimeUnit(from segment: UISegmentedControl) -> MonthYear? {
+    func getSegmentUnit(from segment: UISegmentedControl) -> MonthYear? {
         let selectedIndex = segment.selectedSegmentIndex
         if let title = segment.titleForSegment(at: selectedIndex) {
             return MonthYear(rawValue: title)
@@ -115,6 +113,46 @@ class InvestmentView: BaseView<SimulatorCoordinator> {
 
     func monthsToYears(from value: Double) -> Double  {
         return value / 12
+    }
+    
+    @IBAction func continueButtonAction(_ sender: Any) {
+        guard let termUnit = getSegmentUnit(from: termUnitSegment),
+              let profitUnit = getSegmentUnit(from: profitUnitSegment),
+              let investimentoInicial = startInvestingAmountField.text?.toDouble(),
+              let investimentoMensal = monthlyInvestingField.text?.toDouble(),
+              let taxaJuros = profitRateField.text?.toDouble(),
+              let prazoInvestimento = investingTermField.text?.toDouble() else { return }
+        
+        let taxaJurosAnual = profitUnit == .year ? taxaJuros : taxaJuros * 12
+        let prazoInvestimentoMensal = termUnit == .year ? prazoInvestimento * 12 : prazoInvestimento
+        let result = investimentoPrefixadoCompleto(investimentoInicial: investimentoInicial, investimentoMensal: investimentoMensal, taxaJurosAnual: taxaJurosAnual, prazoInvestimentoMensal: prazoInvestimentoMensal)
+        
+        print(result)
+    }
+    
+    func investimentoPrefixadoCompleto(investimentoInicial: Double, investimentoMensal: Double, taxaJurosAnual: Double, prazoInvestimentoMensal: Double) -> Double {
+        return investimentoPrefixado(investimentoInicial: investimentoInicial, taxaJurosAnual: taxaJurosAnual, prazoInvestimentoMensal: prazoInvestimentoMensal) + investimentoPrefixadoMensal(investimentoMensal: investimentoMensal, taxaJurosAnual: taxaJurosAnual, prazoInvestimentoMensal: prazoInvestimentoMensal - 1)
+    }
+
+    private func investimentoPrefixado(investimentoInicial: Double, taxaJurosAnual: Double, prazoInvestimentoMensal: Double) -> Double {
+        let juros = taxaJurosAnual / 100
+        let montante = investimentoInicial * pow((1 + juros), prazoInvestimentoMensal / 12)
+        return montante
+    }
+
+    private func investimentoPrefixadoMensal(investimentoMensal: Double, taxaJurosAnual: Double, prazoInvestimentoMensal: Double) -> Double {
+        
+        if prazoInvestimentoMensal == 0 ||
+            investimentoMensal == 0 {
+            return investimentoMensal
+        }
+        
+        if prazoInvestimentoMensal < 0 {
+            return 0
+        }
+        
+        let montante = investimentoPrefixado(investimentoInicial: investimentoMensal, taxaJurosAnual: taxaJurosAnual, prazoInvestimentoMensal: prazoInvestimentoMensal) + investimentoPrefixadoMensal(investimentoMensal: investimentoMensal, taxaJurosAnual: taxaJurosAnual, prazoInvestimentoMensal: prazoInvestimentoMensal - 1)
+        return montante
     }
 }
 

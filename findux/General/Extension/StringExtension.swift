@@ -16,6 +16,8 @@ extension String {
         formatter.numberStyle = .decimal
         formatter.decimalSeparator = ","
         formatter.locale = Locale(identifier: "pt_BR")
+        formatter.minimumFractionDigits = 2
+        formatter.alwaysShowsDecimalSeparator = true
         
         if let formattedString = formatter.string(from: NSNumber(value: decimal)) {
             return formattedString
@@ -43,7 +45,7 @@ extension String {
         formatter.decimalSeparator = ","
         formatter.locale = Locale(identifier: "pt_BR")
         
-        if let number = formatter.number(from: self.replacingDotsForCommas()) {
+        if let number = formatter.number(from: self) {
             return number.doubleValue
         }
         
