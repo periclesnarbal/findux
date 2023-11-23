@@ -69,6 +69,17 @@ final class SimulatorCoordinator: BaseChildCoordinator<HomeCoordinator> {
         goToPresentation(presentationModel: investmentModel)
     }
     
+    func goToInvestimentDetail(investmentSimulatorModel: InvestmentSimulatorModel) {
+        let vc = InvestmentDetailViewController()
+        let view = InvestmentDetailView()
+        _ = InvestmentDetailViewModel(viewDelegate: view, investmentSimulatorModel: investmentSimulatorModel)
+        vc.loadContentView(view)
+        //        vc.lifeCycleDelegate = view
+        vc.fullAccessDelegate = view
+        view.coordinatorDelegate = self
+        navigationController.pushViewController(vc, animated: true)
+    }
+    
     func goToPresentation(presentationModel: PresentationModel) {
         parentCoordinator.goToPresentation(presentationModel: presentationModel)
     }

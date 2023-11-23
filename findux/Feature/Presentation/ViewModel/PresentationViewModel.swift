@@ -7,6 +7,15 @@
 
 import Foundation
 
+protocol PresentationViewModelProtocol {
+    var viewDelegate: PresentationViewProtocol { get }
+    var userDefaults: UserDefaultsManager { get }
+    var presentationModel: PresentationModel { get }
+    
+    init(viewDelegate: PresentationViewProtocol, userDefaults: UserDefaultsManager, presentationModel: PresentationModel)
+    func dontShowAgainSwitchAction(_ isOn: Bool)
+}
+
 class PresentationViewModel: PresentationViewModelProtocol {
     
     unowned var viewDelegate: PresentationViewProtocol
