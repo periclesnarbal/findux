@@ -12,6 +12,7 @@ protocol InvestmentDetailViewProtocol: AnyObject {
     var viewModelDelegate: InvestmentDetailViewModelProtocol? { get set }
     
     func setupView(investmentSimulatorDetailModel: InvestmentSimulatorDetailModel)
+    func setupView(investmentSimulatorDetailResultModel: InvestmentSimulatorDetailResultModel)
 }
 
 class InvestmentDetailView: BaseView<SimulatorCoordinator> {
@@ -25,10 +26,11 @@ class InvestmentDetailView: BaseView<SimulatorCoordinator> {
     @IBOutlet weak var termLabel: UILabel!
     @IBOutlet weak var profitRateLabel: UILabel!
     
-    @IBOutlet weak var totalValueLabel: UILabel!
-    @IBOutlet weak var IRLabel: UILabel!
-    @IBOutlet weak var IRValueLabel: UILabel!
-    @IBOutlet weak var resultValue: UILabel!
+    @IBOutlet weak var investmentAmountLabel: UILabel!
+    @IBOutlet weak var incomeValueLabel: UILabel!
+    @IBOutlet weak var finalFullLabel: UILabel!
+    @IBOutlet weak var discountIRLabel: UILabel!
+    @IBOutlet weak var finalValueLabel: UILabel!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -55,6 +57,14 @@ extension InvestmentDetailView: InvestmentDetailViewProtocol {
         montlyValueLabel.text = investmentSimulatorDetailModel.montlyValue
         termLabel.text = investmentSimulatorDetailModel.termValue
         profitRateLabel.text = investmentSimulatorDetailModel.profitRateValue
+    }
+    
+    func setupView(investmentSimulatorDetailResultModel: InvestmentSimulatorDetailResultModel) {
+        investmentAmountLabel.text = investmentSimulatorDetailResultModel.investmentAmount
+        incomeValueLabel.text = investmentSimulatorDetailResultModel.incomeValue
+        finalFullLabel.text = investmentSimulatorDetailResultModel.finalFull
+        discountIRLabel.text = investmentSimulatorDetailResultModel.discountIR
+        finalValueLabel.text = investmentSimulatorDetailResultModel.finalValue
     }
 }
 

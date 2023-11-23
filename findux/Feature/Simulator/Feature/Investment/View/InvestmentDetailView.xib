@@ -11,16 +11,17 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InvestmentDetailView" customModule="findux" customModuleProvider="target">
             <connections>
-                <outlet property="IRLabel" destination="FhE-Eg-N7I" id="ZkH-iy-0fw"/>
-                <outlet property="IRValueLabel" destination="M9x-Uu-H5y" id="Mec-C7-4Qz"/>
+                <outlet property="discountIRLabel" destination="M9x-Uu-H5y" id="Axq-4K-Svu"/>
+                <outlet property="finalFullLabel" destination="FhE-Eg-N7I" id="1ex-u4-OBX"/>
+                <outlet property="finalValueLabel" destination="vbh-NM-ttG" id="noV-85-WgO"/>
                 <outlet property="fixTypeLabel" destination="ili-qU-Idd" id="9oC-nd-eBT"/>
+                <outlet property="incomeValueLabel" destination="bgA-ol-4DH" id="wet-te-3kU"/>
                 <outlet property="initialValueLabel" destination="NTX-o0-aks" id="zf2-9M-XkT"/>
+                <outlet property="investmentAmountLabel" destination="T8m-ZD-LLi" id="UJq-hX-7bC"/>
                 <outlet property="investmentTypeLabel" destination="4px-sF-Qpc" id="RRg-Z3-jWa"/>
                 <outlet property="montlyValueLabel" destination="ODN-aA-LW0" id="ryO-rd-7IH"/>
                 <outlet property="profitRateLabel" destination="zUV-El-Cii" id="T84-fT-4H3"/>
-                <outlet property="resultValue" destination="vbh-NM-ttG" id="zo6-vY-Wkh"/>
                 <outlet property="termLabel" destination="yEv-07-Hmz" id="cx9-tU-CG1"/>
-                <outlet property="totalValueLabel" destination="T8m-ZD-LLi" id="Zdc-wU-4Lb"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -207,7 +208,7 @@
                     </subviews>
                 </stackView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="yn7-zm-Vui">
-                    <rect key="frame" x="0.0" y="276.5" width="320" height="155.5"/>
+                    <rect key="frame" x="0.0" y="276.5" width="320" height="188"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ier-m7-Piz">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="25.5"/>
@@ -229,14 +230,14 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rIF-C5-vkF">
                             <rect key="frame" x="0.0" y="37.5" width="320" height="20.5"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Valor total bruto:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhm-iU-bJP">
-                                    <rect key="frame" x="16" y="0.0" width="127" height="20.5"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Total investido:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhm-iU-bJP">
+                                    <rect key="frame" x="16" y="0.0" width="114" height="20.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0,00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T8m-ZD-LLi">
-                                    <rect key="frame" x="151" y="0.0" width="34.5" height="20.5"/>
+                                    <rect key="frame" x="138" y="0.0" width="34.5" height="20.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -252,17 +253,43 @@
                                 <constraint firstItem="mhm-iU-bJP" firstAttribute="leading" secondItem="rIF-C5-vkF" secondAttribute="leading" constant="16" id="qxi-GA-CeG"/>
                             </constraints>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xoy-3g-yLQ">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hU1-2K-S6u">
                             <rect key="frame" x="0.0" y="70" width="320" height="20.5"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Imposto de renda:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dqg-cy-BN3">
-                                    <rect key="frame" x="16" y="0.0" width="138" height="20.5"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Rendimento bruto:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uCF-cp-Suq">
+                                    <rect key="frame" x="16" y="0.0" width="141.5" height="20.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0,00%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FhE-Eg-N7I">
-                                    <rect key="frame" x="162" y="0.0" width="49.5" height="20.5"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0,00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgA-ol-4DH">
+                                    <rect key="frame" x="165.5" y="0.0" width="34.5" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="bgA-ol-4DH" secondAttribute="trailing" constant="16" id="5yc-m9-5SJ"/>
+                                <constraint firstItem="bgA-ol-4DH" firstAttribute="leading" secondItem="uCF-cp-Suq" secondAttribute="trailing" constant="8" id="B9l-co-fh4"/>
+                                <constraint firstItem="uCF-cp-Suq" firstAttribute="top" secondItem="hU1-2K-S6u" secondAttribute="top" id="M3Y-a4-9e6"/>
+                                <constraint firstItem="uCF-cp-Suq" firstAttribute="leading" secondItem="hU1-2K-S6u" secondAttribute="leading" constant="16" id="mRQ-ir-q74"/>
+                                <constraint firstItem="bgA-ol-4DH" firstAttribute="centerY" secondItem="uCF-cp-Suq" secondAttribute="centerY" id="wkJ-e9-hJq"/>
+                                <constraint firstAttribute="bottom" secondItem="uCF-cp-Suq" secondAttribute="bottom" id="y1i-2J-hrZ"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xoy-3g-yLQ">
+                            <rect key="frame" x="0.0" y="102.5" width="320" height="20.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Valor final bruto:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dqg-cy-BN3">
+                                    <rect key="frame" x="16" y="0.0" width="125" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0,00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FhE-Eg-N7I">
+                                    <rect key="frame" x="149" y="0.0" width="34.5" height="20.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -279,16 +306,16 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0l3-DA-4Ui">
-                            <rect key="frame" x="0.0" y="102.5" width="320" height="20.5"/>
+                            <rect key="frame" x="0.0" y="135" width="320" height="20.5"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Valor do imposto de renda:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CTH-JQ-z6L">
-                                    <rect key="frame" x="16" y="0.0" width="204.5" height="20.5"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Desconto IR:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CTH-JQ-z6L">
+                                    <rect key="frame" x="16" y="0.0" width="97" height="20.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0,00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M9x-Uu-H5y">
-                                    <rect key="frame" x="228.5" y="0.0" width="34.5" height="20.5"/>
+                                    <rect key="frame" x="121" y="0.0" width="34.5" height="20.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -305,7 +332,7 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="17N-9u-ygs">
-                            <rect key="frame" x="0.0" y="135" width="320" height="20.5"/>
+                            <rect key="frame" x="0.0" y="167.5" width="320" height="20.5"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Valor total líquido:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4X8-Of-Oul">
                                     <rect key="frame" x="16" y="0.0" width="136.5" height="20.5"/>
@@ -314,9 +341,9 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0,00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vbh-NM-ttG">
-                                    <rect key="frame" x="160.5" y="0.0" width="34.5" height="20.5"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <nil key="textColor"/>
+                                    <rect key="frame" x="160.5" y="0.0" width="37.5" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                    <color key="textColor" systemColor="systemMintColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
@@ -350,6 +377,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

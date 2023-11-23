@@ -35,3 +35,11 @@ struct InvestmentSimulatorDetailModel {
         profitRateValue = "\(investmentSimulatorModel.profitRateType == .year ? investmentSimulatorModel.profitRateValue : investmentSimulatorModel.profitRateValue * 12)% a.a"
     }
 }
+
+struct InvestmentSimulatorDetailResultModel {
+    let investmentAmount: String
+    let incomeValue: String
+    let finalFull: String
+    let discountIR: String
+    let finalValue: String
+}

@@ -25,13 +25,24 @@ class InvestmentDetailViewModel: InvestmentDetailViewModelProtocol {
         
         self.viewDelegate.viewModelDelegate = self
         self.viewDelegate.setupView(investmentSimulatorDetailModel: InvestmentSimulatorDetailModel(investmentSimulatorModel: investmentSimulatorModel))
-        calculateResult()
+        self.viewDelegate.setupView(investmentSimulatorDetailResultModel: calculateResult())
     }
     
-    func calculateResult() {
+    func calculateResult() -> InvestmentSimulatorDetailResultModel {
         let taxaJurosAnual = investmentSimulatorModel.profitRateType == .year ? investmentSimulatorModel.profitRateValue : investmentSimulatorModel.profitRateValue * 12
         let prazoInvestimentoMensal = investmentSimulatorModel.termType == .year ? investmentSimulatorModel.termValue * 12 : investmentSimulatorModel.termValue
-        let result = investimentoPrefixadoCompleto(investimentoInicial: investmentSimulatorModel.initialValue, investimentoMensal: investmentSimulatorModel.montlyValue, taxaJurosAnual: taxaJurosAnual, prazoInvestimentoMensal: prazoInvestimentoMensal)
+        let valorTotalBruto = investimentoPrefixadoCompleto(investimentoInicial: investmentSimulatorModel.initialValue, investimentoMensal: investmentSimulatorModel.montlyValue, taxaJurosAnual: taxaJurosAnual, prazoInvestimentoMensal: prazoInvestimentoMensal)
+        let valorInvestido = investmentSimulatorModel.initialValue + investmentSimulatorModel.montlyValue * prazoInvestimentoMensal
+        let rendimentoBruto = valorTotalBruto - valorInvestido
+        let taxaImpostoRenda = IRPFRate(months: prazoInvestimentoMensal).rawValue
+        let valorImpostoRenda = rendimentoBruto * (taxaImpostoRenda / 100)
+        let valorTotalLiquido = valorTotalBruto - valorImpostoRenda
+        
+        return InvestmentSimulatorDetailResultModel(investmentAmount: valorInvestido.formatAsCurrency(),
+                                                    incomeValue: rendimentoBruto.formatAsCurrency(),
+                                                    finalFull: valorTotalBruto.formatAsCurrency(),
+                                                    discountIR: valorImpostoRenda.formatAsCurrency(),
+                                                    finalValue: valorTotalLiquido.formatAsCurrency())
     }
     
     func investimentoPrefixadoCompleto(investimentoInicial: Double, investimentoMensal: Double, taxaJurosAnual: Double, prazoInvestimentoMensal: Double) -> Double {
