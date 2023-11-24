@@ -9,6 +9,8 @@ import UIKit
 import SwiftUI
 
 class InvestmentView: BaseView<SimulatorCoordinator> {
+    let IPCA = 4.82
+    let CDI = 12.15
     
     @IBOutlet weak var investingTypeSegment: UISegmentedControl!
     @IBOutlet weak var fixingTypeSegment: UISegmentedControl!
@@ -42,8 +44,20 @@ class InvestmentView: BaseView<SimulatorCoordinator> {
         startInvestingAmountField.addTarget(self, action: #selector(formatCurrencyTextInput(sender: )), for: .editingChanged)
         monthlyInvestingField.addTarget(self, action: #selector(formatCurrencyTextInput(sender: )), for: .editingChanged)
         
+        fixingTypeSegment.addTarget(self, action: #selector(fixingTypeSegmentAction(sender: )), for: .valueChanged)
         termUnitSegment.addTarget(self, action: #selector(formatTermUnit(sender: )), for: .valueChanged)
         profitUnitSegment.addTarget(self, action: #selector(formatProfitUnit(sender: )), for: .valueChanged)
+    }
+    
+    @objc func fixingTypeSegmentAction(sender: UISegmentedControl) {
+        let fixType = InvestmentFixType(rawValue: sender.getTitle())
+        switch fixType {
+        case .CDI, .IPCA:
+            profitUnitSegment.selectedSegmentIndex = 0
+            profitUnitSegment.isEnabled = false
+        case .PRE:
+            profitUnitSegment.isEnabled = true
+        }
     }
     
     @objc func formatCurrencyTextInput(sender: UITextField) {
@@ -91,16 +105,29 @@ class InvestmentView: BaseView<SimulatorCoordinator> {
         
         guard let investimentoInicial = startInvestingAmountField.text?.toDouble(),
               let investimentoMensal = monthlyInvestingField.text?.toDouble(),
-              let taxaJuros = profitRateField.text?.toDouble(),
+              var taxaJuros = profitRateField.text?.toDouble(),
               let prazoInvestimento = investingTermField.text?.toDouble()
         else {
             coordinatorDelegate?.showAlert(title: "Aviso", message: "Preencha todos os campos antes de prosseguir com a simulação.")
             return
         }
         
+        switch fixType {
+        case .CDI:
+            taxaJuros = calculateCDI(profitRate: taxaJuros)
+        case .IPCA:
+            taxaJuros = IPCA + taxaJuros
+        case .PRE:
+            break
+        }
+        
         let investmentSimulatorModel = InvestmentSimulatorModel(investmentType: investmentType, fixType: fixType, termType: termUnit, profitRateType: profitUnit, initialValue: investimentoInicial, montlyValue: investimentoMensal, termValue: prazoInvestimento, profitRateValue: taxaJuros)
         
         coordinatorDelegate?.goToInvestimentDetail(investmentSimulatorModel: investmentSimulatorModel)
+    }
+    
+    func calculateCDI(profitRate: Double) -> Double {
+        return (CDI * profitRate) / 100
     }
 }
 

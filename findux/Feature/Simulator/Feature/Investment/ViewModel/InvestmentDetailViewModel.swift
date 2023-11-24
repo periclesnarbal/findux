@@ -35,7 +35,7 @@ class InvestmentDetailViewModel: InvestmentDetailViewModelProtocol {
         let valorInvestido = investmentSimulatorModel.initialValue + investmentSimulatorModel.montlyValue * prazoInvestimentoMensal
         let rendimentoBruto = valorTotalBruto - valorInvestido
         let taxaImpostoRenda = IRPFRate(months: prazoInvestimentoMensal).rawValue
-        let valorImpostoRenda = rendimentoBruto * (taxaImpostoRenda / 100)
+        let valorImpostoRenda = investmentSimulatorModel.investmentType != .LCI_LCA ? rendimentoBruto * (taxaImpostoRenda / 100) : 0
         let valorTotalLiquido = valorTotalBruto - valorImpostoRenda
         
         return InvestmentSimulatorDetailResultModel(investmentAmount: valorInvestido.formatAsCurrency(),
