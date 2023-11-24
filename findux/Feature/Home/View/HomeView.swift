@@ -10,14 +10,14 @@ import SwiftUI
 
 class HomeView: BaseView<HomeCoordinator> {
     
-    lazy var menus = [HomeCellModel(imageName: "Book", title: "Cursos") { [weak self] in
+    lazy var menus = [HomeCellModel(imageName: "Book", title: "Cursos", isEnabled: true) { [weak self] in
         self?.coordinatorDelegate?.goToCourses() },
-                      HomeCellModel(imageName: "OpenBook", title: "Glossário") {},
-                      HomeCellModel(imageName: "Chart", title: "Simuladores") { [weak self] in
+                      HomeCellModel(imageName: "OpenBook", title: "Glossário", isEnabled: false, action: unavailbleFeature),
+                      HomeCellModel(imageName: "Chart", title: "Simuladores", isEnabled: true) { [weak self] in
         self?.coordinatorDelegate?.goToSimulator() },
-                      HomeCellModel(imageName: "Calendar", title: "Projetos") {},
-                      HomeCellModel(imageName: "Percent", title: "Investimentos") {},
-                      HomeCellModel(imageName: "Chart_alt", title: "Bolsa de valores") {}]
+                      HomeCellModel(imageName: "Calendar", title: "Projetos", isEnabled: false, action: unavailbleFeature),
+                      HomeCellModel(imageName: "Percent", title: "Investimentos", isEnabled: false, action: unavailbleFeature),
+                      HomeCellModel(imageName: "Chart_alt", title: "Bolsa de valores", isEnabled: false, action: unavailbleFeature)]
     
     let headerImageView: UIImageView = {
         let img = UIImageView()
@@ -94,6 +94,10 @@ class HomeView: BaseView<HomeCoordinator> {
     
     @objc func profileButtonAction() {
         coordinatorDelegate?.openProfileModal()
+    }
+    
+    func unavailbleFeature() {
+        coordinatorDelegate?.showAlert(title: "Aviso", message: "Esta funcionalidade não está disponível no momento. Por favor, aguarde o lançamento da próxima versão.")
     }
 }
 

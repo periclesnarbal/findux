@@ -10,5 +10,6 @@ import Foundation
 struct SimulatorCellModel {
     let imageName: String
     let title: String
+    let isEnabled: Bool
     let action: () -> Void
 }

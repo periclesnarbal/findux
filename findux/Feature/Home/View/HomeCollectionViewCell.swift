@@ -27,6 +27,24 @@ class HomeCollectionViewCell: UICollectionViewCell {
         return label
     }()
     
+    let overlayView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .white
+        view.alpha = 0.5
+        view.isHidden = true
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
+    var isEnabled: Bool = true {
+        didSet {
+            switch isEnabled {
+            case true: overlayView.isHidden = true
+            case false: overlayView.isHidden = false
+            }
+        }
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         commomInit()
@@ -46,8 +64,10 @@ class HomeCollectionViewCell: UICollectionViewCell {
         backgroundColor = .clear
         contentView.backgroundColor = .systemGray4
         contentView.layer.cornerRadius = 12
+        contentView.clipsToBounds = true
         contentView.addSubview(imageView)
         contentView.addSubview(title)
+        contentView.addSubview(overlayView)
     }
     
     private func setupConstraints() {
@@ -65,18 +85,21 @@ class HomeCollectionViewCell: UICollectionViewCell {
             title.centerXAnchor.constraint(equalTo: contentView.centerXAnchor)
         ])
         title.setContentCompressionResistancePriority(.required, for: .vertical)
+        
+        contentView.embedConstraints(overlayView)
     }
     
     func setupCell(data: HomeCellModel) {
         imageView.image = UIImage(named: data.imageName)
         title.text = data.title
+        isEnabled = data.isEnabled
     }
 }
 
 struct HomeCollectionViewCellPreview: PreviewProvider {
     static var previews: some View {
         ViewPreview {
-            let dataModel = HomeCellModel(imageName: "Book", title: "Cursos") {}
+            let dataModel = HomeCellModel(imageName: "Book", title: "Cursos", isEnabled: true) {}
             let cell = HomeCollectionViewCell()
             cell.setupCell(data: dataModel)
             return cell

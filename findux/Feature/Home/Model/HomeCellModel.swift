@@ -10,5 +10,6 @@ import Foundation
 struct HomeCellModel {
     let imageName: String
     let title: String
+    let isEnabled: Bool
     let action: () -> Void
 }

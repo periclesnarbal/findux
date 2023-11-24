@@ -10,12 +10,12 @@ import SwiftUI
 
 class SimulatorView: BaseView<SimulatorCoordinator> {
     
-    lazy var menus = [SimulatorCellModel(imageName: "Percent", title: "Investimento") { [weak self] in
+    lazy var menus = [SimulatorCellModel(imageName: "Percent", title: "Investimento", isEnabled: true) { [weak self] in
         self?.coordinatorDelegate?.goToInvestiment()
-    },
-                      SimulatorCellModel(imageName: "Calendar", title: "Financiamento") { [weak self] in
-        self?.coordinatorDelegate?.goToFinancing()
-    }]
+    }, SimulatorCellModel(imageName: "Calendar", title: "Financiamento", isEnabled: false, action: unavailbleFeature)]
+//                      SimulatorCellModel(imageName: "Calendar", title: "Financiamento", isEnabled: false) { [weak self] in
+//        self?.coordinatorDelegate?.goToFinancing()
+//    }]
     
     let collectionView: UICollectionView = {
         let layout = SimulatorCollectionLayout()
@@ -45,6 +45,10 @@ class SimulatorView: BaseView<SimulatorCoordinator> {
         
         collectionView.delegate = self
         collectionView.dataSource = self
+    }
+    
+    func unavailbleFeature() {
+        coordinatorDelegate?.showAlert(title: "Aviso", message: "Esta funcionalidade não está disponível no momento. Por favor, aguarde o lançamento da próxima versão.")
     }
 }
 
